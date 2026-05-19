@@ -1,0 +1,1405 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مقدمة إلى ECMASCRIPT 6 من خلال أمثلة">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ar-ecmascript6-oct-2019/dd-byy-ltwyr.html">
+      
+      
+        <link rel="prev" href="mqdm-l-l-ecmascript-6.html">
+      
+      
+        <link rel="next" href="ssyt-javascript.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>2. إعداد بيئة التطوير - مقدمة إلى ECMASCRIPT 6 من خلال أمثلة</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "مقدمة إلى ECMASCRIPT 6 من خلال أمثلة";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="مقدمة إلى ECMASCRIPT 6 من خلال أمثلة" class="md-header__button md-logo" aria-label="مقدمة إلى ECMASCRIPT 6 من خلال أمثلة" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مقدمة إلى ECMASCRIPT 6 من خلال أمثلة
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. إعداد بيئة التطوير
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الداكن"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الداكن" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الفاتح"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الفاتح" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stahe/ar-ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="مقدمة إلى ECMASCRIPT 6 من خلال أمثلة" class="md-nav__button md-logo" aria-label="مقدمة إلى ECMASCRIPT 6 من خلال أمثلة" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مقدمة إلى ECMASCRIPT 6 من خلال أمثلة
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stahe/ar-ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مرحبًا بكم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mqdm-l-l-ecmascript-6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. مقدمة إلى لغة ECMASCRIPT 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. إعداد بيئة التطوير
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="dd-byy-ltwyr.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. إعداد بيئة التطوير
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. بيئة تطوير خادم الويب
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1. بيئة تطوير خادم الويب">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-laragon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1. تثبيت Laragon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-netbeans-100-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2. تثبيت NetBeans 10.0 IDE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. بيئة التطوير لـ JavaScript
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2. بيئة التطوير لـ JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1. تكوين Visual Studio Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2. إضافة ملحقات إلى Visual Studio Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3. بعض أوامر [VSCode] المفيدة
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ssyt-javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. أساسيات JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ljdwl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. الجداول
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lkynt-lrfy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. الكائنات الحرفية
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lslsl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. السلاسل
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ltbyrt-ldy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. التعبيرات العادية
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lwyf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. الوظائف
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lkh-wlstthnt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. الأخطاء والاستثناءات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wdt-es6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. وحدات ES6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lbrmj-lqym-l-ldth-wlwyf-yr-lmtzmn.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. البرمجة القائمة على الأحداث والوظائف غير المتزامنة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wyf-http-fy-javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. وظائف HTTP في JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lfyt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. الفئات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ml-http-l-javascript-lkhdm-sb-lryb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. عملاء HTTP لـ JavaScript لخدمة حساب الضرائب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="2">2. <span style="color: #365f91">إعداد بيئة التطوير</span></h1>
+<p>سنستخدم الأدوات التالية (على نظام Windows 10 x64):</p>
+<ul>
+  <li>[Laragon] لتشغيل خادم الويب PHP؛
+  </li>
+  <li>[NetBeans] لتحرير كود PHP؛
+  </li>
+  <li>[Visual Studio Code] لكتابة كود JavaScript؛
+  </li>
+  <li><b>[Node.js] </b>لتشغيله؛
+  </li>
+  <li><b>[npm] </b>لتنزيل وتثبيت مكتبات JavaScript التي سنحتاجها؛
+  </li>
+</ul>
+<p><a id="toc42690193"></a>
+<a id="toc42690579"></a></p>
+<h2 id="21">2.1. <span style="color: #4f81bd">بيئة تطوير خادم الويب</span></h2>
+<p>تمت كتابة البرامج النصية لـ PHP واختبارها في البيئة التالية:</p>
+<ul>
+  <li>بيئة خادم ويب Apache / نظام إدارة قواعد البيانات MySQL / PHP 7.3 تسمى <b>Laragon؛</b>
+  </li>
+  <li>بيئة تطوير<b> NetBeans 10.0؛</b>
+  </li>
+</ul>
+<p><a id="installationdelaragon"></a>
+<a id="laragon"></a>
+<a id="toc42690580"></a>
+<a id="toc42690194"></a>
+<a id="refheadingtoc45843531951845"></a></p>
+<h3 id="211-laragon">2.1.1. <span style="color: #4f81bd">تثبيت Laragon</span></h3>
+<p>Laragon هي حزمة تجمع بين عدة مكونات برمجية:</p>
+<ul>
+  <li>خادم ويب Apache. سنستخدمه لكتابة نصوص برمجية للويب بلغة PHP؛
+  </li>
+  <li>نظام إدارة قواعد البيانات MySQL؛
+  </li>
+  <li>لغة البرمجة النصية PHP؛
+  </li>
+  <li>خادم Redis الذي يوفر التخزين المؤقت لتطبيقات الويب:
+  </li>
+</ul>
+
+<p>يمكن تنزيل Laragon (مارس 2019) من العنوان التالي:</p>
+<p><a href="https://laragon.org/download/"><u><span style="color: #0563c1">https://laragon.org/download/</span></u></a></p>
+<p><img src="images/10000000000005AC000003184BDF25EA.png" width="363" height="198" style="width:9.603cm;height:5.239cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005AC000003184BDF25EA.png" /></p>
+<p><img src="images/100000000000086200000337E13872C5.png" width="536" height="206" style="width:14.19cm;height:5.442cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000086200000337E13872C5.png" /></p>
+<p><img src="images/100000000000088C0000033343F79C47.png" width="547" height="205" style="width:14.469cm;height:5.415cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000088C0000033343F79C47.png" /></p>
+<ul>
+  <li>ينتج عن التثبيت <b>[1-5] </b>هيكل الدليل التالي:
+  </li>
+</ul>
+
+<p><img src="images/100000000000083D000003996FDD348B.png" width="633" height="276" style="width:16.739cm;height:7.31cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000083D000003996FDD348B.png" /></p>
+<ul>
+  <li><b>[6] </b>يحتوي على دليل تثبيت PHP؛
+  </li>
+</ul>
+
+<p>يؤدي تشغيل <strong>[Laragon]</strong> إلى عرض النافذة التالية:</p>
+<p><img src="images/10000000000004F800000346ED7C4AFF.png" width="382" height="252" style="width:10.102cm;height:6.655cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004F800000346ED7C4AFF.png" /></p>
+<ul>
+  <li><b>[1]</b>: القائمة الرئيسية لـ Laragon؛
+  </li>
+  <li><b>[2]</b>: زر<b> [Start All] (بدء التشغيل) </b>يطلق خادم الويب Apache وقاعدة بيانات MySQL؛
+  </li>
+  <li><b>[3]</b>: يعرض زر<b> [WEB] </b>صفحة الويب <b>[http://localhost]، </b>والتي تتوافق مع ملف PHP <b>[&lt;laragon&gt;/www/index.php]، </b>حيث &lt;laragon&gt; هو مجلد تثبيت Laragon؛
+  </li>
+  <li><b>[4]</b>: يتيح لك زر<b> [Database] </b>إدارة قاعدة بيانات MySQL باستخدام أداة<b> [phpMyAdmin]</b>. يجب تثبيت هذه الأداة مسبقًا؛
+  </li>
+  <li><b>[5]</b>: يفتح زر<b> [Terminal] </b>محطة أوامر؛
+  </li>
+  <li><b>[6]</b>: يفتح زر<b> [Root] </b>نافذة Windows Explorer في مجلد<b> [&lt;laragon&gt;/www]</b>، وهو الدليل الجذر لموقع الويب<b> [http://localhost]</b>. هذا هو المكان الذي يجب أن تضع فيه جميع تطبيقات الويب التي يديرها خادم Apache الخاص بـ Laragon؛
+  </li>
+</ul>
+
+<p>لنفتح محطة Laragon <strong>[5]</strong>:</p>
+<p><img src="images/1000000000000745000002AC1D4C0E92.png" width="558" height="205" style="width:14.773cm;height:5.429cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000745000002AC1D4C0E92.png" /></p>
+<ul>
+  <li>في <b>[1]</b>، نوع المحطة الطرفية. تتوفر ثلاثة أنواع من المحطات الطرفية في <b>[6]</b>؛
+  </li>
+  <li>في <b>[2، 3]</b>: المجلد الحالي؛
+  </li>
+  <li>في <b>[4]</b>، اكتب الأمر <b>[echo %PATH%]، </b>الذي يعرض قائمة المجلدات التي يتم البحث فيها عند البحث عن ملف قابل للتنفيذ. يتم تضمين جميع المجلدات الرئيسية لـ Laragon في مسار الملفات القابلة للتنفيذ هذا، وهو ما لن يحدث إذا فتحت موجه الأوامر <b>[cmd] </b>في Windows. في هذا المستند، عندما تحتاج إلى كتابة أوامر لتثبيت برنامج معين، يتم كتابة هذه الأوامر عمومًا في محطة Laragon؛
+  </li>
+</ul>
+<p><a id="installationdelide"></a>
+<a id="toc42690581"></a>
+<a id="toc42690195"></a>
+<a id="refheadingtoc45845531951845"></a></p>
+<h3 id="212-netbeans-100-ide">2.1.2. <span style="color: #4f81bd">تثبيت NetBeans 10.0 IDE</span></h3>
+<p>يمكن تنزيل NetBeans 10.0 IDE من العنوان التالي (مارس 2019):</p>
+<p><a href="https://netbeans.apache.org/download/index.html"><u><span style="color: #0563c1">https://netbeans.apache.org/download/index.HTML</span></u></a></p>
+<p><img src="images/10000000000007BD0000037EBD90F9D8.png" width="495" height="223" style="width:13.1cm;height:5.913cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007BD0000037EBD90F9D8.png" /></p>
+<p>الملف الذي تم تنزيله هو ملف ZIP يحتاج فقط إلى فك ضغطه. بمجرد تثبيت NetBeans وتشغيله، يمكنك إنشاء أول مشروع PHP الخاص بك.</p>
+<p><img src="images/10000000000005C4000001A8D40DAF59.png" width="443" height="127" style="width:11.719cm;height:3.366cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C4000001A8D40DAF59.png" /></p>
+<ul>
+  <li>في <b>[1]</b>، حدد خيار File / New Project (ملف / مشروع جديد)؛
+  </li>
+  <li>في <b>[2]</b>، حدد فئة<b> [PHP]</b>؛
+  </li>
+  <li>في <b>[3]</b>، حدد نوع المشروع <b>[PHP Application]</b>؛
+  </li>
+</ul>
+
+<p><img src="images/100000000000085A000001CEB2D6C5E9.png" width="641" height="139" style="width:16.97cm;height:3.667cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000085A000001CEB2D6C5E9.png" /></p>
+<ul>
+  <li>في <b>[4]</b>، قم بتسمية المشروع؛
+  </li>
+  <li>في <b>[5]</b>، اختر مجلدًا للمشروع؛
+  </li>
+  <li>في <b>[6]</b>، حدد إصدار PHP الذي تم تنزيله؛
+  </li>
+  <li>في <b>[7]</b>، حدد ترميز UTF-8 لملفات PHP؛
+  </li>
+  <li>في <b>[8]</b>، حدد وضع<b> [Script] </b>لتشغيل نصوص PHP في وضع سطر الأوامر. حدد <b>[Local WEB Server] </b>لتشغيل نص PHP في بيئة ويب؛
+  </li>
+  <li>في <b>[9،10]</b>، حدد دليل التثبيت لمترجم PHP الخاص بحزمة Laragon:
+  </li>
+</ul>
+
+<p><img src="images/10000000000005DC0000025C1FB2220C.png" width="450" height="181" style="width:11.912cm;height:4.798cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DC0000025C1FB2220C.png" /></p>
+<ul>
+  <li>حدد <b>[Finish] </b>لإكمال معالج إنشاء مشروع PHP؛
+  </li>
+</ul>
+
+<p><img src="images/100000000000070C0000020CD9C9D0E3.png" width="541" height="157" style="width:14.319cm;height:4.159cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000070C0000020CD9C9D0E3.png" /></p>
+<ul>
+  <li>في <b>[11]</b>، يتم إنشاء المشروع باستخدام البرنامج النصي <b>[index.php]</b>؛
+  </li>
+  <li>في <b>[12]</b>، نكتب نصًا برمجيًا بسيطًا بلغة PHP؛
+  </li>
+  <li>في <b>[13]</b>، نقوم بتشغيل <b>[index.php]</b>؛
+  </li>
+</ul>
+
+<p><img src="images/100000000000074C00000147E3253FF8.png" width="561" height="98" style="width:14.833cm;height:2.596cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000074C00000147E3253FF8.png" /></p>
+<ul>
+  <li>في <b>[14]</b>، تظهر النتائج في نافذة<b> [الإخراج] </b>في NetBeans؛
+  </li>
+  <li>في <b>[15]</b>، ننشئ نصًا برمجيًا جديدًا؛
+  </li>
+  <li>في <b>[16]</b>، البرنامج النصي الجديد؛
+  </li>
+</ul>
+
+<p>يمكن للقارئ إنشاء جميع البرامج النصية التالية في مجلدات مختلفة ضمن نفس مشروع PHP. يتوفر كود المصدر للبرامج النصية الواردة في هذا المستند في بنية دليل NetBeans التالية:</p>
+<p><img src="images/1000000000000644000002E5AEA38430.png" width="561" height="259" style="width:14.85cm;height:6.86cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000644000002E5AEA38430.png" /></p>
+<p>توجد البرامج النصية في هذا المستند في دليل مشروع <strong>[scripts-console] [1]</strong>. سنستخدم أيضًا مكتبات PHP التي سيتم وضعها في المجلد <strong>[&lt;laragon-lite&gt;/www/vendor] [2]،</strong> حيث &lt;laragon-lite&gt; هو دليل التثبيت لبرنامج Laragon. لكي يتعرف NetBeans على المكتبات الموجودة في <strong>[2]</strong> كجزء من مشروع <strong>[scripts-console]</strong>، نحتاج إلى تضمين المجلد <strong>[vendor] [2]</strong> في <strong>[مسار التضمين] [3]</strong> للمشروع. سنقوم بتكوين NetBeans بحيث يتم تضمين المجلد <strong>[&lt;laragon-lite&gt;/www/vendor] [2]</strong> في كل مشروع PHP جديد، وليس فقط في مشروع <strong>[scripts-console]</strong>:</p>
+<p><img src="images/10000000000007C4000002C3270A2133.png" width="696" height="247" style="width:18.41cm;height:6.548cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007C4000002C3270A2133.png" /></p>
+<ul>
+  <li>في <b>[1-2]</b>، انتقل إلى خيارات NetBeans؛
+  </li>
+  <li>في <b>[3-4]</b>، قم بتكوين خيارات PHP؛
+  </li>
+  <li>في <b>[5-7]</b>، قم بتكوين <b>[مسار التضمين العام] </b>لـ PHP: يتم تضمين المجلدات المدرجة في <b>[7] </b>تلقائيًا في <b>[مسار التضمين] </b>لكل مشروع PHP؛
+  </li>
+</ul>
+
+<p><img src="images/100000000000025000000231F599A184.png" width="207" height="196" style="width:5.48cm;height:5.193cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025000000231F599A184.png" /></p>
+<ul>
+  <li>في <b>[9]</b>، قم بالوصول إلى خصائص فرع<b> [مسار التضمين]</b>؛
+  </li>
+  <li>في <b>[10-11]</b>، المكتبات الجديدة التي استكشفها NetBeans. يستكشف NetBeans كود PHP في هذه المكتبات ويخزن فئاتها وواجهاتها ووظائفها وما إلى ذلك، من أجل تقديم المساعدة للمطور؛
+  </li>
+</ul>
+
+<p><img src="images/1000000000000403000004FDD8A5CFCC.png" width="360" height="447" style="width:9.513cm;height:11.829cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000403000004FDD8A5CFCC.png" /></p>
+<ul>
+  <li>في <b>[12]</b>، يستخدم مقتطف كود فئة<b> [PhpMimeMailParser\Parser] </b>من مكتبة<b> [vendor/php-mime-mail-parser]</b>؛
+  </li>
+  <li>في <b>[13]</b>، يقترح NetBeans طرق هذه الفئة؛
+  </li>
+  <li>في <b>[14-15]</b>، يعرض NetBeans الوثائق الخاصة بالطريقة المحددة؛
+  </li>
+</ul>
+
+<p>مفهوم <strong>[مسار التضمين]</strong> خاص بـ NetBeans. يوجد هذا المفهوم في PHP أيضًا، لكنهما، من حيث المبدأ، مفهومان مختلفان.</p>
+<p>الآن بعد أن تم إعداد بيئة التطوير، يمكننا تغطية أساسيات PHP.</p>
+<h2 id="22-javascript">2.2. <span style="color: #4f81bd">بيئة التطوير لـ JavaScript</span></h2>
+<p>يمكن تثبيت هذه الأدوات باستخدام Laragon (انظر قسم <a href="../../../../../../../st-2020/cours/ecmascript6/masters/02/chap-02.docx#laragon"><u><span style="color: #0563c1">الروابط</span></u></a>):</p>
+<p><img src="images/100000000000056B0000046C43F6DAF0.png" width="485" height="396" style="width:12.839cm;height:10.479cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000056B0000046C43F6DAF0.png" /></p>
+<p>في <strong>[4]</strong>، قم بتثبيت <strong>[node.js]</strong>. بمجرد اكتمال التثبيت، افتح محطة Laragon (انظر قسم <a href="../../../../../../../st-2020/cours/ecmascript6/masters/02/chap-02.docx#laragon"><u><span style="color: #0563c1">الروابط</span></u></a>) وتحقق من إصدار <strong>[node.js]</strong> المثبت (1) وكذلك إصدار <strong>[npm]</strong> (2):</p>
+<p><img src="images/100000000000082E000003C2B0ACC9CF.png" width="628" height="289" style="width:16.619cm;height:7.636cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000082E000003C2B0ACC9CF.png" /></p>
+<p>بعد ذلك، نقوم بتثبيت Visual Studio Code، الذي يُشار إليه غالبًا باسم <strong>[code]</strong> أو <strong>[VSCode] [3-6]</strong>. بمجرد الانتهاء من ذلك، يمكننا تشغيل أداة التطوير هذه:</p>
+<p><img src="images/1000000000000416000001E820D7CD65.png" width="366" height="171" style="width:9.693cm;height:4.523cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000416000001E820D7CD65.png" /></p>
+<p><img src="images/10000000000003DC0000025F402EB813.png" width="346" height="212" style="width:9.149cm;height:5.622cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003DC0000025F402EB813.png" /></p>
+<h3 id="221-visual-studio-code">2.2.1. <span style="color: #4f81bd">تكوين Visual Studio Code</span></h3>
+<p>سنوضح الآن كيف قمنا بتكوين <strong>[VSCode]</strong> حتى يتمكن القارئ من فهم لقطات الشاشة التي ستظهر من وقت لآخر. للقارئ الحرية في تكوين <strong>[VSCode]</strong> كما يراه مناسبًا. يمكنه حتى إعداد مساحة العمل المفضلة لديه. هذا ليس مهمًا بالنسبة لما سنقوم به بعد ذلك.</p>
+<p>أولاً، سنقوم بتغيير مظهر نافذة <strong>[VSCode]</strong> لتكون الخلفية فاتحة بدلاً من سوداء:</p>
+<p><img src="images/100000000000044F000003D84B9CD393.png" width="386" height="344" style="width:10.209cm;height:9.109cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000044F000003D84B9CD393.png" /></p>
+<p>ثم نخفي الشريط الجانبي الأيسر <strong>[1-2]</strong>، الذي تتوفر عناصره أيضًا في القائمة. في <strong>[3-6]</strong>، نضبط الكود ليقوم بتنسيق نفسه في كل مرة يتم فيها حفظ الملف وفي كل مرة نقوم فيها بالنسخ واللصق.</p>
+<p><img src="images/10000000000005A100000274C91A5311.png" width="504" height="220" style="width:13.34cm;height:5.814cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005A100000274C91A5311.png" /></p>
+<p>بعد حفظ الإعدادات <strong>[Ctrl-S]</strong>، يمكنك إغلاق نافذة <strong>[الإعدادات] [7]</strong>. يمكنك العودة إلى إعدادات <strong>[VSCode]</strong> في أي وقت <strong>[8-10]</strong>:</p>
+<p><img src="images/100000000000057900000252073FE54B.png" width="490" height="208" style="width:12.972cm;height:5.5cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000057900000252073FE54B.png" /></p>
+<p>يتم حفظ هذه الإعدادات في ملف <strong>[settings.json]</strong> الذي يمكن تحريره مباشرة. لنفتح نافذة <strong>[الإعدادات]</strong> كما هو موضح:</p>
+<p><img src="images/10000000000003A400000309C9207C53.png" width="280" height="234" style="width:7.421cm;height:6.188cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003A400000309C9207C53.png" /></p>
+<p>في <strong>[4]</strong>، يمكنك تعديل ملف <strong>[settings.json]</strong> مباشرةً:</p>
+<p><img src="images/1000000000000477000001CB92EE6B4A.png" width="400" height="161" style="width:10.59cm;height:4.253cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000477000001CB92EE6B4A.png" /></p>
+<ul>
+  <li>في <b>[1]</b>، المسار إلى ملف<b> [settings.json]</b>. إحدى طرق العودة إلى الإعدادات الافتراضية هي حذف هذا الملف؛
+  </li>
+  <li>في <b>[2]</b>، الإعدادات التي قمنا بتكوينها للتو؛
+  </li>
+</ul>
+
+<p>الآن، لنفتح محطة طرفية داخل <strong>[VSCode] [1-2]</strong>:</p>
+<p><img src="images/100000000000062D000000FD7AF2926B.png" width="553" height="89" style="width:14.64cm;height:2.342cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000062D000000FD7AF2926B.png" /></p>
+<ul>
+  <li>في <b>[3]</b>، نوع المحطة الطرفية المفتوحة، وهنا PowerShell؛
+  </li>
+  <li>في <b>[4]</b>، يمكنك كتابة أوامر Windows؛
+  </li>
+  <li>في <b>[6]</b>، يمكنك فتح محطات طرفية إضافية؛
+  </li>
+  <li>في <b>[5]</b>، قائمة المحطات المفتوحة؛
+  </li>
+  <li>في <b>[7]</b>، يغلق المحطة الطرفية النشطة؛
+  </li>
+</ul>
+
+<p>سنستخدم محطة <strong>[VSCode]</strong> لتثبيت حزم JavaScript (المكتبات) باستخدام أداة <strong>[npm]</strong> (Node Package Manager). دعونا نتحقق، كما فعلنا سابقًا في محطة Laragon، من إصدار <strong>[npm]</strong> المثبت:</p>
+<p><img src="images/10000000000007ED00000209842B66FC.png" width="609" height="156" style="width:16.11cm;height:4.136cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007ED00000209842B66FC.png" /></p>
+<p>نرى أن الأمر <strong>[npm]</strong> لم يتم التعرف عليه. هذا يعني أنه ليس جزءًا من مسار PATH للمحطة الطرفية (قائمة المجلدات للبحث عن ملف قابل للتنفيذ، في هذه الحالة <strong>[npm]</strong>). يمكننا معرفة مسار PATH الذي تستخدمه المحطة الطرفية:</p>
+<p><img src="images/10000000000007FF0000014E9059DCF6.png" width="614" height="100" style="width:16.251cm;height:2.651cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007FF0000014E9059DCF6.png" /></p>
+<p>لم يتم العثور على الملف القابل للتنفيذ <strong>[npm]</strong> في هذه المجلدات. مثل الأدوات الأخرى التي تم تثبيتها بواسطة Laragon، فهو موجود في مجلد <strong>[&lt;laragon&gt;\bin]</strong> الخاص بـ Laragon، وتحديدًا في مجلد <strong>[nodejs] [4-6]</strong>.</p>
+<p><img src="images/10000000000005940000032320B65C37.png" width="500" height="281" style="width:13.22cm;height:7.435cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005940000032320B65C37.png" /></p>
+<p>لتشغيل <strong>[VSCode]</strong> والوصول إلى <strong>[npm]</strong>، سنقوم بتشغيل <strong>[VSCode]</strong> من محطة Laragon. عند تشغيله بهذه الطريقة، سيرث <strong>[VSCode]</strong> مسار PATH الخاص بمحطة Laragon، والذي يحتوي على مجلدي الملفات التنفيذية <strong>[node]</strong> و<strong>[npm]</strong>:</p>
+<p><img src="images/1000000000000751000002CCD6AEAFB8.png" width="562" height="215" style="width:14.863cm;height:5.681cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000751000002CCD6AEAFB8.png" /></p>
+<ul>
+  <li>في <b>[1]</b>: اكتب الأمر<b> [path]</b>؛
+  </li>
+  <li>في <b>[2]</b>: قائمة المجلدات الموجودة في مسار PATH. نرى مجلد<b> [node-v10] [2]</b>، مما يضمن العثور على الملفات التنفيذية <b>[node] </b>و<b>[npm]</b>؛
+  </li>
+</ul>
+
+<p>يتم تشغيل <strong>[VSCode]</strong> من محطة Laragon باستخدام الأمر <strong>[code]</strong>:</p>
+<p><img src="images/10000000000006240000015D9AFE81A9.png" width="550" height="122" style="width:14.559cm;height:3.231cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006240000015D9AFE81A9.png" /></p>
+<ul>
+  <li>في <b>[2]</b>، افتح محطة PowerShell في <b>[VSCode]</b>؛
+  </li>
+  <li>في <b>[3-4]</b>، يمكنك رؤية أن الملفات التنفيذية <b>[node] </b>و <b>[npm] </b>متاحة؛
+  </li>
+</ul>
+
+<p><strong>ملاحظة</strong>: لا تغلق محطة Laragon التي أطلقت بيئة التطوير <strong>[VSCode]</strong>، وإلا سيتم إغلاق VSCode نفسه.</p>
+<p>سنقوم بإجراء تكوين أخير: سنقوم بتغيير محطة العمل الافتراضية لـ <strong>[VSCode]</strong>:</p>
+<p><img src="images/10000000000007D40000014B0FA726FE.png" width="601" height="99" style="width:15.91cm;height:2.628cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007D40000014B0FA726FE.png" /></p>
+<p><img src="images/1000000000000423000001451BF4678C.png" width="371" height="114" style="width:9.813cm;height:3.013cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000423000001451BF4678C.png" /></p>
+<p>يتم تحديث ملف <strong>[settings.json]</strong> على الفور:</p>
+<p><img src="images/1000000000000628000001AD7E4B77E8.png" width="552" height="150" style="width:14.593cm;height:3.972cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000628000001AD7E4B77E8.png" /></p>
+<p>الآن، لنفتح محطة <strong>[VSCode]</strong> جديدة <strong>[1]</strong>:</p>
+<p><img src="images/100000000000090E000002A0C905833B.png" width="579" height="168" style="width:15.332cm;height:4.445cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000090E000002A0C905833B.png" /></p>
+<ul>
+  <li>في <b>[2]</b>، محطة<b> [cmd] </b>(وليس PowerShell)؛
+  </li>
+  <li>في <b>[3]</b>، يعرض الأمر<b> [path] </b>مسار PATH الخاص بالمحطة الطرفية؛
+  </li>
+  <li>في <b>[4]</b>، يمكنك رؤية مجلدي الملفات التنفيذية <b>[node] </b>و <b>[npm] </b>بوضوح
+  </li>
+</ul>
+<h3 id="222-visual-studio-code">2.2.2. <span style="color: #4f81bd">إضافة ملحقات إلى Visual Studio Code</span></h3>
+<p>لنقم بإنشاء ملف JavaScript باستخدام <strong>[VSCode]</strong>:</p>
+<p><img src="images/10000000000005190000010B180B6943.png" width="522" height="107" style="width:13.809cm;height:2.826cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005190000010B180B6943.png" /></p>
+<p><img src="images/10000000000005DA0000025BB4FD2951.png" width="599" height="241" style="width:15.85cm;height:6.38cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DA0000025BB4FD2951.png" /></p>
+<ul>
+  <li>في <b>[3-4]</b>، نقوم بإنشاء مجلد؛
+  </li>
+  <li>في <b>[5]</b>، نضبطه كمجلد حالي في <b>[VSCode]</b>؛
+  </li>
+  <li>في <b>[6]</b>، افتح محطة طرفية؛
+  </li>
+  <li>في <b>[7]</b>، يمكنك أن ترى أنك الآن في المجلد المحدد. سيتم تنفيذ الخطوات التالية في هذا المجلد؛
+  </li>
+</ul>
+
+<p><img src="images/100000000000058F000000EE15D6877B.png" width="640" height="107" style="width:16.94cm;height:2.833cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000058F000000EE15D6877B.png" /></p>
+<ul>
+  <li>في <b>[1-3]</b>: قم بإنشاء مجلد جديد؛
+  </li>
+  <li>في <b>[4]</b>: أضف ملفًا إلى هذا المجلد؛
+  </li>
+</ul>
+
+<p><img src="images/100000000000051200000101A629280C.png" width="584" height="116" style="width:15.452cm;height:3.059cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000051200000101A629280C.png" /></p>
+<ul>
+  <li>في <b>[5-7]</b>: قم بإنشاء أول برنامج JavaScript الخاص بك؛
+  </li>
+</ul>
+
+<p><img src="images/10000000000005F4000000FA91BA1D06.png" width="686" height="113" style="width:18.15cm;height:2.977cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005F4000000FA91BA1D06.png" /></p>
+<ul>
+  <li>في <b>[8-9]</b>: قم بتشغيل برنامج JavaScript؛
+  </li>
+  <li>تظهر النتيجة في وحدة التحكم في التنفيذ <b>[10]</b>. في <b>[11]، </b>نرى الأمر الذي تم تنفيذه: قام تطبيق<b> [node] </b>بتنفيذ البرنامج النصي<b> [test-01.js]</b>. كان ذلك ممكنًا لأن هذا الملف القابل للتنفيذ موجود في مسار<b> [VSCode]</b>؛ وإلا لكنا تلقينا خطأً يشير إلى أن الأمر<b> [node] </b>غير معروف؛
+  </li>
+</ul>
+
+<p>لنواصل بنفس الطريقة لتشغيل نص برمجي ثانٍ <strong>[test-02.js]</strong>:</p>
+<p><img src="images/10000000000006BB000003E9B21EBE8A.png" width="517" height="300" style="width:13.681cm;height:7.948cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006BB000003E9B21EBE8A.png" /></p>
+<ul>
+  <li>في <b>[1-3]</b>، تم تعريف البرنامج النصي الجديد. تتطلب عبارة<b> [use strict] </b>في السطر 1 فحصًا صارمًا للبناء النحوي. في هذا السياق، يجب إعلان كل متغير باستخدام إحدى الكلمات الرئيسية <b>[let، const، var]</b>. وهذا ليس هو الحال بالنسبة للمتغير <b>[x] </b>في السطر 2؛
+  </li>
+  <li>عندما نقوم بتشغيل هذا الكود باستخدام <b>[Ctrl-F5]</b>، نحصل على الخطأ <b>[5]</b>. من الممكن الحصول على تحذير بشأن هذا النوع من الأخطاء قبل التنفيذ. وهذا هو الأفضل. سنقوم بأمرين:
+    <ul>
+      <li>تثبيت مكتبة تسمى <b>[eslint] </b>باستخدام <b>[npm] </b>تتحقق مما إذا كانت صيغة البرنامج النصي تتوافق مع معيار ECMAScript 6؛
+      </li>
+      <li>تثبيت ملحق Visual Studio Code، يُسمى أيضًا ESLINT، والذي يسهل استخدام مكتبة<b> [eslint] </b>داخل <b>[VSCode]</b>؛
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>أولاً، دعونا نثبّت مكتبة JavaScript <strong>[eslint]</strong> باستخدام أداة <strong>[npm]</strong>. لتثبيت مكتبة <strong>[npm]</strong> (المعروفة باسم الحزمة)، تحتاج إلى معرفة اسمها الدقيق. إذا كنت لا تعرفه، يمكنك الانتقال إلى موقع <strong>[npm]</strong> على الرابط (2019) <strong>[https://www.npmjs.com/]</strong>:</p>
+<p><img src="images/10000000000005EE00000222D0B899C3.png" width="607" height="218" style="width:16.06cm;height:5.777cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005EE00000222D0B899C3.png" /></p>
+<ul>
+  <li>في <b>[3]</b>، الحزم التي تبدأ بـ <b>[esl]</b>؛
+  </li>
+  <li>في <b>[4-6]</b>، ستجد حزمة<b> [eslint]</b>؛
+  </li>
+</ul>
+
+<p><img src="images/10000000000005DF000004B536C182C3.png" width="451" height="361" style="width:11.929cm;height:9.564cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DF000004B536C182C3.png" /></p>
+<ul>
+  <li>في <b>[7]</b>، الأمر<b> [npm] </b>لتثبيت حزمة<b> [eslint]</b>؛
+  </li>
+  <li>في <b>[8]</b>، تكوين الحزمة؛
+  </li>
+  <li>في <b>[9]</b>، كيفية استخدامها للتحقق من صحة بناء جملة نص برمجي JavaScript؛
+  </li>
+</ul>
+
+<p>نقوم بتثبيت حزمة <strong>[eslint]</strong> في نافذة <strong>[Terminal]</strong> في <strong>[VSCode]</strong>. أولاً، نحتاج إلى إنشاء ملف <strong>[package.json]</strong> في جذر دليل العمل <strong>[VSCode]</strong>. سيحتوي هذا الملف على قائمة حزم JavaScript المستخدمة في مشروع <strong>[VSCode]</strong>:</p>
+<p><img src="images/100000000000064100000169A1FABEA2.png" width="640" height="144" style="width:16.94cm;height:3.821cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000064100000169A1FABEA2.png" /></p>
+<ul>
+  <li>في <b>[1]</b>، انقر بزر الماوس الأيمن في مستكشف المشروع (وليس على مجلد الاختبارات)؛
+  </li>
+  <li>في <b>[3-4]</b>، قم بإنشاء ملف<b> [package.json] </b>في جذر مشروع<b> [JavaScript]</b>، على نفس مستوى مجلد<b> [tests] </b>(ولكن ليس داخل <b>[tests]</b>)؛
+  </li>
+  <li>في <b>[4-6]</b>، أضف كائن JSON فارغًا إلى ملف<b> [package.json]</b>؛
+  </li>
+</ul>
+
+<p>ثم افتح محطة <strong>[VSCode]</strong> لتثبيت <strong>[eslint]</strong>:</p>
+<p><img src="images/100000000000062900000110F59B17DB.png" width="631" height="109" style="width:16.692cm;height:2.879cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000062900000110F59B17DB.png" /></p>
+<ul>
+  <li>في <b>[2]</b>، أنت في جذر مشروع<b> [javascript]</b>؛
+  </li>
+  <li>في <b>[3]</b>، الأمر الذي يقوم بتثبيت حزمة<b> [eslint]</b>؛
+  </li>
+  <li>بعد التنفيذ،
+    <ul>
+      <li>في <b>[4-5]</b>، تم تعديل ملف<b> [package.json]</b>. يظهر السطر 3 إصدار <b>[eslint] </b>المثبت. السطر 2، <b>[devDependencies]</b>، يتوافق مع الخيار<b> [--save-dev] </b>المستخدم أثناء التثبيت. تعني هذه الحجة أن التبعية المثبتة يجب أن تكون مدرجة في ملف<b> [package.json] </b>كجزء من خاصية<b> [devDependencies]</b>. تسرد هذه الخاصية تبعيات المشروع المطلوبة في وضع التطوير ولكن ليس في وضع الإنتاج. في الواقع، لا تكون تبعية<b> [eslint] </b>مطلوبة إلا أثناء التطوير للتحقق من أن الكود المكتوب يتوافق مع معيار ECMAScript؛
+      </li>
+      <li>في <b>[6]</b>، ظهر مجلد<b> [node_modules] </b>في المشروع. هذا هو المجلد الذي يتم فيه تثبيت تبعيات المشروع؛
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="images/10000000000001A700000393F9E4EDBB.png" width="148" height="320" style="width:3.919cm;height:8.477cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A700000393F9E4EDBB.png" /></p>
+<ul>
+  <li>في <b>[7]</b>، بعض الحزم المثبتة. هناك عدد غير قليل منها. في الواقع، لم يتم تثبيت حزمة<b> [eslint] </b>فحسب، بل تم أيضًا تثبيت جميع الحزم التي تعتمد عليها؛
+  </li>
+</ul>
+
+<p><img src="images/100000000000061600000238E3D7FE6D.png" width="623" height="227" style="width:16.491cm;height:6.011cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000061600000238E3D7FE6D.png" /></p>
+<ul>
+  <li><b>[1-2]</b>، في محطة<b> [VSCode]</b>، قم بتشغيل الأمر لتكوين حزمة<b> [eslint]</b>. سيطرح هذا الأمر عدة أسئلة <b>[3] </b>لتحديد كيفية استخدام <b>[eslint]</b>. إذا كنت في شك، اترك الخيارات الافتراضية كما هي. لاختيار خيار، استخدم مفتاحي السهمين لأعلى ولأسفل على لوحة المفاتيح لاختيار الخيار ثم تأكيده؛
+  </li>
+  <li>في <b>[4]</b>، تم إنشاء ملف<b> [.eslintrc.js] </b>في جذر المشروع؛
+  </li>
+  <li>في <b>[6]</b>، محتويات الملف. يمكنك نسخ المحتويات إلى ملفك الخاص؛
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
+<span class="odt-code-line"><span class="odt-code-line-content">module.exports = {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#a31515">&quot;env&quot;</span><span style="color:#000000">: {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#a31515">&quot;browser&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">true</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#a31515">&quot;es6&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">true</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#a31515">&quot;extends&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;eslint:recommended&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#a31515">&quot;globals&quot;</span><span style="color:#000000">: {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#a31515">&quot;Atomics&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;readonly&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#a31515">&quot;SharedArrayBuffer&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;readonly&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#a31515">&quot;parserOptions&quot;</span><span style="color:#000000">: {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#a31515">&quot;ecmaVersion&quot;</span><span style="color:#000000">: 2018,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#a31515">&quot;sourceType&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;module&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#a31515">&quot;rules&quot;</span><span style="color:#000000">: {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+</code></pre></div>
+
+<p>هذا لا يكفي للإبلاغ عن الأخطاء في ملف <strong>[test-02.js]</strong>:</p>
+<p><img src="images/10000000000005D20000013B8E6ACD0B.png" width="596" height="126" style="width:15.769cm;height:3.334cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005D20000013B8E6ACD0B.png" /></p>
+<ul>
+  <li>يجب عليك كتابة الأمر <b>[2-3] </b>حتى يتم تحليل الملف <b>[tests/test-02.js]</b>؛
+  </li>
+  <li>في <b>[4]</b>، يتم الكشف عن الخطأ المتعلق بالمتغير غير المعلن؛
+  </li>
+</ul>
+
+<p>سنضيف ملحقًا إلى <strong>[VSCode]</strong> سيسمح لنا برؤية أخطاء JavaScript في الوقت الفعلي. يعتمد هذا الملحق على حزمة <strong>[eslint]</strong> التي قمنا بتثبيتها:</p>
+<p><img src="images/10000000000004EF000001CF056C9AF9.png" width="505" height="185" style="width:13.37cm;height:4.902cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004EF000001CF056C9AF9.png" /></p>
+<ul>
+  <li>في <b>[3-5]</b>، نقوم بتثبيت الملحق المسمى <b>[ESLint]</b>؛
+  </li>
+</ul>
+
+<p><img src="images/10000000000003F4000002F6870BF687.png" width="405" height="303" style="width:10.71cm;height:8.022cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003F4000002F6870BF687.png" /></p>
+<ul>
+  <li>في <b>[1]</b>، تظهر صفحة معلومات حول الملحق الذي تم تثبيته حديثًا؛
+  </li>
+  <li>في <b>[2]</b>، يمكننا أن نرى أن وضع التحقق من صحة<b> [ESLint] </b>هو <b>[type]</b>، مما يعني أنه سيتم التحقق من صحة بناء جملة نصوص JavaScript أثناء كتابة النص؛
+  </li>
+</ul>
+
+<p>يمكن تكوين ESLint عبر ملف التكوين العام لـ <strong>[VSCode]</strong>:</p>
+<p><img src="images/10000000000005E00000029178AD06F1.png" width="602" height="263" style="width:15.923cm;height:6.957cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005E00000029178AD06F1.png" /></p>
+<ul>
+  <li>في <b>[6-7]</b>، تكوين<b> [ESLint]</b>. هنا يمكنك تعديله؛
+  </li>
+</ul>
+
+<p>الآن لنعد إلى ملف <strong>[test-02.js]</strong>:</p>
+<p><img src="images/100000000000051B0000016E5E5A6757.png" width="523" height="146" style="width:13.831cm;height:3.874cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000051B0000016E5E5A6757.png" /></p>
+<ul>
+  <li>في <b>[3-4]</b>، يتم الآن الإبلاغ عن الأخطاء المتعلقة بالمتغير<b> [x]</b>؛
+  </li>
+  <li>في <b>[5]</b>: عدد أخطاء ESLint في الملف؛
+  </li>
+  <li>في <b>[6]</b>، يشير إلى وجود ملفات بها أخطاء في مجلد<b> [tests]</b>؛
+  </li>
+</ul>
+
+<p>إذا قمنا بإصلاح الخطأ، تختفي تحذيرات ESLint:</p>
+<p><img src="images/10000000000003C60000022CE53950D1.png" width="386" height="222" style="width:10.222cm;height:5.883cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003C60000022CE53950D1.png" /></p>
+<p>الآن دعونا نثبّت ملحقًا يُدعى <strong>[Code Runner]</strong>:</p>
+<p><img src="images/1000000000000636000001F9E6EC2E6A.png" width="636" height="202" style="width:16.829cm;height:5.345cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000636000001F9E6EC2E6A.png" /></p>
+<ul>
+  <li>بمجرد تثبيت ملحق<b> [Code-Runner] [1-5]</b>، يمكنك تهيئته باستخدام <b>[6-7] </b>(أعلاه)؛
+  </li>
+</ul>
+
+<p><img src="images/10000000000005A0000002C975973F2B.png" width="576" height="285" style="width:15.242cm;height:7.548cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005A0000002C975973F2B.png" /></p>
+<ul>
+  <li>في <b>[1-2]</b>، خيارات التهيئة لـ <b>[Code-Runner]</b>؛
+  </li>
+  <li>في <b>[3]</b>، نحدد أنه يجب مسح محطة الإخراج قبل كل عملية تنفيذ؛
+  </li>
+  <li>في <b>[4]</b>، حدد عنصر<b> [Executor Map]</b>، الذي يسرد أدوات التنفيذ لمختلف اللغات؛
+  </li>
+  <li>في <b>[5-6]</b>، انسخ التكوين إلى الحافظة؛
+  </li>
+  <li>في <b>[7-8]</b>، نقوم بتعديل ملف<b> [settings.json]</b>؛
+  </li>
+</ul>
+
+<p><img src="images/100000000000061C000002732D031908.png" width="626" height="251" style="width:16.551cm;height:6.636cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000061C000002732D031908.png" /></p>
+<ul>
+  <li>في <b>[2]</b>، أضف فاصلة بعد العنصر الأخير في ملف<b> [settings.json] [1]</b>؛
+  </li>
+  <li>في <b>[3]</b>، الصق ما تم نسخه مسبقًا في <b>[5-6]</b>: هذه هي قائمة الأوامر لتشغيل اللغات المختلفة التي يدعمها <b>[VSCode]</b>؛
+  </li>
+  <li>في <b>[4]</b>، الأمر لتشغيل ملفات JavaScript. هذا لا يعمل إلا إذا كان<b> [node] </b>موجودًا في مسار<b> [VSCode]</b>. إذا لم يكن كذلك، يمكنك إدخال المسار الكامل للملف القابل للتنفيذ <b>[5]</b>؛
+  </li>
+</ul>
+
+<p>الآن دعونا نحفظ التكوين (Ctrl-S). باستخدام ملحق <strong>[Code Runner]</strong>، يمكن تنفيذ ملفات JavaScript بالنقر بزر الماوس الأيمن على الكود <strong>[6]</strong> (أعلاه):</p>
+<p><img src="images/10000000000006E50000023DEA861245.png" width="530" height="172" style="width:14.011cm;height:4.549cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006E50000023DEA861245.png" /></p>
+<h3 id="223-vscode">2.2.3. <span style="color: #4f81bd"><strong>بعض أوامر</strong> [VSCode] <strong>المفيدة</strong></span></h3>
+<ul>
+  <li>لتنسيق الكود، انقر بزر الماوس الأيمن عليه <b>[1]</b>؛
+  </li>
+  <li>لإغلاق النوافذ المفتوحة، انقر بزر الماوس الأيمن على عناوينها <b>[2-3]</b>؛
+  </li>
+</ul>
+
+<p><img src="images/1000000000000525000001F62A0320BB.png" width="527" height="201" style="width:13.942cm;height:5.315cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000525000001F62A0320BB.png" /></p>
+<ul>
+  <li>لعرض نافذة معينة <b>[4-5]</b>؛
+  </li>
+  <li>لحفظ مشروعك (مساحة العمل) <b>[6-9]</b>؛
+  </li>
+  <li>لحفظ مشروع <b>[10-11]</b>؛
+  </li>
+</ul>
+
+<p><img src="images/10000000000004EB00000246E74C9332.png" width="504" height="233" style="width:13.323cm;height:6.16cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004EB00000246E74C9332.png" /></p>
+<p><img src="images/100000000000050F000002E7917BC890.png" width="518" height="297" style="width:13.711cm;height:7.867cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000050F000002E7917BC890.png" /></p>
+<ul>
+  <li>لفتح مشروع <b>[11-16]</b>:
+  </li>
+</ul>
+
+<p><img src="images/10000000000005630000029E2E797027.png" width="552" height="268" style="width:14.593cm;height:7.091cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005630000029E2E797027.png" /></p>
+<ul>
+  <li>عرض الملحقات المثبتة <b>[19-20]</b>:
+  </li>
+</ul>
+
+<p><img src="images/10000000000004EB0000020067EFF25E.png" width="504" height="205" style="width:13.323cm;height:5.419cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004EB0000020067EFF25E.png" /></p>
+<p>لدينا الآن أدوات جيدة للتطوير بلغة JavaScript. سنقدم الآن هذه اللغة باستخدام مقتطفات برمجية قصيرة. ونظرًا لأن هذه المقدمة تأتي بعد دورة تدريبية في لغة PHP، فسوف نقارن بين اللغتين من حين لآخر لإبراز الاختلافات بينهما.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        هذا البرنامج التعليمي الذي كتبه <strong>Serge Tahé</strong> متاح للجمهور وفقًا لشروط
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>

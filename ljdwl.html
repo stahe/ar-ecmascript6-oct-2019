@@ -1,0 +1,1187 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مقدمة إلى ECMASCRIPT 6 من خلال أمثلة">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ar-ecmascript6-oct-2019/ljdwl.html">
+      
+      
+        <link rel="prev" href="ssyt-javascript.html">
+      
+      
+        <link rel="next" href="lkynt-lrfy.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>4. الجداول - مقدمة إلى ECMASCRIPT 6 من خلال أمثلة</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "مقدمة إلى ECMASCRIPT 6 من خلال أمثلة";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="مقدمة إلى ECMASCRIPT 6 من خلال أمثلة" class="md-header__button md-logo" aria-label="مقدمة إلى ECMASCRIPT 6 من خلال أمثلة" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مقدمة إلى ECMASCRIPT 6 من خلال أمثلة
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. الجداول
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الداكن"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الداكن" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الفاتح"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الفاتح" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stahe/ar-ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="مقدمة إلى ECMASCRIPT 6 من خلال أمثلة" class="md-nav__button md-logo" aria-label="مقدمة إلى ECMASCRIPT 6 من خلال أمثلة" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مقدمة إلى ECMASCRIPT 6 من خلال أمثلة
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stahe/ar-ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مرحبًا بكم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mqdm-l-l-ecmascript-6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. مقدمة إلى لغة ECMASCRIPT 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dd-byy-ltwyr.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. إعداد بيئة التطوير
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ssyt-javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. أساسيات JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. الجداول
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ljdwl.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. الجداول
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-tab-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. نص برمجي [tab-01]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-tab-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. نص برمجي [tab-02]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-tab-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. نص برمجي [tab-03]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-tab-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. النص البرمجي [tab-04]
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lkynt-lrfy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. الكائنات الحرفية
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lslsl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. السلاسل
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ltbyrt-ldy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. التعبيرات العادية
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lwyf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. الوظائف
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lkh-wlstthnt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. الأخطاء والاستثناءات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wdt-es6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. وحدات ES6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lbrmj-lqym-l-ldth-wlwyf-yr-lmtzmn.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. البرمجة القائمة على الأحداث والوظائف غير المتزامنة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wyf-http-fy-javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. وظائف HTTP في JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lfyt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. الفئات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ml-http-l-javascript-lkhdm-sb-lryb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. عملاء HTTP لـ JavaScript لخدمة حساب الضرائب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><a id="refheadingtoc2041993980233556"></a></p>
+<h1 id="4">4. <span style="color: #365f91">الجداول</span></h1>
+<p><img src="images/10000000000000F7000000DA0354C5DC.png" width="99" height="87" style="width:2.611cm;height:2.304cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000DA0354C5DC.png" /></p>
+<p><a id="refheadingtoc2042013980233556"></a></p>
+<h2 id="41-tab-01">4.1. <span style="color: #4f81bd"><strong>نص برمجي</strong> [tab-01]</span></h2>
+<p>يوضح البرنامج النصي التالي بعض خصائص مصفوفات JavaScript. تشبه هذه المصفوفات مصفوفات PHP، ولكن مع اختلاف رئيسي واحد: يتم التعامل معها عبر المؤشرات وتُعتبر كائنات.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// an array is an object manipulated via its address</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab1 = </span><span style="font-weight:bold;color:#000000">[1, 2, 3]</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// address copying</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab2 = tab1;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// tab1 and tab2 point to the same table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1===tab2 :&quot;</span><span style="color:#000000">, tab1 === tab2);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// the table can be modified using either tab1 or tab2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab2<span style="font-weight:bold">[1]</span> = 10;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1=&quot;</span><span style="color:#000000">, tab1);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span></span>
+</code></pre></div>
+
+<p><strong>التنفيذ</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-01.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab1===tab2 : true</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab1= <span style="font-weight:bold">[ 1, 10, 3 ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab2= <span style="font-weight:bold">[ 1, 10, 3 ]</span></span></span>
+</code></pre></div>
+
+<p><strong>تعليقات</strong></p>
+<ul>
+  <li>يُظهر السطر 2 من النتائج أن <b>[tab1] </b>و <b>[tab2] </b>هما كيانان متساويان، بل في الواقع مؤشران متساويان؛
+  </li>
+  <li>يُظهر السطران 4 و 5 من النتائج أن هذين المؤشرين يشيران إلى نفس المصفوفة؛
+  </li>
+</ul>
+<p><a id="refheadingtoc2042033980233556"></a></p>
+<h2 id="42-tab-02">4.2. <span style="color: #4f81bd"><strong>نص برمجي</strong> [tab-02]</span></h2>
+<p>يوضح هذا البرنامج النصي أن مصفوفات JavaScript تختلف عن المصفوفات في اللغات المُجمَّعة.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = [];</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#a31515">&quot;, longueur=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.length, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// element initialization</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab<span style="font-weight:bold">[3]</span> = 100;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">tab</span><span style="font-weight:bold;color:#000000">[1]</span><span style="color:#000000"> = </span><span style="color:#a31515">&quot;huit&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#a31515">&quot;, longueur=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.length, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// toString</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab.toString=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.toString(), &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// the keys to the picture are its indices</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> key </span><span style="color:#0000ff">of</span><span style="color:#000000"> tab.keys()) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;clé=</span><span style="font-weight:bold;color:#a31515">[&quot;, key, &quot;]</span><span style="color:#a31515">, valeur=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab[key]</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;]&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// table values</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> value </span><span style="color:#0000ff">of</span><span style="color:#000000"> tab.values()) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;valeur=</span><span style="font-weight:bold;color:#a31515">[&quot;, value, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<ul>
+  <li>السطر 4: مصفوفة فارغة؛
+  </li>
+  <li>السطر 8: المصفوفة ليس لها حجم ثابت. إنها ببساطة سلسلة من العناصر المفهرسة برقم. يمكنك تهيئة العنصر رقم 3 حتى لو لم يتم تعريف العناصر <b>[0، 1، 2] </b>بعد؛
+  </li>
+  <li>الأسطر 16–24: يتصرف مصفوفة JavaScript بشكل مشابه لمصفوفة PHP؛
+  </li>
+</ul>
+
+<p><strong>التنفيذ</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-02.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab= <span style="font-weight:bold">[] , longueur=[ 0 ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab= <span style="font-weight:bold">[ &lt;1 empty item&gt;, &#x27;huit&#x27;, &lt;1 empty item&gt;, 100 ]</span> , longueur=<span style="font-weight:bold">[ 4 ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab.toString=<span style="font-weight:bold">[ ,huit,,100 ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">clé=<span style="font-weight:bold">[ 0 ]</span>, valeur=<span style="font-weight:bold">[ undefined ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">clé=<span style="font-weight:bold">[ 1 ]</span>, valeur=<span style="font-weight:bold">[ huit ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">clé=<span style="font-weight:bold">[ 2 ]</span>, valeur=<span style="font-weight:bold">[ undefined ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">clé=<span style="font-weight:bold">[ 3 ]</span>, valeur=<span style="font-weight:bold">[ 100 ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">-------------------------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">valeur=<span style="font-weight:bold">[ undefined ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">valeur=<span style="font-weight:bold">[ huit ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">valeur=<span style="font-weight:bold">[ undefined ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">valeur=<span style="font-weight:bold">[ 100 ]</span></span></span>
+</code></pre></div>
+
+<p><a id="refheadingtoc2042053980233556"></a></p>
+<h2 id="43-tab-03">4.3. <span style="color: #4f81bd"><strong>نص برمجي</strong> [tab-03]</span></h2>
+<p>يوضح هذا البرنامج النصي طرقًا مختلفة لاستخدام كائن <strong>[array]</strong>.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// a table can contain different types of data</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = </span><span style="font-weight:bold;color:#000000">[1, 2, &quot;un&quot;, &quot;deux&quot;, true, [10, 20]</span><span style="color:#000000">, { prop1: 10, prop2: </span><span style="color:#a31515">&quot;abc&quot;</span><span style="color:#000000"> }];</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// console.log can display the contents of an array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">show(1);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">show(2);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// table path with foreach</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab.forEach(element =&gt; {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (element));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">show(</span><span style="color:#a31515">&quot;2b&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// another script to do the same thing</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">tab.forEach(</span><span style="color:#0000ff">function</span><span style="color:#000000"> (element) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (element));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">show(3);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// table route with for</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; tab.length; i++) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;i=&quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;tab</span><span style="font-weight:bold;color:#a31515">[i]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, tab</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">show(4);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// change tab[i]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab<span style="font-weight:bold">[5]</span> = [];</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// display</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">show(5);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// remove the last element</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> element = tab.pop(tab);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">show(6);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// add an element to the end of the array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">tab.push(</span><span style="color:#a31515">&#x27;xyz&#x27;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">show(7);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// add an element at the beginning of the array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab.unshift(1000);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">show(8);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// remove the 1st element from the array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">element = tab.shift();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">show(9);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// remove element no. 2 from the table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">element = tab.splice(2, 1);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">show(10);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// remove two elements from the table, starting with element no. 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">element = tab.splice(1, 2);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> show(param) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[&quot;, param, &quot;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p><strong>تعليقات</strong></p>
+<ul>
+  <li>يوضح السطران 3 و 24 الفرق بين مصفوفات PHP ومصفوفات JavaScript:
+    <ul>
+      <li>يُعلن السطر 3 المتغير <b>[tab] </b>كثابت؛
+      </li>
+      <li>السطر 24 يعدل العنصر tab<b>[5]</b>؛
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>في السطر 3، يُعلن المؤشر الذي يشير إلى المصفوفة كثابت، وليس المصفوفة نفسها. يمكن تعديل المصفوفة نفسها.</p>
+<ul>
+  <li>السطور 14-16: يتم تكرار المصفوفة<b> [tab] </b>باستخدام طريقة<b> [forEach] </b>الخاصة بالمصفوفة<b> [tab]</b>. تأخذ هذه الطريقة كمعلمة تعريف دالة، والتي يمكن تسميتها دالة حرفية. تأخذ هذه الدالة معلمة واحدة: العنصر الحالي من المصفوفة<b> [tab]</b>. يتم استدعاء الدالة لكل عنصر من عناصر المصفوفة. هذا النوع من بناء الجملة شائع في JavaScript؛
+  </li>
+  <li>السطور 9-10: نستخدم بناء جملة مختلفًا لتعريف الدالة. بدلاً من كتابة:
+    <ul>
+      <li>function(p1, p2, …, pn){….}
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>نكتب:</p>
+<ul>
+  <li>(تابع)
+    <ul>
+      <li><b>(p1,p2, ..,pn)=&gt;{.…}</b>. وهذا ما يُسمى بـ&quot;ترميز السهم&quot;؛
+      </li>
+    </ul>
+  </li>
+  <li>يتم شرح بقية الكود من خلال التعليقات؛
+  </li>
+</ul>
+
+<p>من هذا البرنامج النصي، لاحظ أن:</p>
+<ul>
+  <li>المصفوفة هي كائن يُشار إليه بواسطة مؤشر؛
+  </li>
+  <li>هذا الكائن له طرق <b>[forEach، pop، push، shift، unshift]</b>؛
+  </li>
+</ul>
+<p><a id="refheadingtoc2042073980233556"></a></p>
+<h2 id="44-tab-04">4.4. <span style="color: #4f81bd"><strong>النص البرمجي</strong> [tab-04]</span></h2>
+<p>يقدم هذا البرنامج النصي طرقًا أخرى لكائنات المصفوفات.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// table manipulation method</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// a picture</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = [];</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  tab<span style="font-weight:bold">[i]</span> = i * 10;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// display</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// map</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab2 = tab.map(element =&gt; {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> { prop1: element, prop2: element * element }</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// display</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// reduce without initial value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> somme = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;somme tab=&quot;</span><span style="color:#000000">, somme);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// reduce with initial value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> somme2 = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue, 10);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;somme2 tab=&quot;</span><span style="color:#000000">, somme2);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// filter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab4 = tab.filter((element) =&gt; {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (element &gt; 50) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> element;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab4=&quot;</span><span style="color:#000000">, tab4);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// find</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> element1 = tab.find((element) =&gt; (element &gt; 20));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément1=&quot;</span><span style="color:#000000">, element1);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// findIndex</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> index1 = tab.findIndex((element) =&gt; (element === 20));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index1 20=&quot;</span><span style="color:#000000">, index1);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// indexOf</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> index2 = tab.indexOf(30);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index2 30=&quot;</span><span style="color:#000000">, index2);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> index3 = tab.indexOf(31);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index3 31=&quot;</span><span style="color:#000000">, index3);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// lastIndexOf</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> index4 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.lastIndexOf(4);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index4 4=&quot;</span><span style="color:#000000">, index4);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// spell</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab5 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab5=&quot;</span><span style="color:#000000">, tab5);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// reverse spell</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab6 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort((e1, e2) =&gt; {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (e1 &gt; e2) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> -1;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">else</span><span style="color:#000000"> </span><span style="color:#0000ff">if</span><span style="color:#000000"> (e1 === e2) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> 0;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> +1;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab6=&quot;</span><span style="color:#000000">, tab6);</span></span></span>
+</code></pre></div>
+
+<p><strong>تعليقات</strong></p>
+<ul>
+  <li>الأسطر 13–15: تأخذ طريقة<b> [map] </b>دالة تحويل كمعلمة. يتم استدعاء هذه الدالة بشكل متكرر لكل عنصر في المصفوفة. وهي مسؤولة عن تحويل العنصر إلى شيء آخر — في هذه الحالة، كائن له الخصائص <b>[prop1, prop2]</b>. تُرجع طريقة<b> [map] </b>مصفوفة جديدة. تظل المصفوفة الأصلية دون تغيير:
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">tab= <span style="font-weight:bold">[ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90 ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">tab2= [ { prop1: 0, prop2: 0 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{ prop1: 10, prop2: 100 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{ prop1: 20, prop2: 400 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{ prop1: 30, prop2: 900 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{ prop1: 40, prop2: 1600 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{ prop1: 50, prop2: 2500 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{ prop1: 60, prop2: 3600 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{ prop1: 70, prop2: 4900 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{ prop1: 80, prop2: 6400 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{ prop1: 90, prop2: 8100 } ]</span></span>
+</code></pre></div>
+
+<ul>
+  <li>السطر 20: تأخذ طريقة<b> [reduce] </b>كمعلمة دالة ذات حجتين يتم استدعاؤها بشكل متكرر لكل عنصر في المصفوفة. تأخذ هذه الدالة حجتين:
+    <ul>
+      <li><b>[currentValue] </b>هو العنصر الحالي في المصفوفة؛
+      </li>
+      <li><b>[accumulator] </b>هي النتيجة الأخيرة التي حصلت عليها الدالة. إذا لم يتم توفير قيمة أولية لهذا المجمع، فستكون 0؛
+      </li>
+      <li>عند استدعاء دالة التراكم للمرة الأولى، فإنها تُرجع <b>[0+tab[0]</b>]. يتم تعيين هذه القيمة للمُجمِّع؛
+      </li>
+      <li>في المرة الثانية، تُرجع المجمع + tab<b>[1]</b>، أي tab<b>[0] </b>+ tab<b>[1]</b>؛
+      </li>
+      <li>في المرة الثالثة، تُرجع المجمع + tab<b>[2]</b>، أي tab<b>[0] </b>+ tab<b>[1] </b>+ tab<b>[2]</b>؛
+      </li>
+      <li>وهكذا دواليك. في النهاية، سيمثل المجمع مجموع جميع العناصر في المصفوفة <b>[tab]</b>؛
+      </li>
+    </ul>
+  </li>
+  <li>السطر 26: تأخذ طريقة<b> [filter] </b>دالة تصفية كمعلمة. يتم استدعاء هذه الدالة بشكل متكرر لكل عنصر في المصفوفة وتتلقى هذا العنصر كمعلمة. يجب أن ترجع:
+    <ul>
+      <li><b>[true] </b>إذا كان يجب الاحتفاظ بالعنصر؛
+      </li>
+      <li><b>[false] </b>في الحالات الأخرى؛
+      </li>
+    </ul>
+  </li>
+  <li>السطر 33: تأخذ طريقة<b> [find] </b>دالة بحث كمعلمة. يتم استدعاء هذه الدالة بشكل متكرر لكل عنصر في المصفوفة وتستقبل ذلك العنصر كمعلمة. يجب أن ترجع <b>[true] </b>إذا كان العنصر المستلم يفي بمعايير البحث. ثم يتوقف البحث. وبالتالي، ترجع طريقة<b> [find] </b>عنصرًا واحدًا أو صفرًا؛
+  </li>
+  <li>السطر 36: تعمل طريقة<b> [findIndex] </b>مثل طريقة<b> [find]</b>، ولكن بدلاً من إرجاع العنصر الذي تم العثور عليه، فإنها ترجع مؤشره في المصفوفة؛
+  </li>
+  <li>السطران 39 و41: تبحث طريقة<b> [indexOf(value)] </b>عن <b>[value] </b>في المصفوفة وتُرجع رقمها الترتيبي، أو -1 إذا لم يتم العثور عليها؛
+  </li>
+  <li>السطر 44: تعمل الطريقة<b> [lastIndexOf(value)] </b>مثل الطريقة<b> [indexOf(value)] </b>ولكنها تبدأ البحث من نهاية المصفوفة؛
+  </li>
+  <li>السطر 47: تُرجع طريقة<b> [sort] </b>بدون معلمات مصفوفة مرتبة بالترتيب الطبيعي (أرقام، سلاسل)؛
+  </li>
+  <li>السطر 50: عندما لا يكون الترتيب الطبيعي مناسبًا، يجب تمرير دالة ذات معلمتين (e1، e2) إلى دالة<b> [sort]</b>، والتي ترجع:
+    <ul>
+      <li>+1 إذا كان يجب فرز e1 بعد e2؛
+      </li>
+      <li>-1 إذا كان يجب فرز e1 قبل e2؛
+      </li>
+      <li>0 إذا كان يجب أن يكون لكلا العنصرين نفس الترتيب؛
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>يتم استدعاء الدالة التي تم تمريرها كمعلمة إلى طريقة <strong>[sort]</strong> بشكل متكرر من قبلها لمقارنة عنصرين من المصفوفة؛</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        هذا البرنامج التعليمي الذي كتبه <strong>Serge Tahé</strong> متاح للجمهور وفقًا لشروط
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
