@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -809,15 +811,15 @@
 
 <p><a id="refheadingtoc2042253980233556"></a></p>
 <h1 id="6">6. <span style="color: #365f91">السلاسل</span></h1>
-<p>تشبه سلاسل JavaScript إلى حد كبير تلك الموجودة في PHP.</p>
+<p>تشبه سلاسل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> إلى حد كبير تلك الموجودة في <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi></p>
 <p><img src="images/10000000000000C9000001318D77205E.png" width="81" height="122" style="width:2.133cm;height:3.237cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C9000001318D77205E.png" /></p>
 <p><a id="refheadingtoc2042273980233556"></a></p>
-<h2 id="61-str-01">6.1. <span style="color: #4f81bd"><strong>نص برمجي</strong> [str-01]</span></h2>
+<h2 id="61-str-01">6.1. <span style="color: #4f81bd"><strong>نص برمجي</strong> [<bdi dir="ltr" class="odt-ltr-term">str-01</bdi>]</span></h2>
 <p>أول شيء يجب فهمه هو أنه بمجرد إنشاء سلسلة، لا يمكن تعديلها بعد ذلك. هناك العديد من الطرق المتاحة لإنشاء سلسلة جديدة من السلسلة الأصلية، لكن السلسلة الأصلية تظل دون تغيير. علاوة على ذلك، يمكن أن تكون السلسلة من نوعين:</p>
 <ul>
-  <li><b>[string] </b>عندما يتم تهيئتها بقيمة نصية ثابتة؛
+  <li><b>[<bdi dir="ltr" class="odt-ltr-term">string</bdi>] </b>عندما يتم تهيئتها بقيمة نصية ثابتة؛
   </li>
-  <li><b>[object] </b>عندما يتم إنشاؤها كمثيل لفئة<b> [String]</b>؛
+  <li><b>[<bdi dir="ltr" class="odt-ltr-term">object</bdi>] </b>عندما يتم إنشاؤها كمثيل لفئة<b> [<bdi dir="ltr" class="odt-ltr-term">String</bdi>]</b>؛
   </li>
 </ul>
 
@@ -848,7 +850,7 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc2042293980233556"></a></p>
-<h2 id="62-str-02">6.2. <span style="color: #4f81bd"><strong>نص برمجي</strong> [str-02]</span></h2>
+<h2 id="62-str-02">6.2. <span style="color: #4f81bd"><strong>نص برمجي</strong> [<bdi dir="ltr" class="odt-ltr-term">str-02</bdi>]</span></h2>
 <p>يوضح هذا البرنامج النصي أنه يمكن إنشاء سلسلة بطريقتين.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -874,9 +876,9 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 6: الطريقة القياسية لتعريف سلسلة. سيكون<b> [string1] </b>من النوع <b>[string]</b>؛
+  <li>السطر 6: الطريقة القياسية لتعريف سلسلة. سيكون<b> [<bdi dir="ltr" class="odt-ltr-term">string1</bdi>] </b>من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">string</bdi>]</b>؛
   </li>
-  <li>السطر 10: يمكن إنشاء سلسلة باستخدام منشئ فئة<b> [String]</b>. سيكون<b> [string2] </b>من النوع <b>[object]</b>؛
+  <li>السطر 10: يمكن إنشاء سلسلة باستخدام منشئ فئة<b> [<bdi dir="ltr" class="odt-ltr-term">String</bdi>]</b>. سيكون<b> [<bdi dir="ltr" class="odt-ltr-term">string2</bdi>] </b>من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">object</bdi>]</b>؛
   </li>
 </ul>
 
@@ -890,9 +892,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content">chaîne2.length= 4</span></span>
 </code></pre></div>
 
-<p>يستفيد النوع <strong>[string]</strong> من أساليب فئة <strong>[String]</strong>.</p>
+<p>يستفيد النوع <strong>[<bdi dir="ltr" class="odt-ltr-term">string</bdi>]</strong> من أساليب فئة <strong>[<bdi dir="ltr" class="odt-ltr-term">String</bdi>]</strong>.</p>
 <p><a id="refheadingtoc2042313980233556"></a></p>
-<h2 id="63-str-03">6.3. <span style="color: #4f81bd"><strong>نص برمجي</strong> [str-03]</span></h2>
+<h2 id="63-str-03">6.3. <span style="color: #4f81bd"><strong>نص برمجي</strong> [<bdi dir="ltr" class="odt-ltr-term">str-03</bdi>]</span></h2>
 <p>يعرض هذا البرنامج النصي سلسلة معينة باستخدام الاستيفاء المتغير.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -906,7 +908,7 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 6: من الممكن أن تحتوي السلاسل على تعبيرات ${variable} التي يتم استبدالها بقيمة المتغير. وهذا يتبع نفس منطق متغيرات $ في سلاسل PHP. لاحظ صيغة مثل هذه السلسلة: فهي محاطة بعلامات اقتباس مائلة (AltGr-7 على لوحة المفاتيح الفرنسية)؛
+  <li>السطر 6: من الممكن أن تحتوي السلاسل على تعبيرات ${<bdi dir="ltr" class="odt-ltr-term">variable</bdi>} التي يتم استبدالها بقيمة المتغير. وهذا يتبع نفس منطق متغيرات $ في سلاسل <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi> لاحظ صيغة مثل هذه السلسلة: فهي محاطة بعلامات اقتباس مائلة (<bdi dir="ltr" class="odt-ltr-term">AltGr-7</bdi> على لوحة المفاتيح الفرنسية)؛
   </li>
 </ul>
 
@@ -917,8 +919,8 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc2042333980233556"></a></p>
-<h2 id="64-str-04">6.4. <span style="color: #4f81bd"><strong>نص برمجي</strong> [str-04]</span></h2>
-<p>لا تزال السلسلة التي تحتوي على استيفاء متغير غير كافية. لا يمكن استبدال المتغير في تعبير ${variable} بتعبير آخر. بالنسبة لأولئك الذين برمجوا بلغة C، لا يوجد ما يضاهي وظائف <strong>[printf، sprintf]</strong> لكتابة أو إنشاء سلاسل منسقة. أنشأ مئات المطورين آلاف حزم JavaScript، مما شكل نظامًا بيئيًا واسعًا. عندما تكون لديك حاجة لا تلبيها JavaScript أصلاً، فقد حان الوقت للبحث عن حزمة تلبيها. للقيام بذلك، نستخدم مدير الحزم <strong>[npm]</strong>. يحتوي على خيار <strong>[search]</strong> الذي يسمح لك بالبحث عن سلسلة داخل أوصاف الحزم. يعرض <strong>[npm]</strong> قائمة بالحزم المطابقة للبحث. لذلك سنبحث عن السلسلة <strong>[sprintf]</strong> في أوصاف الحزم:</p>
+<h2 id="64-str-04">6.4. <span style="color: #4f81bd"><strong>نص برمجي</strong> [<bdi dir="ltr" class="odt-ltr-term">str-04</bdi>]</span></h2>
+<p>لا تزال السلسلة التي تحتوي على استيفاء متغير غير كافية. لا يمكن استبدال المتغير في تعبير ${<bdi dir="ltr" class="odt-ltr-term">variable</bdi>} بتعبير آخر. بالنسبة لأولئك الذين برمجوا بلغة <bdi dir="ltr" class="odt-ltr-term">C</bdi>، لا يوجد ما يضاهي وظائف <strong>[<bdi dir="ltr" class="odt-ltr-term">printf</bdi>، <bdi dir="ltr" class="odt-ltr-term">sprintf</bdi>]</strong> لكتابة أو إنشاء سلاسل منسقة. أنشأ مئات المطورين آلاف حزم <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>، مما شكل نظامًا بيئيًا واسعًا. عندما تكون لديك حاجة لا تلبيها <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> أصلاً، فقد حان الوقت للبحث عن حزمة تلبيها. للقيام بذلك، نستخدم مدير الحزم <strong>[<bdi dir="ltr" class="odt-ltr-term">npm</bdi>]</strong>. يحتوي على خيار <strong>[<bdi dir="ltr" class="odt-ltr-term">search</bdi>]</strong> الذي يسمح لك بالبحث عن سلسلة داخل أوصاف الحزم. يعرض <strong>[<bdi dir="ltr" class="odt-ltr-term">npm</bdi>]</strong> قائمة بالحزم المطابقة للبحث. لذلك سنبحث عن السلسلة <strong>[<bdi dir="ltr" class="odt-ltr-term">sprintf</bdi>]</strong> في أوصاف الحزم:</p>
 <p><img src="images/10000000000008B9000002C23DAD22B5.png" width="670" height="212" style="width:17.722cm;height:5.604cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008B9000002C23DAD22B5.png" /></p>
 <ul>
   <li>في العمود <b>[4]</b>، الكلمات الرئيسية للحزم في العمود <b>[3]</b>؛
@@ -927,30 +929,30 @@
   </li>
 </ul>
 
-<p>الخطوة التالية هي الانتقال إلى موقع <strong>[npm]</strong>، <strong>[https://www.npmjs.com/]</strong>، وقراءة أوصاف الحزم:</p>
+<p>الخطوة التالية هي الانتقال إلى موقع <strong>[<bdi dir="ltr" class="odt-ltr-term">npm</bdi>]</strong>، <strong>[<bdi dir="ltr" class="odt-ltr-term">https://www.npmjs.com/</bdi>]</strong>، وقراءة أوصاف الحزم:</p>
 <p><img src="images/100000000000069700000427F84A598B.png" width="422" height="266" style="width:11.16cm;height:7.033cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000069700000427F84A598B.png" /></p>
 <p>في <strong>[3]</strong>، نراجع قائمة الحزم ونختار واحدة منها.</p>
 <p><img src="images/1000000000000485000002026D3D5A42.png" width="347" height="154" style="width:9.179cm;height:4.078cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000485000002026D3D5A42.png" /></p>
 <p>في وصف الحزمة، ستجد تعليمات لتثبيتها واستخدامها:</p>
 <p><img src="images/10000000000004970000034CF10EC898.png" width="294" height="211" style="width:7.772cm;height:5.583cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004970000034CF10EC898.png" /></p>
-<p>نقوم بتثبيت حزمة <strong>[sprintf-js]</strong> في محطة <strong>[VSCode]</strong>:</p>
+<p>نقوم بتثبيت حزمة <strong>[<bdi dir="ltr" class="odt-ltr-term">sprintf-js</bdi>]</strong> في محطة <strong>[<bdi dir="ltr" class="odt-ltr-term">VSCode</bdi>]</strong>:</p>
 <p><img src="images/1000000000000558000001CE1C9B1593.png" width="410" height="139" style="width:10.86cm;height:3.667cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000558000001CE1C9B1593.png" /></p>
-<p>سيؤدي هذا التثبيت إلى تعديل ملف <strong>[package.json]</strong> الموجود في جذر مجلد <strong>[javascript] [2]</strong>:</p>
+<p>سيؤدي هذا التثبيت إلى تعديل ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">package.json</bdi>]</strong> الموجود في جذر مجلد <strong>[<bdi dir="ltr" class="odt-ltr-term">javascript</bdi>] [2]</strong>:</p>
 <p><img src="images/100000000000026B000001AB5E547E08.png" width="248" height="171" style="width:6.549cm;height:4.517cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000026B000001AB5E547E08.png" /></p>
-<p>كما هو موضح أعلاه، تم تثبيت الحزمة في <strong>[dependencies]</strong>، أي الحزم المطلوبة لتشغيل المشروع. تذكر أن الحزم المطلوبة فقط أثناء تطوير المشروع توضع في <strong>[devDependencies]</strong>. ولا يتم استخدامها أثناء وقت التشغيل. هذا التمييز مهم عند إنشاء النسخة النهائية من المشروع لنشره في بيئة الإنتاج. تتوفر أدوات للقيام بما يلي:</p>
+<p>كما هو موضح أعلاه، تم تثبيت الحزمة في <strong>[<bdi dir="ltr" class="odt-ltr-term">dependencies</bdi>]</strong>، أي الحزم المطلوبة لتشغيل المشروع. تذكر أن الحزم المطلوبة فقط أثناء تطوير المشروع توضع في <strong>[<bdi dir="ltr" class="odt-ltr-term">devDependencies</bdi>]</strong>. ولا يتم استخدامها أثناء وقت التشغيل. هذا التمييز مهم عند إنشاء النسخة النهائية من المشروع لنشره في بيئة الإنتاج. تتوفر أدوات للقيام بما يلي:</p>
 <ul>
-  <li>دمج جميع ملفات JavaScript المطلوبة للتنفيذ في ملف واحد. وبالتالي، لا يتم تضمين الحزم الموجودة في <b>[devDependencies] </b>في هذا الملف النهائي؛
+  <li>دمج جميع ملفات <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> المطلوبة للتنفيذ في ملف واحد. وبالتالي، لا يتم تضمين الحزم الموجودة في <b>[<bdi dir="ltr" class="odt-ltr-term">devDependencies</bdi>] </b>في هذا الملف النهائي؛
   </li>
   <li>تصغيره، أي تقليل حجمه قدر الإمكان. للقيام بذلك، على سبيل المثال، تتم إزالة جميع التعليقات؛
   </li>
-  <li>&quot;تشويش&quot; الكود لجعله صعب الفهم. على سبيل المثال، سيتم استبدال المتغيرات rate و salary و tax بالمتغيرات a و b و c؛
+  <li>&quot;تشويش&quot; الكود لجعله صعب الفهم. على سبيل المثال، سيتم استبدال المتغيرات <bdi dir="ltr" class="odt-ltr-term">rate</bdi> و <bdi dir="ltr" class="odt-ltr-term">salary</bdi> و <bdi dir="ltr" class="odt-ltr-term">tax</bdi> بالمتغيرات <bdi dir="ltr" class="odt-ltr-term">a</bdi> و <bdi dir="ltr" class="odt-ltr-term">b</bdi> و <bdi dir="ltr" class="odt-ltr-term">c</bdi>؛
   </li>
   <li>إجراء تحسينات أخرى؛
   </li>
 </ul>
 
-<p>يُستخدم هذا التحسين للملف النهائي لمشروع JavaScript في برمجة الويب. قد يعتمد تطبيق الويب على عدد كبير من ملفات JavaScript. قد يؤدي تحميل هذه الملفات في المتصفح إلى إبطاء عرض الصفحة الأولى للتطبيق. يهدف التحسين الموصوف أعلاه إلى تحسين وقت التحميل هذا. إذا وجد المستخدمون أن وقت التحميل طويل جدًا، فلن يتم استخدام التطبيق.</p>
-<p>الآن بعد أن أصبح لدينا حزمة <strong>[sprintf-js]</strong>، نحتاج إلى استخدامها. هذا هو البرنامج النصي <strong>[str-04]</strong>:</p>
+<p>يُستخدم هذا التحسين للملف النهائي لمشروع <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> في برمجة الويب. قد يعتمد تطبيق الويب على عدد كبير من ملفات <bdi dir="ltr" class="odt-ltr-term">JavaScript.</bdi> قد يؤدي تحميل هذه الملفات في المتصفح إلى إبطاء عرض الصفحة الأولى للتطبيق. يهدف التحسين الموصوف أعلاه إلى تحسين وقت التحميل هذا. إذا وجد المستخدمون أن وقت التحميل طويل جدًا، فلن يتم استخدام التطبيق.</p>
+<p>الآن بعد أن أصبح لدينا حزمة <strong>[<bdi dir="ltr" class="odt-ltr-term">sprintf-js</bdi>]</strong>، نحتاج إلى استخدامها. هذا هو البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">str-04</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
@@ -961,18 +963,18 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.substr(3,2)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.substr(3, 2)));</span></span></span>
 </code></pre></div>
 
-<p>مع ECMAScript 6، نستخدم الكلمة الرئيسية <strong>[import] لاستيراد</strong> كائن تم تصديره بواسطة حزمة. لمعرفة ما تصدره الحزمة، يمكنك الاطلاع على كودها:</p>
+<p>مع <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi> 6، نستخدم الكلمة الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">import</bdi>] لاستيراد</strong> كائن تم تصديره بواسطة حزمة. لمعرفة ما تصدره الحزمة، يمكنك الاطلاع على كودها:</p>
 <p><img src="images/100000000000060D0000015281E8D3FA.png" width="620" height="135" style="width:16.392cm;height:3.577cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000060D0000015281E8D3FA.png" /></p>
 <ul>
   <li>في <b>[1]</b>، انقر بزر الماوس الأيمن على الحزمة المستوردة؛
   </li>
   <li>في <b>[2]</b>، نريد رؤية تعريفها؛
   </li>
-  <li>في <b>[3-4]</b>، نرى أن الحزمة تصدر دالة تسمى <b>[sprintf]</b>؛
+  <li>في <b>[3-4]</b>، نرى أن الحزمة تصدر دالة تسمى <b>[<bdi dir="ltr" class="odt-ltr-term">sprintf</bdi>]</b>؛
   </li>
 </ul>
 
-<p>يتم استيراد الدالة <strong>[sprintf]</strong> من الحزمة <strong>[sprintf-js]</strong> باستخدام العبارة التالية:</p>
+<p>يتم استيراد الدالة <strong>[<bdi dir="ltr" class="odt-ltr-term">sprintf</bdi>]</strong> من الحزمة <strong>[<bdi dir="ltr" class="odt-ltr-term">sprintf-js</bdi>]</strong> باستخدام العبارة التالية:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
@@ -1002,16 +1004,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content">at Module._compile (internal/modules/cjs/loader.js:657:28)</span></span>
 </code></pre></div>
 
-<p>السطر 3: لم يتم التعرف على عبارة <strong>[import]</strong>. ويرجع ذلك إلى أن الإصدار 10.15.1 من <strong>[node.js]</strong> المستخدم في هذه الدورة (سبتمبر 2019) لا يدعم بعد معيار ECMAScript لاستيراد الحزم التي تسمى الوحدات النمطية. في عام 2019، يدعم <strong>[node.js]</strong> معيار وحدة نمطية يُسمى CommonJS. ومن المقرر أن يتم دمج وحدات ECMAScript بواسطة <strong>[node.js]</strong> في عام 2020. ومرة أخرى، بادر المطورون بإنشاء حزم تسمح باستخدام وحدات ES6 مع <strong>[node.js]</strong> في الوقت الحالي (2019).</p>
-<p>سنستخدم حزمة تسمى <strong>[esm]</strong> (ECMAScript Modules). نقوم بتثبيتها في محطة طرفية لمشروع <strong>[javascript]</strong>:</p>
+<p>السطر 3: لم يتم التعرف على عبارة <strong>[<bdi dir="ltr" class="odt-ltr-term">import</bdi>]</strong>. ويرجع ذلك إلى أن الإصدار 10.15.1 من <strong>[<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</strong> المستخدم في هذه الدورة (سبتمبر 2019) لا يدعم بعد معيار <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi> لاستيراد الحزم التي تسمى الوحدات النمطية. في عام 2019، يدعم <strong>[<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</strong> معيار وحدة نمطية يُسمى <bdi dir="ltr" class="odt-ltr-term">CommonJS.</bdi> ومن المقرر أن يتم دمج وحدات <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi> بواسطة <strong>[<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</strong> في عام 2020. ومرة أخرى، بادر المطورون بإنشاء حزم تسمح باستخدام وحدات <bdi dir="ltr" class="odt-ltr-term">ES6</bdi> مع <strong>[<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</strong> في الوقت الحالي (2019).</p>
+<p>سنستخدم حزمة تسمى <strong>[<bdi dir="ltr" class="odt-ltr-term">esm</bdi>]</strong> (<bdi dir="ltr" class="odt-ltr-term">ECMAScript Modules</bdi>). نقوم بتثبيتها في محطة طرفية لمشروع <strong>[<bdi dir="ltr" class="odt-ltr-term">javascript</bdi>]</strong>:</p>
 <p><img src="images/10000000000005560000017C3D85E466.png" width="547" height="152" style="width:14.46cm;height:4.023cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005560000017C3D85E466.png" /></p>
-<p>في <strong>[4]</strong>، يمكننا أن نرى أن تثبيت حزمة <strong>[esm] [1-3]</strong> قد أدى إلى تعديل ملف <strong>[javascript/package.json]</strong>.</p>
-<p>لم ننتهِ بعد. لكي يتم استخدام وحدة <strong>[esm]</strong> بواسطة <strong>[node.js]</strong>، نحتاج إلى تشغيلها باستخدام الوسيطة <strong>[-r esm]</strong>.</p>
-<p>لذلك نقوم بتعديل إعدادات ملحق <strong>[Code Runner]</strong> في <strong>[VSCode]</strong>:</p>
+<p>في <strong>[4]</strong>، يمكننا أن نرى أن تثبيت حزمة <strong>[<bdi dir="ltr" class="odt-ltr-term">esm</bdi>] [1-3]</strong> قد أدى إلى تعديل ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">javascript/package.json</bdi>]</strong>.</p>
+<p>لم ننتهِ بعد. لكي يتم استخدام وحدة <strong>[<bdi dir="ltr" class="odt-ltr-term">esm</bdi>]</strong> بواسطة <strong>[<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</strong>، نحتاج إلى تشغيلها باستخدام الوسيطة <strong>[-<bdi dir="ltr" class="odt-ltr-term">r esm</bdi>]</strong>.</p>
+<p>لذلك نقوم بتعديل إعدادات ملحق <strong>[<bdi dir="ltr" class="odt-ltr-term">Code Runner</bdi>]</strong> في <strong>[<bdi dir="ltr" class="odt-ltr-term">VSCode</bdi>]</strong>:</p>
 <p><img src="images/1000000000000623000003283CBE44C5.png" width="629" height="323" style="width:16.632cm;height:8.555cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000623000003283CBE44C5.png" /></p>
 <p><img src="images/1000000000000674000001DF96DD6E5D.png" width="578" height="168" style="width:15.289cm;height:4.433cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000674000001DF96DD6E5D.png" /></p>
-<p>في <strong>[11]</strong>، نضيف الحجة <strong>[-r esm]</strong> ونحفظ (Ctrl-S) الإعدادات.</p>
-<p>الآن يمكننا تشغيل البرنامج النصي <strong>[str-04]</strong>:</p>
+<p>في <strong>[11]</strong>، نضيف الحجة <strong>[-<bdi dir="ltr" class="odt-ltr-term">r esm</bdi>]</strong> ونحفظ (<bdi dir="ltr" class="odt-ltr-term">Ctrl-S</bdi>) الإعدادات.</p>
+<p>الآن يمكننا تشغيل البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">str-04</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
@@ -1024,8 +1026,8 @@
 
 <p><img src="images/10000000000007E30000010E2282F9EF.png" width="606" height="81" style="width:16.03cm;height:2.143cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007E30000010E2282F9EF.png" /></p>
 <p><a id="refheadingtoc2042353980233556"></a></p>
-<h2 id="65-script-str-05">6.5. <span style="color: #4f81bd"><strong>script</strong> [str-05]</span></h2>
-<p>فيما يلي ما تقوله الوثائق عن دالة <strong>[sprintf]</strong>:</p>
+<h2 id="65-script-str-05">6.5. <span style="color: #4f81bd"><strong><bdi dir="ltr" class="odt-ltr-term">script</bdi></strong> [<bdi dir="ltr" class="odt-ltr-term">str-05</bdi>]</span></h2>
+<p>فيما يلي ما تقوله الوثائق عن دالة <strong>[<bdi dir="ltr" class="odt-ltr-term">sprintf</bdi>]</strong>:</p>
 <p><em>يتم تمييز العناصر النائبة في سلسلة التنسيق بعلامة % وتليها واحد أو أكثر من هذه العناصر، بالترتيب التالي:</em></p>
 <ul>
   <li>رقم اختياري يتبعه علامة $ تحدد مؤشر الحجة الذي سيُستخدم للقيمة. إذا لم يتم تحديده، فسيتم وضع الحجج بنفس ترتيب العناصر النائبة في سلسلة الإدخال.
@@ -1034,51 +1036,51 @@
   </li>
   <li>محدد حشو اختياري يحدد الحرف الذي سيتم استخدامه للحشو (إذا تم تحديده). القيم الممكنة هي 0 أو أي حرف آخر يسبقه &#x27; (علامة اقتباس مفردة). الإعداد الافتراضي هو الحشو بمسافات.
   </li>
-  <li>علامة - اختيارية تجعل sprintf تقوم بمحاذاة نتيجة هذا العنصر النائب إلى اليسار. الإعداد الافتراضي هو محاذاة النتيجة إلى اليمين.
+  <li>علامة - اختيارية تجعل <bdi dir="ltr" class="odt-ltr-term">sprintf</bdi> تقوم بمحاذاة نتيجة هذا العنصر النائب إلى اليسار. الإعداد الافتراضي هو محاذاة النتيجة إلى اليمين.
   </li>
-  <li>رقم اختياري يحدد عدد الأحرف التي يجب أن تحتوي عليها النتيجة. إذا كانت القيمة المراد إرجاعها أقصر من هذا الرقم، فسيتم ملء الفراغات. عند استخدامه مع محدد النوع j (JSON)، يحدد طول الملء حجم علامة الجدولة المستخدمة للتبويب.
+  <li>رقم اختياري يحدد عدد الأحرف التي يجب أن تحتوي عليها النتيجة. إذا كانت القيمة المراد إرجاعها أقصر من هذا الرقم، فسيتم ملء الفراغات. عند استخدامه مع محدد النوع <bdi dir="ltr" class="odt-ltr-term">j</bdi> (<bdi dir="ltr" class="odt-ltr-term">JSON</bdi>)، يحدد طول الملء حجم علامة الجدولة المستخدمة للتبويب.
   </li>
-  <li>معدل دقة اختياري، يتكون من . (نقطة) متبوعة برقم، يحدد عدد الأرقام التي يجب عرضها للأرقام العائمة. عند استخدامه مع محدد النوع g، فإنه يحدد عدد الأرقام ذات الأهمية. عند استخدامه على سلسلة، فإنه يؤدي إلى اقتطاع النتيجة.
+  <li>معدل دقة اختياري، يتكون من . (نقطة) متبوعة برقم، يحدد عدد الأرقام التي يجب عرضها للأرقام العائمة. عند استخدامه مع محدد النوع <bdi dir="ltr" class="odt-ltr-term">g</bdi>، فإنه يحدد عدد الأرقام ذات الأهمية. عند استخدامه على سلسلة، فإنه يؤدي إلى اقتطاع النتيجة.
   </li>
   <li>محدد نوع يمكن أن يكون أيًا مما يلي:
     <ul>
       <li>% — ينتج حرف % حرفي
       </li>
-      <li>b — تُنتج عددًا صحيحًا كرقم ثنائي
+      <li><bdi dir="ltr" class="odt-ltr-term">b</bdi> — تُنتج عددًا صحيحًا كرقم ثنائي
       </li>
-      <li>c — ينتج عددًا صحيحًا كحرف بقيمة ASCII تلك
+      <li><bdi dir="ltr" class="odt-ltr-term">c</bdi> — ينتج عددًا صحيحًا كحرف بقيمة <bdi dir="ltr" class="odt-ltr-term">ASCII</bdi> تلك
       </li>
-      <li>d أو i — ينتج عددًا صحيحًا كرقم عشري موقّع
+      <li><bdi dir="ltr" class="odt-ltr-term">d</bdi> أو <bdi dir="ltr" class="odt-ltr-term">i</bdi> — ينتج عددًا صحيحًا كرقم عشري موقّع
       </li>
-      <li>e — ينتج عددًا عائمًا باستخدام الترميز العلمي
+      <li><bdi dir="ltr" class="odt-ltr-term">e</bdi> — ينتج عددًا عائمًا باستخدام الترميز العلمي
       </li>
-      <li>u — ينتج عددًا صحيحًا كرقم عشري غير موقّع
+      <li><bdi dir="ltr" class="odt-ltr-term">u</bdi> — ينتج عددًا صحيحًا كرقم عشري غير موقّع
       </li>
-      <li>f — يُرجع عددًا عائمًا كما هو؛ انظر الملاحظات حول الدقة أعلاه
+      <li><bdi dir="ltr" class="odt-ltr-term">f</bdi> — يُرجع عددًا عائمًا كما هو؛ انظر الملاحظات حول الدقة أعلاه
       </li>
-      <li>g — تُرجع عددًا عائمًا كما هو؛ انظر الملاحظات حول الدقة أعلاه
+      <li><bdi dir="ltr" class="odt-ltr-term">g</bdi> — تُرجع عددًا عائمًا كما هو؛ انظر الملاحظات حول الدقة أعلاه
       </li>
-      <li>o — تُرجع عددًا صحيحًا كرقم ثماني
+      <li><bdi dir="ltr" class="odt-ltr-term">o</bdi> — تُرجع عددًا صحيحًا كرقم ثماني
       </li>
-      <li>s — تُرجع سلسلة نصية كما هي
+      <li><bdi dir="ltr" class="odt-ltr-term">s</bdi> — تُرجع سلسلة نصية كما هي
       </li>
-      <li>t — تُرجع صحيح أو خطأ
+      <li><bdi dir="ltr" class="odt-ltr-term">t</bdi> — تُرجع صحيح أو خطأ
       </li>
-      <li><i>T — تُرجع نوع </i><a href="https://www.npmjs.com/package/sprintf-js#fn-1"><u><span style="color: #0563c1">الحجة 1</span></u></a>
+      <li><i><bdi dir="ltr" class="odt-ltr-term">T</bdi> — تُرجع نوع </i><a href="https://www.npmjs.com/package/sprintf-js#fn-1"><u><span style="color: #0563c1">الحجة 1</span></u></a>
       </li>
-      <li>v — يُرجع القيمة الأولية للحجة المحددة
+      <li><bdi dir="ltr" class="odt-ltr-term">v</bdi> — يُرجع القيمة الأولية للحجة المحددة
       </li>
-      <li>x — يُرجع عددًا صحيحًا كرقم سداسي عشري (بالأحرف الصغيرة)
+      <li><bdi dir="ltr" class="odt-ltr-term">x</bdi> — يُرجع عددًا صحيحًا كرقم سداسي عشري (بالأحرف الصغيرة)
       </li>
-      <li>X — يُنتج عددًا صحيحًا كرقم سداسي عشري (بالأحرف الكبيرة)
+      <li><bdi dir="ltr" class="odt-ltr-term">X</bdi> — يُنتج عددًا صحيحًا كرقم سداسي عشري (بالأحرف الكبيرة)
       </li>
-      <li>j — يُرجع كائن JavaScript أو مصفوفة كسلسلة مشفرة بتنسيق JSON
+      <li><bdi dir="ltr" class="odt-ltr-term">j</bdi> — يُرجع كائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> أو مصفوفة كسلسلة مشفرة بتنسيق <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>
       </li>
     </ul>
   </li>
 </ul>
 
-<p>ينفذ البرنامج النصي <strong>[script-05]</strong> بعض هذه التنسيقات:</p>
+<p>ينفذ البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">script-05</bdi>]</strong> بعض هذه التنسيقات:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
@@ -1127,8 +1129,8 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc2042373980233556"></a></p>
-<h2 id="66-str-06">6.6. <span style="color: #4f81bd"><strong>نص برمجي</strong> [str-06]</span></h2>
-<p>يوضح البرنامج النصي <strong>[str-06]</strong> بعض طرق فئة <strong>[String]</strong> التي يمكن استخدامها أيضًا في النوع <strong>[string]</strong>:</p>
+<h2 id="66-str-06">6.6. <span style="color: #4f81bd"><strong>نص برمجي</strong> [<bdi dir="ltr" class="odt-ltr-term">str-06</bdi>]</span></h2>
+<p>يوضح البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">str-06</bdi>]</strong> بعض طرق فئة <strong>[<bdi dir="ltr" class="odt-ltr-term">String</bdi>]</strong> التي يمكن استخدامها أيضًا في النوع <strong>[<bdi dir="ltr" class="odt-ltr-term">string</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>

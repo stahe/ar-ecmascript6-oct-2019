@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -704,33 +706,33 @@
   
 
 
-<h1 id="1-ecmascript-6">1. <span style="color: #365f91">مقدمة إلى لغة ECMASCRIPT 6</span></h1>
-<p>ملف PDF لهذه المقالة متاح |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQCfZRpGaGS6QrOYQVWplvpPAf0rVh24lh92QsRkIp_TQdI?e=IyuxST">هنا</a>|.</p>
+<h1 id="1-ecmascript-6">1. <span style="color: #365f91">مقدمة إلى لغة <bdi dir="ltr" class="odt-ltr-term">ECMASCRIPT</bdi> 6</span></h1>
+<p>ملف <bdi dir="ltr" class="odt-ltr-term">PDF</bdi> لهذه المقالة متاح |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQCfZRpGaGS6QrOYQVWplvpPAf0rVh24lh92QsRkIp_TQdI?e=IyuxST">هنا</a>|.</p>
 <p>الأمثلة الواردة في هذه المقالة متاحة |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQAMy_zKvA8FSpjOjfzO60MYAe8B30jTpKWQJIt853Aq3ok?e=XSBaXO">هنا</a>|.</p>
 <p>هذا المستند جزء من سلسلة مكونة من أربع مقالات:</p>
 <ol>
-<li>[<a href="https://stahe.github.io/ar-php7-juillet-2019/"><u><span style="color: #0563c1">مقدمة إلى لغة PHP7 من خلال الأمثلة</span></u></a>]؛</li>
+<li>[<a href="https://stahe.github.io/ar-php7-juillet-2019/"><u><span style="color: #0563c1">مقدمة إلى لغة <bdi dir="ltr" class="odt-ltr-term">PHP7</bdi> من خلال الأمثلة</span></u></a>]؛</li>
 </ol>
 <ol start="2">
-  <li>[<a href="https://stahe.github.io/ar-ecmascript6-oct-2019/"><u><span style="color: #0563c1">مقدمة إلى ECMASCRIPT 6 من خلال أمثلة</span></u></a>]. <b>هذا هو المستند الحالي</b>؛
+  <li>[<a href="https://stahe.github.io/ar-ecmascript6-oct-2019/"><u><span style="color: #0563c1">مقدمة إلى <bdi dir="ltr" class="odt-ltr-term">ECMASCRIPT</bdi> 6 من خلال أمثلة</span></u></a>]. <b>هذا هو المستند الحالي</b>؛
   </li>
-  <li>[<a href="https://stahe.github.io/ar-vuejs-oct-2019/"><u><span style="color: #0563c1">مقدمة إلى إطار عمل VUE.JS من خلال أمثلة</span></u></a>]؛
+  <li>[<a href="https://stahe.github.io/ar-vuejs-oct-2019/"><u><span style="color: #0563c1">مقدمة إلى إطار عمل <bdi dir="ltr" class="odt-ltr-term">VUE.JS</bdi> من خلال أمثلة</span></u></a>]؛
   </li>
-  <li>[<a href="https://stahe.github.io/ar-nuxtjs-dec-2019/"><u><span style="color: #0563c1">مقدمة إلى إطار عمل NUXT.JS من خلال أمثلة</span></u></a>]؛
+  <li>[<a href="https://stahe.github.io/ar-nuxtjs-dec-2019/"><u><span style="color: #0563c1">مقدمة إلى إطار عمل <bdi dir="ltr" class="odt-ltr-term">NUXT.JS</bdi> من خلال أمثلة</span></u></a>]؛
   </li>
 </ol>
 
 <p>هذه جميعها وثائق <strong>للمبتدئين</strong>. تتبع المقالات تسلسلاً منطقياً <strong>ولكنها مرتبطة ببعضها بشكل غير وثيق</strong>:</p>
 <ul>
-  <li>تقدم الوثيقة [1] لغة PHP 7. يجب على القراء المهتمين بلغة PHP فقط وليس بلغة JavaScript التي تتناولها المقالات التالية التوقف عند هذه النقطة؛
+  <li>تقدم الوثيقة [1] لغة <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> 7. يجب على القراء المهتمين بلغة <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> فقط وليس بلغة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> التي تتناولها المقالات التالية التوقف عند هذه النقطة؛
   </li>
-  <li>تهدف الوثائق [2–4] إلى إنشاء عميل JavaScript لخادم حساب الضرائب الذي تم تطويره في الوثيقة [1]؛
+  <li>تهدف الوثائق [2–4] إلى إنشاء عميل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> لخادم حساب الضرائب الذي تم تطويره في الوثيقة [1]؛
   </li>
-  <li>تتطلب أطر عمل JavaScript [Vue.js] و [Nuxt.js] في المقالتين 3 و 4 معرفة بأحدث إصدارات ECMAScript، وتحديدًا الإصدار 6. ولذلك، فإن الوثيقة [2] مخصصة لأولئك الذين ليسوا على دراية بهذا الإصدار من JavaScript. وهي تشير إلى خادم حساب الضرائب الذي تم بناؤه في الوثيقة [1]. ولذلك، سيحتاج قراء [2] أحيانًا إلى الرجوع إلى الوثيقة [1]؛
+  <li>تتطلب أطر عمل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> [<bdi dir="ltr" class="odt-ltr-term">Vue.js</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Nuxt.js</bdi>] في المقالتين 3 و 4 معرفة بأحدث إصدارات <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi>، وتحديدًا الإصدار 6. ولذلك، فإن الوثيقة [2] مخصصة لأولئك الذين ليسوا على دراية بهذا الإصدار من <bdi dir="ltr" class="odt-ltr-term">JavaScript.</bdi> وهي تشير إلى خادم حساب الضرائب الذي تم بناؤه في الوثيقة [1]. ولذلك، سيحتاج قراء [2] أحيانًا إلى الرجوع إلى الوثيقة [1]؛
   </li>
-  <li>بمجرد إتقان ECMASCRIPT 6، يمكننا الانتقال إلى إطار عمل VUE.JS، الذي يسمح بإنشاء عملاء JavaScript يعملون في متصفح في وضع SPA (تطبيق صفحة واحدة). هذا هو المستند [3]. وهو يشير إلى كل من خادم حساب الضرائب الذي تم إنشاؤه في المستند [1] ورمز عميل JavaScript المستقل الذي تم إنشاؤه في [2]. لذلك، سيحتاج قراء [3] أحيانًا إلى الرجوع إلى الوثيقتين [1] و[2]؛
+  <li>بمجرد إتقان <bdi dir="ltr" class="odt-ltr-term">ECMASCRIPT</bdi> 6، يمكننا الانتقال إلى إطار عمل <bdi dir="ltr" class="odt-ltr-term">VUE.JS</bdi>، الذي يسمح بإنشاء عملاء <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> يعملون في متصفح في وضع <bdi dir="ltr" class="odt-ltr-term">SPA</bdi> (تطبيق صفحة واحدة). هذا هو المستند [3]. وهو يشير إلى كل من خادم حساب الضرائب الذي تم إنشاؤه في المستند [1] ورمز عميل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> المستقل الذي تم إنشاؤه في [2]. لذلك، سيحتاج قراء [3] أحيانًا إلى الرجوع إلى الوثيقتين [1] و[2]؛
   </li>
-  <li>بمجرد إتقان VUE.JS، يمكنك الانتقال إلى إطار عمل NUXT.JS، الذي يسمح لك بإنشاء عملاء JavaScript يعملون في متصفح في وضع SSR (Server Side Rendered). وهو يشير إلى خادم حساب الضرائب الذي تم إنشاؤه في الوثيقة [1]، ورمز عميل JavaScript المستقل الذي تم إنشاؤه في [2]، وتطبيق [vue.js] الذي تم تطويره في الوثيقة [3]. لذلك سيحتاج قراء [4] أحيانًا إلى الرجوع إلى الوثائق [1] و[2] و[3]؛
+  <li>بمجرد إتقان <bdi dir="ltr" class="odt-ltr-term">VUE.JS</bdi>، يمكنك الانتقال إلى إطار عمل <bdi dir="ltr" class="odt-ltr-term">NUXT.JS</bdi>، الذي يسمح لك بإنشاء عملاء <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> يعملون في متصفح في وضع <bdi dir="ltr" class="odt-ltr-term">SSR</bdi> (<bdi dir="ltr" class="odt-ltr-term">Server Side Rendered</bdi>). وهو يشير إلى خادم حساب الضرائب الذي تم إنشاؤه في الوثيقة [1]، ورمز عميل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> المستقل الذي تم إنشاؤه في [2]، وتطبيق [<bdi dir="ltr" class="odt-ltr-term">vue.js</bdi>] الذي تم تطويره في الوثيقة [3]. لذلك سيحتاج قراء [4] أحيانًا إلى الرجوع إلى الوثائق [1] و[2] و[3]؛
   </li>
 </ul>
 
@@ -738,15 +740,15 @@
 <ul>
   <li>الإصدار الحالي يركز على الخادم. الاتجاه السائد حاليًا (يوليو 2019) هو نحو بنية العميل-الخادم:
     <ul>
-      <li>يعمل الخادم كخدمة JSON؛
+      <li>يعمل الخادم كخدمة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>؛
       </li>
-      <li>تُستخدم صفحة ثابتة أو ديناميكية كنقطة دخول لتطبيق الويب. تحتوي هذه الصفحة على HTML/CSS بالإضافة إلى JavaScript؛
+      <li>تُستخدم صفحة ثابتة أو ديناميكية كنقطة دخول لتطبيق الويب. تحتوي هذه الصفحة على <bdi dir="ltr" class="odt-ltr-term">HTML/CSS</bdi> بالإضافة إلى <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
       </li>
-      <li>يتم إنشاء الصفحات الأخرى لتطبيق الويب ديناميكيًا بواسطة JavaScript:
+      <li>يتم إنشاء الصفحات الأخرى لتطبيق الويب ديناميكيًا بواسطة <bdi dir="ltr" class="odt-ltr-term">JavaScript:</bdi>
         <ul>
-          <li>يمكن إنشاء صفحة HTML عن طريق تجميع أجزاء ثابتة، مقدمة من نفس الخادم الذي يقدم الصفحة الرئيسية، أو إنشاؤها بالكامل بواسطة JavaScript؛
+          <li>يمكن إنشاء صفحة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> عن طريق تجميع أجزاء ثابتة، مقدمة من نفس الخادم الذي يقدم الصفحة الرئيسية، أو إنشاؤها بالكامل بواسطة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
           </li>
-          <li>تعرض هذه الصفحات المختلفة البيانات المطلوبة من خدمة JSON؛
+          <li>تعرض هذه الصفحات المختلفة البيانات المطلوبة من خدمة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>؛
           </li>
         </ul>
       </li>
@@ -757,42 +759,42 @@
 <p>وبالتالي، يتم توزيع العمل بين العميل والخادم. وبفضل انخفاض الحمل على الخادم، يمكنه خدمة عدد أكبر من المستخدمين.</p>
 <p>وتكون البنية المطابقة لهذا النموذج كما يلي:</p>
 <p><img src="images/100000000000074A0000024541501B05.png" width="560" height="174" style="width:14.81cm;height:4.611cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000074A0000024541501B05.png" /></p>
-<p><strong>JS</strong>: جافا سكريبت</p>
-<p>يتم تنفيذ كود JavaScript على جانب العميل:</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">JS</bdi></strong>: جافا سكريبت</p>
+<p>يتم تنفيذ كود <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> على جانب العميل:</p>
 <ul>
   <li>من خدمة تقدم صفحات أو أجزاء ثابتة أو غير ثابتة؛
   </li>
-  <li>خدمة JSON؛
+  <li>خدمة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>؛
   </li>
 </ul>
 
-<p>وبالتالي، فإن كود JavaScript هو عميل JSON، وبهذه الصفة، يمكن تنظيمه في طبقات <strong>[UI، منطق الأعمال، DAO]</strong> (UI: واجهة المستخدم)، تمامًا مثل عملاء JSON المكتوبين بلغة PHP. في النهاية، يقوم المتصفح بتحميل صفحة واحدة فقط — الصفحة الرئيسية. يتم جلب جميع الصفحات الأخرى وعرضها بواسطة JavaScript. يُطلق على هذا النوع من التطبيقات <strong>اسم SPA</strong> (تطبيق صفحة واحدة) أو <strong>APU</strong> (تطبيق صفحة واحدة).</p>
-<p>هذا النوع من التطبيقات هو أيضًا جزء مما يُعرف بتطبيقات <strong>AJAX</strong>: JavaScript غير المتزامن و XML</p>
+<p>وبالتالي، فإن كود <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> هو عميل <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>، وبهذه الصفة، يمكن تنظيمه في طبقات <strong>[<bdi dir="ltr" class="odt-ltr-term">UI</bdi>، منطق الأعمال، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</strong> (<bdi dir="ltr" class="odt-ltr-term">UI:</bdi> واجهة المستخدم)، تمامًا مثل عملاء <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المكتوبين بلغة <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi> في النهاية، يقوم المتصفح بتحميل صفحة واحدة فقط — الصفحة الرئيسية. يتم جلب جميع الصفحات الأخرى وعرضها بواسطة <bdi dir="ltr" class="odt-ltr-term">JavaScript.</bdi> يُطلق على هذا النوع من التطبيقات <strong>اسم <bdi dir="ltr" class="odt-ltr-term">SPA</bdi></strong> (تطبيق صفحة واحدة) أو <strong><bdi dir="ltr" class="odt-ltr-term">APU</bdi></strong> (تطبيق صفحة واحدة).</p>
+<p>هذا النوع من التطبيقات هو أيضًا جزء مما يُعرف بتطبيقات <strong><bdi dir="ltr" class="odt-ltr-term">AJAX</bdi></strong>: <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> غير المتزامن و <bdi dir="ltr" class="odt-ltr-term">XML</bdi></p>
 <ul>
-  <li><b>غير متزامن</b>: لأن استدعاءات عميل JavaScript لخادم JSON غير متزامنة؛
+  <li><b>غير متزامن</b>: لأن استدعاءات عميل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> لخادم <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> غير متزامنة؛
   </li>
-  <li><b>XML</b>: لأن XML كانت التقنية المستخدمة قبل ظهور JSON. ومع ذلك، تم الاحتفاظ باختصار AJAX؛
+  <li><b><bdi dir="ltr" class="odt-ltr-term">XML</bdi></b>: لأن <bdi dir="ltr" class="odt-ltr-term">XML</bdi> كانت التقنية المستخدمة قبل ظهور <bdi dir="ltr" class="odt-ltr-term">JSON.</bdi> ومع ذلك، تم الاحتفاظ باختصار <bdi dir="ltr" class="odt-ltr-term">AJAX</bdi>؛
   </li>
 </ul>
 
-<p>سنستكشف هذه البنية في الفصول القادمة. على جانب العميل، سنستخدم إطار عمل JavaScript <strong>[Vue.js] [https://vuejs.org/]</strong> لكتابة عميل JavaScript لخادم PHP JSON الذي وصفناه في الوثيقة [1].</p>
-<p><strong>[Vue.js]</strong> هو إطار عمل JavaScript. لفهمه، يجب أن تكون بارعًا في هذه اللغة. في هذا المستند، نقدم معيار ECMAScript 6، وهو أحدث (اعتبارًا من عام 2019) توحيد لمعايير هذه اللغة. يمكن العثور على تاريخ ودور ECMAScript على ويكيبيديا <strong>[https://fr.wikipedia.org/wiki/ECMAScript]</strong>.</p>
-<p>يقدم هذا المستند قائمة <strong>ببرامج</strong> JavaScript <strong>النصية</strong> في مجالات مختلفة (هياكل اللغة، والوصول إلى قواعد البيانات، والوصول إلى الإنترنت، والبرمجة الطبقية، والبرمجة عبر الواجهات). ويختتم المستند بتطبيقين:</p>
-<p><strong>تطبيق وحدة التحكم</strong> الذي سيعمل كعميل لخادم حساب الضرائب المدمج في الوثيقة [1]. سيكون لهذا العميل نفس بنية عميل وحدة التحكم PHP المدمج في الوثيقة [1]:</p>
+<p>سنستكشف هذه البنية في الفصول القادمة. على جانب العميل، سنستخدم إطار عمل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">Vue.js</bdi>] [<bdi dir="ltr" class="odt-ltr-term">https://vuejs.org/</bdi>]</strong> لكتابة عميل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> لخادم <bdi dir="ltr" class="odt-ltr-term">PHP JSON</bdi> الذي وصفناه في الوثيقة [1].</p>
+<p><strong>[<bdi dir="ltr" class="odt-ltr-term">Vue.js</bdi>]</strong> هو إطار عمل <bdi dir="ltr" class="odt-ltr-term">JavaScript.</bdi> لفهمه، يجب أن تكون بارعًا في هذه اللغة. في هذا المستند، نقدم معيار <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi> 6، وهو أحدث (اعتبارًا من عام 2019) توحيد لمعايير هذه اللغة. يمكن العثور على تاريخ ودور <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi> على ويكيبيديا <strong>[<bdi dir="ltr" class="odt-ltr-term">https://fr.wikipedia.org/wiki/ECMAScript</bdi>]</strong>.</p>
+<p>يقدم هذا المستند قائمة <strong>ببرامج</strong> <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> <strong>النصية</strong> في مجالات مختلفة (هياكل اللغة، والوصول إلى قواعد البيانات، والوصول إلى الإنترنت، والبرمجة الطبقية، والبرمجة عبر الواجهات). ويختتم المستند بتطبيقين:</p>
+<p><strong>تطبيق وحدة التحكم</strong> الذي سيعمل كعميل لخادم حساب الضرائب المدمج في الوثيقة [1]. سيكون لهذا العميل نفس بنية عميل وحدة التحكم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> المدمج في الوثيقة [1]:</p>
 <p><img src="images/100000000000069B0000028D0E16BB25.png" width="507" height="196" style="width:13.42cm;height:5.182cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000069B0000028D0E16BB25.png" /></p>
 <ul>
-  <li>ستكون الطبقات [7–9] هي طبقات عميل JavaScript الذي يعمل في وحدة التحكم؛
+  <li>ستكون الطبقات [7–9] هي طبقات عميل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> الذي يعمل في وحدة التحكم؛
   </li>
-  <li>الطبقات [1–4] هي طبقات خادم PHP 7 المضمن في الوثيقة [1]؛
+  <li>الطبقات [1–4] هي طبقات خادم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> 7 المضمن في الوثيقة [1]؛
   </li>
-  <li>على عكس عميل وحدة التحكم PHP المضمن في الوثيقة [1]، لن يكون هناك أي تفاعل مع نظام الملفات المحلي [6]؛
+  <li>على عكس عميل وحدة التحكم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> المضمن في الوثيقة [1]، لن يكون هناك أي تفاعل مع نظام الملفات المحلي [6]؛
   </li>
 </ul>
 
-<p>لدينا هنا تطبيق عميل/خادم حيث يكون العميل تطبيق وحدة تحكم. سيتم كتابة تطبيق ثانٍ حيث <strong>سيتم نقل</strong> كود الطبقات [7–9] <strong>إلى متصفح</strong>. سنكون عندئذ جاهزين للتعامل مع أطر عمل JavaScript للمتصفح في الوثيقتين [3] و[4].</p>
+<p>لدينا هنا تطبيق عميل/خادم حيث يكون العميل تطبيق وحدة تحكم. سيتم كتابة تطبيق ثانٍ حيث <strong>سيتم نقل</strong> كود الطبقات [7–9] <strong>إلى متصفح</strong>. سنكون عندئذ جاهزين للتعامل مع أطر عمل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> للمتصفح في الوثيقتين [3] و[4].</p>
 <p>النصوص البرمجية في هذا المستند مزودة بتعليقات، كما تم إعادة إنتاج مخرجات وحدة التحكم الخاصة بها. يتم تقديم تفسيرات إضافية في بعض الأحيان. يتطلب المستند قراءة نشطة: لفهم النص البرمجي، يجب عليك قراءة الكود الخاص به والتعليقات ونتائج التنفيذ.</p>
 <p>الأمثلة الواردة في هذا المستند متاحة <strong>|هنا|</strong>.</p>
-<p>يمكن اختبار تطبيق خادم PHP 7 <strong>|هنا|</strong>.</p>
+<p>يمكن اختبار تطبيق خادم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> 7 <strong>|هنا|</strong>.</p>
 <p>سيرج تاهي، أكتوبر 2019</p>
 
 

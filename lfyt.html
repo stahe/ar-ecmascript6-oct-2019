@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -799,9 +801,9 @@
 <p><a id="refheadingtoc225406640539168"></a></p>
 <h1 id="13">13. <span style="color: #365f91">الفئات</span></h1>
 <p><img src="images/10000000000000EF000001677C3D49DE.png" width="108" height="162" style="width:2.85cm;height:4.281cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EF000001677C3D49DE.png" /></p>
-<p>نقدم هنا فئات ECMAScript 6. أولاً، نوضح أن الدوال يمكن استخدامها بالفعل كفئات.</p>
+<p>نقدم هنا فئات <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi> 6. أولاً، نوضح أن الدوال يمكن استخدامها بالفعل كفئات.</p>
 <p><a id="refheadingtoc225408640539168"></a></p>
-<h2 id="131-class-00">13.1. <span style="color: #4f81bd">نص برمجي [class-00]</span></h2>
+<h2 id="131-class-00">13.1. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">class-00</bdi>]</span></h2>
 <p>يوضح البرنامج النصي التالي استخدامًا غير معتاد للدوال. هنا، يتم استخدامها ككائنات.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -832,15 +834,15 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>الأسطر 5–7: لا يحدد نص الدالة f أي خصائص؛
+  <li>الأسطر 5–7: لا يحدد نص الدالة <bdi dir="ltr" class="odt-ltr-term">f</bdi> أي خصائص؛
   </li>
-  <li>الأسطر 9–12: يتم تعيين الخصائص للدالة f من الخارج؛
+  <li>الأسطر 9–12: يتم تعيين الخصائص للدالة <bdi dir="ltr" class="odt-ltr-term">f</bdi> من الخارج؛
   </li>
-  <li>السطر 14: استخدام الدالة (الكائن) f. لاحظ أننا لا نكتب <b>[f()] </b>بل نكتفي بكتابة <b>[f]</b>. هذه هي صيغة الكائن؛
+  <li>السطر 14: استخدام الدالة (الكائن) <bdi dir="ltr" class="odt-ltr-term">f.</bdi> لاحظ أننا لا نكتب <b>[<bdi dir="ltr" class="odt-ltr-term">f</bdi>()] </b>بل نكتفي بكتابة <b>[<bdi dir="ltr" class="odt-ltr-term">f</bdi>]</b>. هذه هي صيغة الكائن؛
   </li>
-  <li>الأسطر 17–22: نُعرّف الدالة <b>[g] </b>كما لو كانت فئة ذات خصائص وطرق؛
+  <li>الأسطر 17–22: نُعرّف الدالة <b>[<bdi dir="ltr" class="odt-ltr-term">g</bdi>] </b>كما لو كانت فئة ذات خصائص وطرق؛
   </li>
-  <li>السطر 24: يتم إنشاء مثيل للدالة <b>[g] </b>بواسطة <b>[new g()]</b>؛
+  <li>السطر 24: يتم إنشاء مثيل للدالة <b>[<bdi dir="ltr" class="odt-ltr-term">g</bdi>] </b>بواسطة <b>[<bdi dir="ltr" class="odt-ltr-term">new g</bdi>()]</b>؛
   </li>
 </ul>
 
@@ -851,10 +853,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">val2</span></span>
 </code></pre></div>
 
-<p>أدخلت ES6 مفهوم الفئات، مما يسمح لنا الآن بتجنب استخدام الدوال لإنشاء الفئات.</p>
+<p>أدخلت <bdi dir="ltr" class="odt-ltr-term">ES6</bdi> مفهوم الفئات، مما يسمح لنا الآن بتجنب استخدام الدوال لإنشاء الفئات.</p>
 <p><a id="refheadingtoc225410640539168"></a></p>
-<h2 id="132-class-01">13.2. <span style="color: #4f81bd">نص برمجي [class-01]</span></h2>
-<p>يقدم البرنامج النصي <strong>[class-01]</strong> فئة <strong>[Person]</strong>:</p>
+<h2 id="132-class-01">13.2. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">class-01</bdi>]</span></h2>
+<p>يقدم البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">class-01</bdi>]</strong> فئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">// class</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Personne</span><span style="color:#000000"> {</span></span></span>
@@ -906,13 +908,13 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 2: تشير الكلمة الرئيسية <b>[class] </b>إلى فئة؛
+  <li>السطر 2: تشير الكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">class</bdi>] </b>إلى فئة؛
   </li>
-  <li>الأسطر 5–9: تشير الكلمة الرئيسية <b>[constructor] </b>إلى مُنشئ الفئة. يمكن أن يكون هناك واحد على الأكثر. ويُستخدم لإنشاء وتهيئة مثيل للفئة. لاحظ أنه لا يوجد إعلان للخصائص <b>[last_name, first_name, age]</b>؛
+  <li>الأسطر 5–9: تشير الكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">constructor</bdi>] </b>إلى مُنشئ الفئة. يمكن أن يكون هناك واحد على الأكثر. ويُستخدم لإنشاء وتهيئة مثيل للفئة. لاحظ أنه لا يوجد إعلان للخصائص <b>[<bdi dir="ltr" class="odt-ltr-term">last_name</bdi>, <bdi dir="ltr" class="odt-ltr-term">first_name</bdi>, <bdi dir="ltr" class="odt-ltr-term">age</bdi>]</b>؛
   </li>
   <li>الأسطر 11–36: خصائص الفئة. نرى هنا عناصر تمت تغطيتها بالفعل في القسم الخاص بالكائنات 4، الصفحة<a href="#refheadingtoc2042093980233556"><u><span style="color: #0563c1"> 44</span></u></a>. يختلف فقط بناء الجملة؛
   </li>
-  <li>السطر 41: إنشاء كائن من النوع <b>[Person]</b>. من الآن فصاعدًا، يُستخدم الكائن <b>[person] </b>ككائن حرفي. يُقيَّم<b> [typeof (person)] </b>إلى «object» ويكون التعبير <b>[person instanceof (Person)] </b>صحيحًا. لذلك، من الممكن تحديد النوع الدقيق لمثيل الفئة؛
+  <li>السطر 41: إنشاء كائن من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</b>. من الآن فصاعدًا، يُستخدم الكائن <b>[<bdi dir="ltr" class="odt-ltr-term">person</bdi>] </b>ككائن حرفي. يُقيَّم<b> [<bdi dir="ltr" class="odt-ltr-term">typeof</bdi> (<bdi dir="ltr" class="odt-ltr-term">person</bdi>)] </b>إلى «<bdi dir="ltr" class="odt-ltr-term">object</bdi>» ويكون التعبير <b>[<bdi dir="ltr" class="odt-ltr-term">person instanceof</bdi> (<bdi dir="ltr" class="odt-ltr-term">Person</bdi>)] </b>صحيحًا. لذلك، من الممكن تحديد النوع الدقيق لمثيل الفئة؛
   </li>
 </ul>
 
@@ -923,9 +925,9 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc225412640539168"></a></p>
-<h2 id="133-class-02">13.3. <span style="color: #4f81bd">نص برمجي [class-02]</span></h2>
-<p>يوضح هذا البرنامج النصي القدرة على التوريث من فئة باستخدام الكلمة الرئيسية <strong>[extends]</strong>.</p>
-<p>أولاً، ننقل فئة <strong>[Person]</strong> إلى وحدة نمطية <strong>تسمى [Person.js]</strong>:</p>
+<h2 id="133-class-02">13.3. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">class-02</bdi>]</span></h2>
+<p>يوضح هذا البرنامج النصي القدرة على التوريث من فئة باستخدام الكلمة الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">extends</bdi>]</strong>.</p>
+<p>أولاً، ننقل فئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</strong> إلى وحدة نمطية <strong>تسمى [<bdi dir="ltr" class="odt-ltr-term">Person.js</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// classe</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Personne</span><span style="color:#000000"> {</span></span></span>
@@ -969,11 +971,11 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 39: نقوم بتصدير فئة<b> [Person] </b>حتى تتمكن البرامج النصية من استيرادها؛
+  <li>السطر 39: نقوم بتصدير فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>] </b>حتى تتمكن البرامج النصية من استيرادها؛
   </li>
 </ul>
 
-<p>ينشئ البرنامج النصي <strong>[class-02]</strong> فئة <strong>[Teacher]</strong> مشتقة من فئة <strong>[Person]</strong>:</p>
+<p>ينشئ البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">class-02</bdi>]</strong> فئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>]</strong> مشتقة من فئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Personne </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Personne&#x27;</span><span style="color:#000000">;</span></span></span>
@@ -1009,21 +1011,21 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 2: نستورد فئة<b> [Person] </b>من الوحدة النمطية<b> [Person.js]</b>، الموجودة في نفس المجلد الذي توجد فيه <b>[class-02]</b>؛
+  <li>السطر 2: نستورد فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>] </b>من الوحدة النمطية<b> [<bdi dir="ltr" class="odt-ltr-term">Person.js</bdi>]</b>، الموجودة في نفس المجلد الذي توجد فيه <b>[<bdi dir="ltr" class="odt-ltr-term">class-02</bdi>]</b>؛
   </li>
-  <li>السطر 5: تمتد فئة<b> [Teacher] </b>(ترث) من فئة<b> [Person] </b>باستخدام الكلمة الرئيسية<b> [extends]</b>: تضيف خاصية<b> [_subject] </b>مع طرق getter و setter المقابلة؛
+  <li>السطر 5: تمتد فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>] </b>(ترث) من فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>] </b>باستخدام الكلمة الرئيسية<b> [<bdi dir="ltr" class="odt-ltr-term">extends</bdi>]</b>: تضيف خاصية<b> [_subject] </b>مع طرق <bdi dir="ltr" class="odt-ltr-term">getter</bdi> و <bdi dir="ltr" class="odt-ltr-term">setter</bdi> المقابلة؛
   </li>
-  <li>الأسطر 8–11: يتلقى منشئ فئة<b> [Teacher] </b>أربع قيم لتهيئة الخصائص الأربع للفئة؛
+  <li>الأسطر 8–11: يتلقى منشئ فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>] </b>أربع قيم لتهيئة الخصائص الأربع للفئة؛
   </li>
-  <li>السطر 9: تستدعي الكلمة الرئيسية <b>[super] </b>منشئ الفئة الأم <b>[Person]، </b>والتي ستقوم بالتالي بتهيئة الخصائص <b>[_last_name، _first_name، _age]</b>؛
+  <li>السطر 9: تستدعي الكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">super</bdi>] </b>منشئ الفئة الأم <b>[<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]، </b>والتي ستقوم بالتالي بتهيئة الخصائص <b>[_last_name، _first_name، _age]</b>؛
   </li>
-  <li>السطر 10: يتم تهيئة الخاصية<b> [_discipline] </b>التابعة لفئة<b> [Teacher]</b>؛
+  <li>السطر 10: يتم تهيئة الخاصية<b> [_discipline] </b>التابعة لفئة<b> [<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>]</b>؛
   </li>
   <li>الأسطر 14-19: طرق الحصول والتعيين للخاصية<b> [_discipline]</b>؛
   </li>
-  <li>السطر 25: يتم إنشاء كائن من النوع <b>[Teacher]</b>؛
+  <li>السطر 25: يتم إنشاء كائن من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>]</b>؛
   </li>
-  <li>السطر 26: نستخدم الطريقة <b>[teacher.toString()]</b>. لا تحتوي فئة<b> [Teacher] </b>على هذه الطريقة. لذلك، يتم استخدام الطريقة من فئتها الأم تلقائيًا. تعرض هذه الطريقة التعبير <b>[JSON.stringify(this)]</b>، حيث سيكون<b> [this] </b>كائنًا من نوع<b> [Teacher] </b>هنا، وليس كائنًا من نوع<b> [Person]</b>. هذا ما يُعرف في البرمجة الموجهة للكائنات باسم تعدد أشكال الفئة. مصطلح كبير بالنسبة لـ JavaScript، التي ليست لغة موجهة للكائنات. ومع ذلك، فإن JavaScript تقوم بما هو متوقع منها هنا: تعرض المعلم بشكل صحيح؛
+  <li>السطر 26: نستخدم الطريقة <b>[<bdi dir="ltr" class="odt-ltr-term">teacher.toString</bdi>()]</b>. لا تحتوي فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>] </b>على هذه الطريقة. لذلك، يتم استخدام الطريقة من فئتها الأم تلقائيًا. تعرض هذه الطريقة التعبير <b>[<bdi dir="ltr" class="odt-ltr-term">JSON.stringify</bdi>(<bdi dir="ltr" class="odt-ltr-term">this</bdi>)]</b>، حيث سيكون<b> [<bdi dir="ltr" class="odt-ltr-term">this</bdi>] </b>كائنًا من نوع<b> [<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>] </b>هنا، وليس كائنًا من نوع<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</b>. هذا ما يُعرف في البرمجة الموجهة للكائنات باسم تعدد أشكال الفئة. مصطلح كبير بالنسبة لـ <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>، التي ليست لغة موجهة للكائنات. ومع ذلك، فإن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> تقوم بما هو متوقع منها هنا: تعرض المعلم بشكل صحيح؛
   </li>
 </ul>
 
@@ -1034,12 +1036,12 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 2: يتعرف JavaScript بشكل صحيح على أن المتغير <b>[teacher] </b>هو من النوع <b>[Teacher]</b>؛
+  <li>السطر 2: يتعرف <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> بشكل صحيح على أن المتغير <b>[<bdi dir="ltr" class="odt-ltr-term">teacher</bdi>] </b>هو من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>]</b>؛
   </li>
 </ul>
 <p><a id="refheadingtoc225414640539168"></a></p>
-<h2 id="134-class-03">13.4. <span style="color: #4f81bd">نص برمجي [class-03]</span></h2>
-<p>يُظهر البرنامج النصي <strong>[class-03]</strong> أن الفئة الفرعية يمكنها تجاوز خصائص وأساليب الفئة الأصلية. هنا، نتجاوز أسلوب <strong>[toString]</strong> الخاص بالفئة الأصلية:</p>
+<h2 id="134-class-03">13.4. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">class-03</bdi>]</span></h2>
+<p>يُظهر البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">class-03</bdi>]</strong> أن الفئة الفرعية يمكنها تجاوز خصائص وأساليب الفئة الأصلية. هنا، نتجاوز أسلوب <strong>[<bdi dir="ltr" class="odt-ltr-term">toString</bdi>]</strong> الخاص بالفئة الأصلية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Personne </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Personne&#x27;</span><span style="color:#000000">;</span></span></span>
@@ -1084,9 +1086,9 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc225416640539168"></a></p>
-<h2 id="135-script-class-04">13.5. <span style="color: #4f81bd">script [class-04]</span></h2>
-<p>يُظهر البرنامج النصي <strong>[class-04]</strong> مرة أخرى تعدد الأشكال في العمل: عندما تتوقع دالة معلمة رسمية من النوع <strong>[Person]</strong>، يمكننا تمرير نوع مشتق مثل <strong>[Teacher]</strong>. وبالفعل، بفضل الاشتقاق، يمتلك النوع <strong>[Teacher]</strong> جميع سمات النوع <strong>[Person]</strong>.</p>
-<p>أولاً، نقوم بعزل نوع <strong>[Teacher]</strong> في وحدة <strong>[Teacher.js]</strong>:</p>
+<h2 id="135-script-class-04">13.5. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">script</bdi> [<bdi dir="ltr" class="odt-ltr-term">class-04</bdi>]</span></h2>
+<p>يُظهر البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">class-04</bdi>]</strong> مرة أخرى تعدد الأشكال في العمل: عندما تتوقع دالة معلمة رسمية من النوع <strong>[<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</strong>، يمكننا تمرير نوع مشتق مثل <strong>[<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>]</strong>. وبالفعل، بفضل الاشتقاق، يمتلك النوع <strong>[<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>]</strong> جميع سمات النوع <strong>[<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</strong>.</p>
+<p>أولاً، نقوم بعزل نوع <strong>[<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>]</strong> في وحدة <strong>[<bdi dir="ltr" class="odt-ltr-term">Teacher.js</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Personne </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Personne&#x27;</span><span style="color:#000000">;</span></span></span>
@@ -1115,11 +1117,11 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 24: يتم تصدير فئة<b> [Teacher] </b>حتى تتمكن البرامج النصية الأخرى من استيرادها؛
+  <li>السطر 24: يتم تصدير فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>] </b>حتى تتمكن البرامج النصية الأخرى من استيرادها؛
   </li>
 </ul>
 
-<p>النص البرمجي <strong>[class-04]</strong> هو كما يلي:</p>
+<p>النص البرمجي <strong>[<bdi dir="ltr" class="odt-ltr-term">class-04</bdi>]</strong> هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Enseignant </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./Enseignant&#x27;</span><span style="color:#000000">;</span></span></span>
@@ -1145,11 +1147,11 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 6: تتوقع الدالة<b> [show] </b>نوع<b> [Person] </b>أو نوعًا مشتقًا منه؛
+  <li>السطر 6: تتوقع الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">show</bdi>] </b>نوع<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>] </b>أو نوعًا مشتقًا منه؛
   </li>
-  <li>السطر 8: يتم عرض سلسلة المعلمة ونوعها. سنجد <b>[object]</b>؛
+  <li>السطر 8: يتم عرض سلسلة المعلمة ونوعها. سنجد <b>[<bdi dir="ltr" class="odt-ltr-term">object</bdi>]</b>؛
   </li>
-  <li>الأسطر 10-16: يمكننا تحديد ما إذا كان نوع<b> [Person] </b>أو نوع<b> [Teacher]</b>. وبالتالي يمكن تكييف الكود مع النوع الفعلي للمعلمة؛
+  <li>الأسطر 10-16: يمكننا تحديد ما إذا كان نوع<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>] </b>أو نوع<b> [<bdi dir="ltr" class="odt-ltr-term">Teacher</bdi>]</b>. وبالتالي يمكن تكييف الكود مع النوع الفعلي للمعلمة؛
   </li>
 </ul>
 
@@ -1164,7 +1166,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطران 4 و6: يتعرف JavaScript بشكل صحيح على نوع مثيلات الفئة؛
+  <li>السطران 4 و6: يتعرف <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> بشكل صحيح على نوع مثيلات الفئة؛
   </li>
 </ul>
 

@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -777,10 +779,10 @@
 <p><a id="refheadingtoc2042493980233556"></a></p>
 <h1 id="9">9. <span style="color: #365f91">الأخطاء والاستثناءات</span></h1>
 <p><img src="images/10000000000000ED000000BDBBC75AB1.png" width="95" height="76" style="width:2.512cm;height:2.004cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000ED000000BDBBC75AB1.png" /></p>
-<p>لا تمتلك JavaScript نظامًا متطورًا للغاية لمعالجة الاستثناءات. ومع ذلك، فهي توفر عبارة <strong>[throw]</strong>، التي تسمح لك بالإشارة إلى وجود خطأ، بالإضافة إلى بنية try/catch/finally، التي تسمح لك بالتقاط تلك الأخطاء.</p>
+<p>لا تمتلك <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> نظامًا متطورًا للغاية لمعالجة الاستثناءات. ومع ذلك، فهي توفر عبارة <strong>[<bdi dir="ltr" class="odt-ltr-term">throw</bdi>]</strong>، التي تسمح لك بالإشارة إلى وجود خطأ، بالإضافة إلى بنية <bdi dir="ltr" class="odt-ltr-term">try/catch/finally</bdi>، التي تسمح لك بالتقاط تلك الأخطاء.</p>
 <p><a id="refheadingtoc2042513980233556"></a></p>
-<h2 id="91-excep-01">9.1. <span style="color: #4f81bd">نص برمجي [excep-01]</span></h2>
-<p>في البرنامج النصي التالي، سنعرض التاريخ الحالي بالتنسيق <strong>[ساعات:دقائق:ثوانٍ:مللي ثانية]</strong>. للقيام بذلك، سنستخدم مكتبة JavaScript تسمى <strong>[moment.js]</strong>. نقوم بتثبيتها، كالمعتاد، باستخدام أداة <strong>[npm]</strong>:</p>
+<h2 id="91-excep-01">9.1. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">excep-01</bdi>]</span></h2>
+<p>في البرنامج النصي التالي، سنعرض التاريخ الحالي بالتنسيق <strong>[ساعات:دقائق:ثوانٍ:مللي ثانية]</strong>. للقيام بذلك، سنستخدم مكتبة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> تسمى <strong>[<bdi dir="ltr" class="odt-ltr-term">moment.js</bdi>]</strong>. نقوم بتثبيتها، كالمعتاد، باستخدام أداة <strong>[<bdi dir="ltr" class="odt-ltr-term">npm</bdi>]</strong>:</p>
 <p><img src="images/1000000000000580000001BB195119DB.png" width="563" height="177" style="width:14.9cm;height:4.688cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
 <p>فيما يلي كود البرنامج النصي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -792,16 +794,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 </code></pre></div>
 
-<p>لفهم كيفية كتابة سطر <strong>[import]</strong> في السطر 4، يمكننا النظر إلى تعريف الوحدة النمطية <strong>[moment]</strong>:</p>
+<p>لفهم كيفية كتابة سطر <strong>[<bdi dir="ltr" class="odt-ltr-term">import</bdi>]</strong> في السطر 4، يمكننا النظر إلى تعريف الوحدة النمطية <strong>[<bdi dir="ltr" class="odt-ltr-term">moment</bdi>]</strong>:</p>
 <p><img src="images/1000000000000580000001BB195119DB.png" width="563" height="177" style="width:14.9cm;height:4.688cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
 <ul>
   <li>في <b>[1-2]</b>، ننتقل إلى تعريف الوحدة النمطية؛
   </li>
-  <li>في <b>[3]</b>، لدينا ملف TypeScript، وليس ملف JavaScript. في وقت التشغيل، يتم ترجمة ملف TypeScript هذا إلى ملف JavaScript قبل استخدامه؛
+  <li>في <b>[3]</b>، لدينا ملف <bdi dir="ltr" class="odt-ltr-term">TypeScript</bdi>، وليس ملف <bdi dir="ltr" class="odt-ltr-term">JavaScript.</bdi> في وقت التشغيل، يتم ترجمة ملف <bdi dir="ltr" class="odt-ltr-term">TypeScript</bdi> هذا إلى ملف <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> قبل استخدامه؛
   </li>
-  <li>في <b>[4]</b>، نبحث عن عبارات<b> [export] </b>(Ctrl-F)؛
+  <li>في <b>[4]</b>، نبحث عن عبارات<b> [<bdi dir="ltr" class="odt-ltr-term">export</bdi>] </b>(<bdi dir="ltr" class="odt-ltr-term">Ctrl-F</bdi>)؛
   </li>
-  <li>في <b>[5]</b>، يقوم البيان بتصدير الكائن<b> [moment]</b>. يمكن استيراد هذا في ES6 على النحو التالي:
+  <li>في <b>[5]</b>، يقوم البيان بتصدير الكائن<b> [<bdi dir="ltr" class="odt-ltr-term">moment</bdi>]</b>. يمكن استيراد هذا في <bdi dir="ltr" class="odt-ltr-term">ES6</bdi> على النحو التالي:
   </li>
 </ul>
 
@@ -809,7 +811,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p>يمكنك استخدام أي اسم لاستيراد كائن <strong>[moment]</strong>، على سبيل المثال:</p>
+<p>يمكنك استخدام أي اسم لاستيراد كائن <strong>[<bdi dir="ltr" class="odt-ltr-term">moment</bdi>]</strong>، على سبيل المثال:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> m </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
@@ -852,13 +854,13 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 4: استيراد مكتبة<b> [moment]</b>؛
+  <li>السطر 4: استيراد مكتبة<b> [<bdi dir="ltr" class="odt-ltr-term">moment</bdi>]</b>؛
   </li>
   <li>يتم تكرار البرنامج النصي 10 مرات (السطر 7). في كل تكرار للدورة، يتم استرداد الوقت الحالي بالتنسيق <b>[ساعات:دقائق:ثوانٍ:مللي ثانية] </b>(الأسطر 8–13)؛
   </li>
   <li>إذا كان عدد الميلي ثانية زوجيًا، يتم عرض رسالة خطأ (الأسطر 19–22)؛
   </li>
-  <li>الهدف هنا هو فهم كيفية عمل try / catch / finally
+  <li>الهدف هنا هو فهم كيفية عمل <bdi dir="ltr" class="odt-ltr-term">try</bdi> / <bdi dir="ltr" class="odt-ltr-term">catch</bdi> / <bdi dir="ltr" class="odt-ltr-term">finally</bdi>
   </li>
 </ul>
 
@@ -897,10 +899,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
 </code></pre></div>
 
-<p>يمكننا أن نرى أن جملة <strong>[finally]</strong> يتم تنفيذها دائمًا، سواء كان هناك خطأ أم لا.</p>
+<p>يمكننا أن نرى أن جملة <strong>[<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</strong> يتم تنفيذها دائمًا، سواء كان هناك خطأ أم لا.</p>
 <p><a id="refheadingtoc225364640539168"></a></p>
-<h2 id="92-excep-02">9.2. <span style="color: #4f81bd">نص برمجي [excep-02]</span></h2>
-<p>يوضح هذا البرنامج النصي أن عبارة <strong>[throw]</strong> يمكنها إلقاء أي نوع من البيانات وأن هذه البيانات يتم التقاطها بالكامل بواسطة جملة <strong>[catch]</strong>.</p>
+<h2 id="92-excep-02">9.2. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">excep-02</bdi>]</span></h2>
+<p>يوضح هذا البرنامج النصي أن عبارة <strong>[<bdi dir="ltr" class="odt-ltr-term">throw</bdi>]</strong> يمكنها إلقاء أي نوع من البيانات وأن هذه البيانات يتم التقاطها بالكامل بواسطة جملة <strong>[<bdi dir="ltr" class="odt-ltr-term">catch</bdi>]</strong>.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -954,9 +956,9 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطران 35 و 44: <b>[Error] </b>هي فئة JavaScript يقبل منشئها رسالة خطأ كمعلمة أولى اختيارية. يمكن استرداد هذه الرسالة من الخاصية<b> [Error.message] </b>(السطر 47)؛
+  <li>السطران 35 و 44: <b>[<bdi dir="ltr" class="odt-ltr-term">Error</bdi>] </b>هي فئة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> يقبل منشئها رسالة خطأ كمعلمة أولى اختيارية. يمكن استرداد هذه الرسالة من الخاصية<b> [<bdi dir="ltr" class="odt-ltr-term">Error.message</bdi>] </b>(السطر 47)؛
   </li>
-  <li>هناك فئات أخرى إلى جانب <b>[Error] </b>يمكنها الإشارة إلى وجود خطأ: [EvalError، InternalError، RangeError، ReferenceError، SyntaxError، TypeError، URIError)؛
+  <li>هناك فئات أخرى إلى جانب <b>[<bdi dir="ltr" class="odt-ltr-term">Error</bdi>] </b>يمكنها الإشارة إلى وجود خطأ: [<bdi dir="ltr" class="odt-ltr-term">EvalError</bdi>، <bdi dir="ltr" class="odt-ltr-term">InternalError</bdi>، <bdi dir="ltr" class="odt-ltr-term">RangeError</bdi>، <bdi dir="ltr" class="odt-ltr-term">ReferenceError</bdi>، <bdi dir="ltr" class="odt-ltr-term">SyntaxError</bdi>، <bdi dir="ltr" class="odt-ltr-term">TypeError</bdi>، <bdi dir="ltr" class="odt-ltr-term">URIError</bdi>)؛
   </li>
 </ul>
 
@@ -986,8 +988,8 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc225366640539168"></a></p>
-<h2 id="93-excep-03">9.3. <span style="color: #4f81bd">نص برمجي [excep-03]</span></h2>
-<p>يوضح هذا البرنامج النصي أنه، داخل <strong>[catch]</strong>، يمكنك التمييز بين نوع مثيل <strong>[Error]</strong> الذي تم اعتراضه بواسطة <strong>[catch]</strong>:</p>
+<h2 id="93-excep-03">9.3. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">excep-03</bdi>]</span></h2>
+<p>يوضح هذا البرنامج النصي أنه، داخل <strong>[<bdi dir="ltr" class="odt-ltr-term">catch</bdi>]</strong>، يمكنك التمييز بين نوع مثيل <strong>[<bdi dir="ltr" class="odt-ltr-term">Error</bdi>]</strong> الذي تم اعتراضه بواسطة <strong>[<bdi dir="ltr" class="odt-ltr-term">catch</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>

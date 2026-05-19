@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -767,8 +769,8 @@
 <h1 id="7">7. <span style="color: #365f91">التعبيرات العادية</span></h1>
 <p><img src="images/1000000000000111000000913AD7CFA8.png" width="109" height="58" style="width:2.889cm;height:1.535cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000111000000913AD7CFA8.png" /></p>
 <p><a id="refheadingtoc259299196815120"></a></p>
-<h2 id="71-regex-01">7.1. <span style="color: #4f81bd">نص برمجي [regex-01]</span></h2>
-<p>في دورة PHP، استخدمنا الكود التالي لتوضيح التعبيرات العادية في PHP 7:</p>
+<h2 id="71-regex-01">7.1. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">regex-01</bdi>]</span></h2>
+<p>في دورة <bdi dir="ltr" class="odt-ltr-term">PHP</bdi>، استخدمنا الكود التالي لتوضيح التعبيرات العادية في <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> 7:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -829,7 +831,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>نقوم بتحويل هذا الكود إلى JavaScript على النحو التالي:</p>
+<p>نقوم بتحويل هذا الكود إلى <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -881,9 +883,9 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>كود PHP و JavaScript متشابهان جدًا؛
+  <li>كود <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> و <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> متشابهان جدًا؛
   </li>
-  <li>السطر 7: لاحظ أن التعبير العادي في JavaScript ليس سلسلة بل كائن. لا تضع علامات اقتباس أو فواصل عليا حول التعبير؛
+  <li>السطر 7: لاحظ أن التعبير العادي في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> ليس سلسلة بل كائن. لا تضع علامات اقتباس أو فواصل عليا حول التعبير؛
   </li>
   <li>السطران 41 و 44: هناك طريقتان لتحقيق نفس النتيجة؛
   </li>
@@ -1006,27 +1008,27 @@
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec match= <span style="font-weight:bold">[ &#x27; + 4&#x27;, &#x27;+&#x27;, &#x27;4&#x27;, index: 0, input: &#x27; + 4&#x27;, groups: undefined ]</span></span></span>
 </code></pre></div>
 
-<p>تُرجع طريقتا <strong>[regexp.exec]</strong> و <strong>[string.match]</strong> نفس النتائج:</p>
+<p>تُرجع طريقتا <strong>[<bdi dir="ltr" class="odt-ltr-term">regexp.exec</bdi>]</strong> و <strong>[<bdi dir="ltr" class="odt-ltr-term">string.match</bdi>]</strong> نفس النتائج:</p>
 <ul>
-  <li><b>[null] </b>إذا لم تكن هناك تطابقات بين السلسلة ونمطها؛
+  <li><b>[<bdi dir="ltr" class="odt-ltr-term">null</bdi>] </b>إذا لم تكن هناك تطابقات بين السلسلة ونمطها؛
   </li>
-  <li>مصفوفة t، إذا كانت هناك مطابقة مع:
+  <li>مصفوفة <bdi dir="ltr" class="odt-ltr-term">t</bdi>، إذا كانت هناك مطابقة مع:
     <ul>
-      <li>t<b>[0]</b>: السلسلة المطابقة للنمط؛
+      <li><bdi dir="ltr" class="odt-ltr-term">t</bdi><b>[0]</b>: السلسلة المطابقة للنمط؛
       </li>
-      <li>t<b>[1]</b>: السلسلة المطابقة لأول قوس من النمط؛
+      <li><bdi dir="ltr" class="odt-ltr-term">t</bdi><b>[1]</b>: السلسلة المطابقة لأول قوس من النمط؛
       </li>
-      <li>t<b>[2]</b>: السلسلة المطابقة للقوس الثاني في النمط؛
+      <li><bdi dir="ltr" class="odt-ltr-term">t</bdi><b>[2]</b>: السلسلة المطابقة للقوس الثاني في النمط؛
       </li>
       <li>…
       </li>
-      <li>t<b>[input]</b>: السلسلة الكاملة التي تم البحث فيها عن النمط؛
+      <li><bdi dir="ltr" class="odt-ltr-term">t</bdi><b>[<bdi dir="ltr" class="odt-ltr-term">input</bdi>]</b>: السلسلة الكاملة التي تم البحث فيها عن النمط؛
       </li>
     </ul>
   </li>
 </ul>
 <p><a id="refheadingtoc259301196815120"></a></p>
-<h2 id="72-regexp-02">7.2. <span style="color: #4f81bd">نص برمجي [regexp-02]</span></h2>
+<h2 id="72-regexp-02">7.2. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">regexp-02</bdi>]</span></h2>
 <p>في بعض الأحيان، قد لا ترغب في استخراج عناصر من السلسلة التي تم اختبارها، بل ترغب فقط في معرفة ما إذا كانت تتطابق مع النمط:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -1076,11 +1078,11 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>يستخدم<b> [regexp-02] </b>الكود من <b>[regexp-01] </b>مع الاختلافات التالية:
+  <li>يستخدم<b> [<bdi dir="ltr" class="odt-ltr-term">regexp-02</bdi>] </b>الكود من <b>[<bdi dir="ltr" class="odt-ltr-term">regexp-01</bdi>] </b>مع الاختلافات التالية:
     <ul>
       <li>لا نريد استخراج عناصر من السلسلة التي يتم اختبارها. لذلك، قمنا بإزالة الأقواس من التعبيرات العادية المستخدمة؛
       </li>
-      <li>السطر 40: نستخدم طريقة<b> [Regexp.test] </b>لتحديد ما إذا كانت السلسلة تتطابق مع تعبير عادي؛
+      <li>السطر 40: نستخدم طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">Regexp.test</bdi>] </b>لتحديد ما إذا كانت السلسلة تتطابق مع تعبير عادي؛
       </li>
     </ul>
   </li>

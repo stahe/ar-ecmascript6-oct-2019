@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -859,13 +861,13 @@
 
 <p><a id="refheadingtoc2152541731793072"></a>
 <a id="fontionshttp"></a></p>
-<h1 id="12-http-javascript">12. <span style="color: #365f91">وظائف HTTP في JavaScript</span></h1>
+<h1 id="12-http-javascript">12. <span style="color: #365f91">وظائف <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi></span></h1>
 <p><img src="images/10000000000000F90000014488334DE4.png" width="100" height="130" style="width:2.641cm;height:3.436cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F90000014488334DE4.png" /></p>
 <p><a id="refheadingtoc225388640539168"></a></p>
-<h2 id="121-http">12.1. <span style="color: #4f81bd">اختيار مكتبة HTTP</span></h2>
+<h2 id="121-http">12.1. <span style="color: #4f81bd">اختيار مكتبة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi></span></h2>
 <p>لقد اخترنا مكتبتين هنا:</p>
-<p>يحتوي ECMAScript 6 بشكل أساسي على دالة HTTP تسمى <strong>[fetch]</strong> لم يتم تنفيذها في <strong>[node.js]</strong> (حتى سبتمبر 2019). هناك مكتبة تسمى <strong>[node-fetch]</strong> تسمح لك باستخدام وظيفة <strong>[fetch]</strong> في Node. تستخدم هذه المكتبة واجهات برمجة تطبيقات (APIs) معينة خاصة بـ <strong>[node.js]</strong>. لذلك قد لا يكون كود <strong>[node-fetch]</strong> قابلاً للنقل بنسبة 100% إلى بيئة غير <strong>[node]</strong>، مثل المتصفح؛</p>
-<p>هناك أيضًا مكتبة تسمى <strong>[axios]</strong> مخصصة لطلبات HTTP وهي متوافقة مع كل من <strong>[node.js]</strong> والمتصفحات. هذه هي المكتبة التي سنستخدمها في النهاية.</p>
+<p>يحتوي <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi> 6 بشكل أساسي على دالة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> تسمى <strong>[<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>]</strong> لم يتم تنفيذها في <strong>[<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</strong> (حتى سبتمبر 2019). هناك مكتبة تسمى <strong>[<bdi dir="ltr" class="odt-ltr-term">node-fetch</bdi>]</strong> تسمح لك باستخدام وظيفة <strong>[<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>]</strong> في <bdi dir="ltr" class="odt-ltr-term">Node.</bdi> تستخدم هذه المكتبة واجهات برمجة تطبيقات (<bdi dir="ltr" class="odt-ltr-term">APIs</bdi>) معينة خاصة بـ <strong>[<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</strong>. لذلك قد لا يكون كود <strong>[<bdi dir="ltr" class="odt-ltr-term">node-fetch</bdi>]</strong> قابلاً للنقل بنسبة 100% إلى بيئة غير <strong>[<bdi dir="ltr" class="odt-ltr-term">node</bdi>]</strong>، مثل المتصفح؛</p>
+<p>هناك أيضًا مكتبة تسمى <strong>[<bdi dir="ltr" class="odt-ltr-term">axios</bdi>]</strong> مخصصة لطلبات <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> وهي متوافقة مع كل من <strong>[<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</strong> والمتصفحات. هذه هي المكتبة التي سنستخدمها في النهاية.</p>
 <p>سنقدم نفس البرنامج النصي المكتوب باستخدام كلتا المكتبتين لإثبات أن نهج البرمجة متشابه.</p>
 <p><a id="refheadingtoc225390640539168"></a></p>
 <h2 id="122">12.2. <span style="color: #4f81bd">إعداد بيئة التطوير</span></h2>
@@ -873,20 +875,20 @@
 <h3 id="1221">12.2.1. <span style="color: #4f81bd">تثبيت خادم حساب الضرائب</span></h3>
 <p>في النهاية، سنكتب تطبيق ويب بالبنية التالية:</p>
 <p><img src="images/100000000000055A000001AFF8202431.png" width="548" height="172" style="width:14.499cm;height:4.561cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000055A000001AFF8202431.png" /></p>
-<p><strong>JS</strong>: JavaScript</p>
-<p>يكون كود JavaScript من جانب العميل:</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">JS</bdi></strong>: <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi></p>
+<p>يكون كود <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> من جانب العميل:</p>
 <ul>
   <li>من خدمة تقدم صفحات ثابتة أو أجزاء منها؛
   </li>
-  <li>خدمة JSON؛
+  <li>خدمة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>؛
   </li>
 </ul>
 
-<p>وبالتالي، فإن كود JavaScript هو عميل JSON، وبهذه الصفة، يمكن تنظيمه في طبقات <strong>[UI، منطق الأعمال، DAO]</strong> (UI: واجهة المستخدم) تمامًا مثل عملاء JSON المكتوبين بلغة PHP.</p>
-<p>سيكون الخادم هو خادم حساب الضرائب الذي كتبنا له بالفعل 13 إصدارًا. سنقوم بكتابة الإصدار الرابع عشر. لذلك نبدأ بنسخ مجلد الإصدار 13 في NetBeans إلى مجلد الإصدار 14:</p>
+<p>وبالتالي، فإن كود <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> هو عميل <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>، وبهذه الصفة، يمكن تنظيمه في طبقات <strong>[<bdi dir="ltr" class="odt-ltr-term">UI</bdi>، منطق الأعمال، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</strong> (<bdi dir="ltr" class="odt-ltr-term">UI:</bdi> واجهة المستخدم) تمامًا مثل عملاء <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المكتوبين بلغة <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi></p>
+<p>سيكون الخادم هو خادم حساب الضرائب الذي كتبنا له بالفعل 13 إصدارًا. سنقوم بكتابة الإصدار الرابع عشر. لذلك نبدأ بنسخ مجلد الإصدار 13 في <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> إلى مجلد الإصدار 14:</p>
 <p><img src="images/1000000000000390000003D773DFC466.png" width="410" height="442" style="width:10.86cm;height:11.705cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000390000003D773DFC466.png" /></p>
 <ul>
-  <li>في <b>[6]</b>، نقوم بتعديل ملف<b> [config.json] </b>الخاص بالإصدار 14 على النحو التالي:
+  <li>في <b>[6]</b>، نقوم بتعديل ملف<b> [<bdi dir="ltr" class="odt-ltr-term">config.json</bdi>] </b>الخاص بالإصدار 14 على النحو التالي:
   </li>
 </ul>
 
@@ -913,39 +915,39 @@
   </li>
 </ul>
 
-<p>للوصول إلى هذا الخادم، يجب عليك تشغيل خدمات <strong>[Laragon]</strong>.</p>
-<p>وبمجرد الانتهاء من ذلك، يمكننا اختبار هذا الإصدار الجديد من الخادم — الذي يتطابق حاليًا مع الإصدار 13 — باستخدام <strong>[Postman]</strong> (انظر المقالة <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">المرفقة</span></u></a>). ويمكننا استخدام مجموعة الطلبات التي استُخدمت لاختبار الإصدار 12 من خادم حساب الضرائب:</p>
+<p>للوصول إلى هذا الخادم، يجب عليك تشغيل خدمات <strong>[<bdi dir="ltr" class="odt-ltr-term">Laragon</bdi>]</strong>.</p>
+<p>وبمجرد الانتهاء من ذلك، يمكننا اختبار هذا الإصدار الجديد من الخادم — الذي يتطابق حاليًا مع الإصدار 13 — باستخدام <strong>[<bdi dir="ltr" class="odt-ltr-term">Postman</bdi>]</strong> (انظر المقالة <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">المرفقة</span></u></a>). ويمكننا استخدام مجموعة الطلبات التي استُخدمت لاختبار الإصدار 12 من خادم حساب الضرائب:</p>
 <p><img src="images/10000000000007FB000004EA33F975D1.png" width="613" height="377" style="width:16.221cm;height:9.987cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007FB000004EA33F975D1.png" /></p>
 <ul>
-  <li>في <b>[1-4]</b>، استخدم طلب<b> [init-session-700] </b>لتهيئة جلسة JSON؛
+  <li>في <b>[1-4]</b>، استخدم طلب<b> [<bdi dir="ltr" class="odt-ltr-term">init-session-700</bdi>] </b>لتهيئة جلسة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>؛
   </li>
-  <li>في <b>[4-5]</b>، استبدل <b>[version-12] </b>بـ <b>[version-14] </b>لاختبار الإصدار 14 من المشروع؛
+  <li>في <b>[4-5]</b>، استبدل <b>[<bdi dir="ltr" class="odt-ltr-term">version-12</bdi>] </b>بـ <b>[<bdi dir="ltr" class="odt-ltr-term">version-14</bdi>] </b>لاختبار الإصدار 14 من المشروع؛
   </li>
-  <li>عند التنفيذ، يجب أن نتلقى استجابة JSON <b>[6] </b>من الخادم؛
+  <li>عند التنفيذ، يجب أن نتلقى استجابة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> <b>[6] </b>من الخادم؛
   </li>
 </ul>
 
-<p>الإصدار 14 من الخادم جاهز للعمل الآن. سنحتاج إلى تعديله قليلاً. دعونا نراجع واجهة برمجة تطبيقات (API) هذا الخادم:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الإجراء</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>سياق التنفيذ</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>init-session</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يُستخدم لتعيين نوع (json، xml، html) الاستجابات المطلوبة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b>GET main.php?action=init-session&amp;type=x</b></div><div style="margin:0 0 0.5em 0">يمكن إرساله في أي وقت</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>authenticate-user</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يوافق على تسجيل دخول المستخدم أو يرفضه</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b>POST main.php?action=authenticate-user</b></div><div style="margin:0 0 0.5em 0">يجب أن يحتوي الطلب على معلمتين مرسلتين <b>[user, password]</b></div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (json، xml، html) معروفًا</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>حساب الضريبة</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يقوم بمحاكاة حساب الضريبة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b>POST </b>إلى <b>main.php?action=calculate-tax</b></div><div style="margin:0 0 0.5em 0">يجب أن يحتوي الطلب على ثلاثة معلمات مرسلة <b>[married، children، salary]</b></div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (json، xml، html) معروفًا وتم مصادقة المستخدم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>list-simulations</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب لعرض قائمة المحاكاة التي تم إجراؤها منذ بداية الجلسة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b>GET main.php?action=list-simulations</b></div><div style="margin:0 0 0.5em 0">لا يقبل الطلب أي معلمات أخرى</div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (json، xml، html) معروفًا وتم توثيق المستخدم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>delete-simulation</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحذف محاكاة من قائمة المحاكاة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b>GET main.php?action=list-simulations&amp;number=x</b></div><div style="margin:0 0 0.5em 0">لا يقبل الطلب أي معلمات أخرى</div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (json، xml، html) معروفًا وتم توثيق المستخدم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>إنهاء الجلسة</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينهي جلسة المحاكاة.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">من الناحية الفنية، يتم حذف جلسة الويب القديمة وإنشاء جلسة جديدة</div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (json، xml، html) معروفًا وتم توثيق المستخدم</div></td></tr></table>
+<p>الإصدار 14 من الخادم جاهز للعمل الآن. سنحتاج إلى تعديله قليلاً. دعونا نراجع واجهة برمجة تطبيقات (<bdi dir="ltr" class="odt-ltr-term">API</bdi>) هذا الخادم:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الإجراء</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>سياق التنفيذ</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">init-session</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يُستخدم لتعيين نوع (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) الاستجابات المطلوبة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">type</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi></b></div><div style="margin:0 0 0.5em 0">يمكن إرساله في أي وقت</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">authenticate-user</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يوافق على تسجيل دخول المستخدم أو يرفضه</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">POST main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">authenticate-user</bdi></b></div><div style="margin:0 0 0.5em 0">يجب أن يحتوي الطلب على معلمتين مرسلتين <b>[<bdi dir="ltr" class="odt-ltr-term">user</bdi>, <bdi dir="ltr" class="odt-ltr-term">password</bdi>]</b></div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>حساب الضريبة</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يقوم بمحاكاة حساب الضريبة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">POST</bdi> </b>إلى <b><bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">calculate-tax</bdi></b></div><div style="margin:0 0 0.5em 0">يجب أن يحتوي الطلب على ثلاثة معلمات مرسلة <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>، <bdi dir="ltr" class="odt-ltr-term">children</bdi>، <bdi dir="ltr" class="odt-ltr-term">salary</bdi>]</b></div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا وتم مصادقة المستخدم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب لعرض قائمة المحاكاة التي تم إجراؤها منذ بداية الجلسة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi></b></div><div style="margin:0 0 0.5em 0">لا يقبل الطلب أي معلمات أخرى</div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا وتم توثيق المستخدم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">delete-simulation</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحذف محاكاة من قائمة المحاكاة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">number</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi></b></div><div style="margin:0 0 0.5em 0">لا يقبل الطلب أي معلمات أخرى</div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا وتم توثيق المستخدم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>إنهاء الجلسة</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينهي جلسة المحاكاة.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">من الناحية الفنية، يتم حذف جلسة الويب القديمة وإنشاء جلسة جديدة</div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا وتم توثيق المستخدم</div></td></tr></table>
 
 <p><a id="refheadingtoc225394640539168"></a></p>
-<h3 id="1222-http-javascript">12.2.2. <span style="color: #4f81bd">تثبيت مكتبات HTTP لعميل JavaScript</span></h3>
+<h3 id="1222-http-javascript">12.2.2. <span style="color: #4f81bd">تثبيت مكتبات <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> لعميل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi></span></h3>
 <p>في البداية، سنعمل مع البنية التالية:</p>
 <p><img src="images/1000000000000548000001AC0F76E799.png" width="541" height="171" style="width:14.31cm;height:4.53cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000548000001AC0F76E799.png" /></p>
 <ul>
-  <li>في <b>[1]</b>، يقوم برنامج نصي للوحدة <b>[node.js] </b>بإرسال طلب HTTP إلى خادم JSON لحساب الضرائب؛
+  <li>في <b>[1]</b>، يقوم برنامج نصي للوحدة <b>[<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>] </b>بإرسال طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> إلى خادم <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> لحساب الضرائب؛
   </li>
   <li>في <b>[4]</b>، يتلقى هذا الرد ويعرضه في وحدة التحكم؛
   </li>
 </ul>
 
-<p>في المثال 1، سنستخدم مكتبتَي <strong>[node-fetch]</strong> و<strong>[axios]</strong>، ثم سنحتفظ بـ <strong>[axios]</strong> فقط للأمثلة التالية. سنقوم الآن بتثبيت هاتين المكتبتين من JavaScript من محطة <strong>[VSCode]</strong>:</p>
+<p>في المثال 1، سنستخدم مكتبتَي <strong>[<bdi dir="ltr" class="odt-ltr-term">node-fetch</bdi>]</strong> و<strong>[<bdi dir="ltr" class="odt-ltr-term">axios</bdi>]</strong>، ثم سنحتفظ بـ <strong>[<bdi dir="ltr" class="odt-ltr-term">axios</bdi>]</strong> فقط للأمثلة التالية. سنقوم الآن بتثبيت هاتين المكتبتين من <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> من محطة <strong>[<bdi dir="ltr" class="odt-ltr-term">VSCode</bdi>]</strong>:</p>
 <p><img src="images/10000000000005A10000026CFFDAC34F.png" width="576" height="248" style="width:15.251cm;height:6.562cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005A10000026CFFDAC34F.png" /></p>
-<p>سنستخدم أيضًا مكتبة <strong>[qs]</strong>، التي تسمح بترميز URL لسلسلة نصية. تذكر أن هذا الترميز يُستخدم لترميز معلمات طلب HTTP GET أو POST.</p>
+<p>سنستخدم أيضًا مكتبة <strong>[<bdi dir="ltr" class="odt-ltr-term">qs</bdi>]</strong>، التي تسمح بترميز <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لسلسلة نصية. تذكر أن هذا الترميز يُستخدم لترميز معلمات طلب <bdi dir="ltr" class="odt-ltr-term">HTTP GET</bdi> أو <bdi dir="ltr" class="odt-ltr-term">POST.</bdi></p>
 <p><img src="images/10000000000005BC000002291894F579.png" width="587" height="221" style="width:15.542cm;height:5.854cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005BC000002291894F579.png" /></p>
 <p><a id="refheadingtoc225396640539168"></a></p>
-<h2 id="123-fetch-01">12.3. <span style="color: #4f81bd">نص برمجي [fetch-01]</span></h2>
-<p>يستخدم البرنامج النصي <strong>[fetch-01]</strong> مكتبة <strong>[node-fetch]</strong> لتهيئة جلسة JSON مع خادم حساب الضرائب. وفيما يلي كوده:</p>
+<h2 id="123-fetch-01">12.3. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">fetch-01</bdi>]</span></h2>
+<p>يستخدم البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">fetch-01</bdi>]</strong> مكتبة <strong>[<bdi dir="ltr" class="odt-ltr-term">node-fetch</bdi>]</strong> لتهيئة جلسة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> مع خادم حساب الضرائب. وفيما يلي كوده:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1041,64 +1043,64 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>وظائف HTTP في JavaScript هي وظائف غير متزامنة. هنا، نطبق ما تعلمناه في القسم السابق (انظر <a href="../../../../../../../st-2020/cours/ecmascript6/masters/02/chap-11.docx#fontions_async"><u><span style="color: #0563c1">الرابط</span></u></a>)؛
+  <li>وظائف <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> هي وظائف غير متزامنة. هنا، نطبق ما تعلمناه في القسم السابق (انظر <a href="../../../../../../../st-2020/cours/ecmascript6/masters/02/chap-11.docx#fontions_async"><u><span style="color: #0563c1">الرابط</span></u></a>)؛
   </li>
-  <li>السطر 24: لانتظار نشر استجابة الدالة غير المتزامنة <b>[fetch] </b>في حلقة أحداث<b> [node.js]</b>، نستخدم الكلمة الرئيسية <b>[await]</b>. ونعلم أن هذه العبارة يجب أن تكون ضمن كود مسبوق بالكلمة الرئيسية <b>[async] </b>(السطر 13)؛
+  <li>السطر 24: لانتظار نشر استجابة الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>] </b>في حلقة أحداث<b> [<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</b>، نستخدم الكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">await</bdi>]</b>. ونعلم أن هذه العبارة يجب أن تكون ضمن كود مسبوق بالكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">async</bdi>] </b>(السطر 13)؛
   </li>
-  <li>الأسطر 13-56: نقوم بتغليف كود HTTP داخل الدالة غير المتزامنة <b>[initSession]</b>؛
+  <li>الأسطر 13-56: نقوم بتغليف كود <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> داخل الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>]</b>؛
   </li>
-  <li>الأسطر 59-69: تُستخدم دالة غير متزامنة ثانية <b>[main] </b>لاستدعاء الدالة غير المتزامنة <b>[initSession] </b>بطريقة حجبية (async/await)؛
+  <li>الأسطر 59-69: تُستخدم دالة غير متزامنة ثانية <b>[<bdi dir="ltr" class="odt-ltr-term">main</bdi>] </b>لاستدعاء الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>] </b>بطريقة حجبية (<bdi dir="ltr" class="odt-ltr-term">async/await</bdi>)؛
   </li>
-  <li>السطر 72: يتم استدعاء الدالة غير المتزامنة <b>[main]</b>؛
+  <li>السطر 72: يتم استدعاء الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">main</bdi>]</b>؛
   </li>
   <li>على الرغم من أن الكود بأكمله يشبه الكود المتزامن، إلا أن هذه هي في الواقع دوال غير متزامنة يتم تنفيذها، ولكن بطريقة حجبية؛
   </li>
-  <li>السطر 19: لتهيئة جلسة JSON مع خادم حساب الضرائب، يجب إرسال طلب HTTP <b>[get /main.php?action=init-session&amp;type=json] </b>إليه. وهذا ما يفعله الكود في الأسطر 24–27. صيغة <b>[fetch] </b>هي كما يلي<b>: [fetch(URL, options)] </b>مع:
+  <li>السطر 19: لتهيئة جلسة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> مع خادم حساب الضرائب، يجب إرسال طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">get</bdi> /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">type</bdi>=<bdi dir="ltr" class="odt-ltr-term">json</bdi>] </b>إليه. وهذا ما يفعله الكود في الأسطر 24–27. صيغة <b>[<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>] </b>هي كما يلي<b>: [<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>(<bdi dir="ltr" class="odt-ltr-term">URL</bdi>, <bdi dir="ltr" class="odt-ltr-term">options</bdi>)] </b>مع:
     <ul>
-      <li><b>[URL]</b>: عنوان URL الذي يتم الاستعلام عنه؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">URL</bdi>]</b>: عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي يتم الاستعلام عنه؛
       </li>
-      <li><b>[options]</b>: كائن يحدد خيارات الطلب. هنا نحدد رؤوس HTTP التي نريد إرسالها إلى الخادم المستهدف؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">options</bdi>]</b>: كائن يحدد خيارات الطلب. هنا نحدد رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> التي نريد إرسالها إلى الخادم المستهدف؛
       </li>
     </ul>
   </li>
   <li>الأسطر 15–18: نحدد خيارات الطلب الذي نريد إجراؤه:
     <ul>
-      <li><b>[method]</b>: نريد تنفيذ GET؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">method</bdi>]</b>: نريد تنفيذ <bdi dir="ltr" class="odt-ltr-term">GET</bdi>؛
       </li>
-      <li><b>[timeout]</b>: نريد أن ينتظر عميل<b> [fetch] </b>ما لا يزيد عن ثانيتين لاستجابة الخادم. إذا تم تجاوز هذا الوقت المحدد، فسوف يرمي <b>[fetch] </b>استثناءً؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">timeout</bdi>]</b>: نريد أن ينتظر عميل<b> [<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>] </b>ما لا يزيد عن ثانيتين لاستجابة الخادم. إذا تم تجاوز هذا الوقت المحدد، فسوف يرمي <b>[<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>] </b>استثناءً؛
       </li>
     </ul>
   </li>
-  <li>السطر 24: للحصول على عنوان URL <b>[/main.php?action=init-session&amp;type=json]</b>، نستخدم مكتبة<b> [qs] </b>للحصول على المعلمات <b>[action,type] </b>المشفرة في عنوان URL لطلب GET. السلسلة الناتجة هي <b>[init-session&amp;type=json]، </b>والتي كان بإمكاننا تكوينها بأنفسنا. أردنا ببساطة توضيح كيفية الحصول على سلسلة مشفرة في عنوان URL؛
+  <li>السطر 24: للحصول على عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <b>[/<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">type</bdi>=<bdi dir="ltr" class="odt-ltr-term">json</bdi>]</b>، نستخدم مكتبة<b> [<bdi dir="ltr" class="odt-ltr-term">qs</bdi>] </b>للحصول على المعلمات <b>[<bdi dir="ltr" class="odt-ltr-term">action</bdi>,<bdi dir="ltr" class="odt-ltr-term">type</bdi>] </b>المشفرة في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لطلب <bdi dir="ltr" class="odt-ltr-term">GET.</bdi> السلسلة الناتجة هي <b>[<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">type</bdi>=<bdi dir="ltr" class="odt-ltr-term">json</bdi>]، </b>والتي كان بإمكاننا تكوينها بأنفسنا. أردنا ببساطة توضيح كيفية الحصول على سلسلة مشفرة في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>؛
   </li>
-  <li>السطر 24: تشير الكلمة الرئيسية <b>[await] </b>إلى أنه يتم هنا تشغيل مهمة غير متزامنة وأننا ننتظر نشرها لاستجابتها في حلقة أحداث<b> [node.js]</b>؛
+  <li>السطر 24: تشير الكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">await</bdi>] </b>إلى أنه يتم هنا تشغيل مهمة غير متزامنة وأننا ننتظر نشرها لاستجابتها في حلقة أحداث<b> [<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</b>؛
   </li>
-  <li>السطر 24: في <b>[response]</b>، نحصل على كائن معقد يصف استجابة HTTP المستلمة بالكامل (الرؤوس والنص الأساسي)؛
+  <li>السطر 24: في <b>[<bdi dir="ltr" class="odt-ltr-term">response</bdi>]</b>، نحصل على كائن معقد يصف استجابة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> المستلمة بالكامل (الرؤوس والنص الأساسي)؛
   </li>
-  <li>السطران 30-31: نقوم بطباعة كائن<b> [response] </b>لرؤية هيكله، أولاً كسلسلة ثم ككائن JavaScript؛
+  <li>السطران 30-31: نقوم بطباعة كائن<b> [<bdi dir="ltr" class="odt-ltr-term">response</bdi>] </b>لرؤية هيكله، أولاً كسلسلة ثم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
   </li>
-  <li>السطر 33: نعرض رؤوس HTTP المرسلة من الخادم؛
+  <li>السطر 33: نعرض رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> المرسلة من الخادم؛
   </li>
-  <li>السطر 38: نعلم أن خادم حساب الضرائب سيرسل سلسلة JSON. هذه السلسلة مغلفة في كائن<b> [response]</b>. يمكننا استردادها باستخدام طريقة<b> [response.json()]</b>. ومع ذلك، فإن هذه الطريقة غير متزامنة. لذلك نكتب <b>[await response.json()] </b>لاسترداد سلسلة JSON التي سيتم نشرها في حلقة أحداث<b> [node.js]</b>. في الواقع، ليس سلسلة JSON نفسها هي ما نحصل عليه، بل كائن JavaScript الذي تمثله؛
+  <li>السطر 38: نعلم أن خادم حساب الضرائب سيرسل سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON.</bdi> هذه السلسلة مغلفة في كائن<b> [<bdi dir="ltr" class="odt-ltr-term">response</bdi>]</b>. يمكننا استردادها باستخدام طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">response.json</bdi>()]</b>. ومع ذلك، فإن هذه الطريقة غير متزامنة. لذلك نكتب <b>[<bdi dir="ltr" class="odt-ltr-term">await response.json</bdi>()] </b>لاسترداد سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> التي سيتم نشرها في حلقة أحداث<b> [<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</b>. في الواقع، ليس سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> نفسها هي ما نحصل عليه، بل كائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> الذي تمثله؛
   </li>
-  <li>السطر 39: عرض سلسلة JSON المستلمة؛
+  <li>السطر 39: عرض سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المستلمة؛
   </li>
-  <li>السطر 40: إرجاع كائن JavaScript المستلم؛
+  <li>السطر 40: إرجاع كائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> المستلم؛
   </li>
-  <li>السطر 47: نلتقط أي أخطاء محتملة من عبارة<b> [fetch]</b>. لا ترمي هذه العبارة استثناءً إلا إذا فشلت عملية HTTP ولم يتم تلقي أي استجابة من الخادم. إذا تم تلقي استجابة، حتى مع رمز حالة HTTP غير <b>[200 OK]</b>، فإن<b> [fetch] </b>لا ترمي استثناءً، وستكون استجابة الخادم متاحة في السطر 38؛
+  <li>السطر 47: نلتقط أي أخطاء محتملة من عبارة<b> [<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>]</b>. لا ترمي هذه العبارة استثناءً إلا إذا فشلت عملية <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> ولم يتم تلقي أي استجابة من الخادم. إذا تم تلقي استجابة، حتى مع رمز حالة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> غير <b>[200 <bdi dir="ltr" class="odt-ltr-term">OK</bdi>]</b>، فإن<b> [<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>] </b>لا ترمي استثناءً، وستكون استجابة الخادم متاحة في السطر 38؛
   </li>
-  <li>السطران 51-52: يتم عرض كائن<b> [error] </b>الذي تم استلامه بواسطة جملة<b> [catch]</b>، أولاً كسلسلة JSON ثم ككائن JavaScript؛
+  <li>السطران 51-52: يتم عرض كائن<b> [<bdi dir="ltr" class="odt-ltr-term">error</bdi>] </b>الذي تم استلامه بواسطة جملة<b> [<bdi dir="ltr" class="odt-ltr-term">catch</bdi>]</b>، أولاً كسلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> ثم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
   </li>
-  <li>السطر 54: يتم تخزين رسالة الخطأ الواردة من <b>[fetch] </b>في <b>[error.message]</b>؛
+  <li>السطر 54: يتم تخزين رسالة الخطأ الواردة من <b>[<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>] </b>في <b>[<bdi dir="ltr" class="odt-ltr-term">error.message</bdi>]</b>؛
   </li>
-  <li>الأسطر 59–69: تستدعي الدالة غير المتزامنة <b>[main] </b>الدالة غير المتزامنة <b>[initSession] </b>بطريقة حجبية (await في السطر 62)؛
+  <li>الأسطر 59–69: تستدعي الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">main</bdi>] </b>الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>] </b>بطريقة حجبية (<bdi dir="ltr" class="odt-ltr-term">await</bdi> في السطر 62)؛
   </li>
-  <li>السطر 72: يتم تشغيل الدالة غير المتزامنة <b>[main]</b>، ثم يكتمل كود البرنامج النصي الرئيسي. سينتهي البرنامج النصي بأكمله عندما تنشر المهام غير المتزامنة التي تم تشغيلها نتائجها إلى حلقة الأحداث؛
+  <li>السطر 72: يتم تشغيل الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">main</bdi>]</b>، ثم يكتمل كود البرنامج النصي الرئيسي. سينتهي البرنامج النصي بأكمله عندما تنشر المهام غير المتزامنة التي تم تشغيلها نتائجها إلى حلقة الأحداث؛
   </li>
 </ul>
 
 <p>نتائج التنفيذ هي كما يلي:</p>
-<p><strong>الحالة 1</strong>: خادم Laragon لا يعمل</p>
+<p><strong>الحالة 1</strong>: خادم <bdi dir="ltr" class="odt-ltr-term">Laragon</bdi> لا يعمل</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\fetch-01.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">requête HTTP vers le serveur en cours ---------------------------------------------</span></span>
@@ -1120,21 +1122,21 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 3: فشل طلب HTTP بعد 2 ثانية و62 مللي ثانية بسبب مهلة 2 ثانية المفروضة على طلب HTTP؛
+  <li>السطر 3: فشل طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> بعد 2 ثانية و62 مللي ثانية بسبب مهلة 2 ثانية المفروضة على طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>؛
   </li>
-  <li>الأسطر 4–9: كائن<b> [error] </b>في JavaScript الذي تم اعتراضه بواسطة جملة<b> [catch(error)]</b>. يحتوي هذا الكائن على خاصيتين:
+  <li>الأسطر 4–9: كائن<b> [<bdi dir="ltr" class="odt-ltr-term">error</bdi>] </b>في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> الذي تم اعتراضه بواسطة جملة<b> [<bdi dir="ltr" class="odt-ltr-term">catch</bdi>(<bdi dir="ltr" class="odt-ltr-term">error</bdi>)]</b>. يحتوي هذا الكائن على خاصيتين:
     <ul>
-      <li><b>[FetchError]</b>: السطر 4؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">FetchError</bdi>]</b>: السطر 4؛
       </li>
-      <li><b>[message]</b>: الأسطر 10–12؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">message</bdi>]</b>: الأسطر 10–12؛
       </li>
     </ul>
   </li>
-  <li>السطر 14: رسالة الخطأ التي تلقتها الدالة غير المتزامنة <b>[main]</b>؛
+  <li>السطر 14: رسالة الخطأ التي تلقتها الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">main</bdi>]</b>؛
   </li>
 </ul>
 
-<p><strong>الحالة 2</strong>: خادم Laragon قيد التشغيل</p>
+<p><strong>الحالة 2</strong>: خادم <bdi dir="ltr" class="odt-ltr-term">Laragon</bdi> قيد التشغيل</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\fetch-01.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">requête HTTP vers le serveur en cours ---------------------------------------------</span></span>
@@ -1186,29 +1188,29 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 3: <b>[fetch] </b>يتلقى استجابة الخادم بعد 375 مللي ثانية؛
+  <li>السطر 3: <b>[<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>] </b>يتلقى استجابة الخادم بعد 375 مللي ثانية؛
   </li>
-  <li>الأسطر 4–39: بنية كائن JavaScript <b>[response] </b>الذي يغلف استجابة الخادم. من بين خصائصه، قد تهمنا بعض الخصائص:
+  <li>الأسطر 4–39: بنية كائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">response</bdi>] </b>الذي يغلف استجابة الخادم. من بين خصائصه، قد تهمنا بعض الخصائص:
     <ul>
-      <li><b>[status] </b>(السطر 25): رمز حالة HTTP لاستجابة الخادم؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">status</bdi>] </b>(السطر 25): رمز حالة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> لاستجابة الخادم؛
       </li>
-      <li><b>[statusText] </b>(السطر 26): النص المرتبط بهذا الرمز؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">statusText</bdi>] </b>(السطر 26): النص المرتبط بهذا الرمز؛
       </li>
-      <li><b>[headers] </b>(السطر 27): رؤوس HTTP لاستجابة الخادم؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">headers</bdi>] </b>(السطر 27): رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> لاستجابة الخادم؛
       </li>
-      <li><b>[body] </b>(السطر 8): يمثل المستند الذي أرسله الخادم. توفر عبارة<b> [fetch] </b>طرقًا للعمل معه؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">body</bdi>] </b>(السطر 8): يمثل المستند الذي أرسله الخادم. توفر عبارة<b> [<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>] </b>طرقًا للعمل معه؛
       </li>
     </ul>
   </li>
-  <li>الأسطر 29-39: رؤوس HTTP لاستجابة الخادم؛
+  <li>الأسطر 29-39: رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> لاستجابة الخادم؛
   </li>
-  <li>السطر 40: أرجعت الدالة غير المتزامنة <b>[response.json()] </b>استجابتها بعد 1 مللي ثانية؛
+  <li>السطر 40: أرجعت الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">response.json</bdi>()] </b>استجابتها بعد 1 مللي ثانية؛
   </li>
-  <li>الأسطر 42–44: كائن JavaScript الذي استقبلته الدالة غير المتزامنة <b>[main]</b>؛
+  <li>الأسطر 42–44: كائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> الذي استقبلته الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">main</bdi>]</b>؛
   </li>
 </ul>
 
-<p><strong>الحالة 3</strong>: خادم Laragon قيد التشغيل، ولكن تم إرسال أمر غير صحيح إليه:</p>
+<p><strong>الحالة 3</strong>: خادم <bdi dir="ltr" class="odt-ltr-term">Laragon</bdi> قيد التشغيل، ولكن تم إرسال أمر غير صحيح إليه:</p>
 <p><img src="images/100000000000044A00000111255483E0.png" width="384" height="96" style="width:10.171cm;height:2.529cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000044A00000111255483E0.png" /></p>
 <ul>
   <li>أعلاه، السطر 26، يتم تمرير نوع جلسة غير صحيح إلى الخادم؛
@@ -1267,14 +1269,14 @@
 <ul>
   <li>تم استلام استجابة الخادم في السطر 2؛
   </li>
-  <li>السطر 24: يمكننا أن نرى أن رمز حالة HTTP لاستجابة الخادم هو 400، وهو رمز خطأ. ومع ذلك، لم تقم<b> [fetch] </b>بإلقاء استثناء. طالما أن <b>[fetch] </b>تتلقى استجابة من الخادم، فإنها تعالجها ولا تلقي استثناءً؛
+  <li>السطر 24: يمكننا أن نرى أن رمز حالة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> لاستجابة الخادم هو 400، وهو رمز خطأ. ومع ذلك، لم تقم<b> [<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>] </b>بإلقاء استثناء. طالما أن <b>[<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>] </b>تتلقى استجابة من الخادم، فإنها تعالجها ولا تلقي استثناءً؛
   </li>
-  <li>الأسطر 41–43: الاستجابة التي حصلت عليها الدالة غير المتزامنة <b>[main]</b>؛
+  <li>الأسطر 41–43: الاستجابة التي حصلت عليها الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">main</bdi>]</b>؛
   </li>
 </ul>
 <p><a id="refheadingtoc225398640539168"></a></p>
-<h2 id="124-fetch-02">12.4. <span style="color: #4f81bd">النص البرمجي [fetch-02]</span></h2>
-<p>يعيد البرنامج النصي التالي استخدام البرنامج النصي <strong>[fetch-01]</strong> مع إزالة جميع التفاصيل غير الضرورية:</p>
+<h2 id="124-fetch-02">12.4. <span style="color: #4f81bd">النص البرمجي [<bdi dir="ltr" class="odt-ltr-term">fetch-02</bdi>]</span></h2>
+<p>يعيد البرنامج النصي التالي استخدام البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">fetch-01</bdi>]</strong> مع إزالة جميع التفاصيل غير الضرورية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1329,7 +1331,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.56</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p>نتائج التنفيذ مع وجود استثناء (إيقاف خادم Laragon):</p>
+<p>نتائج التنفيذ مع وجود استثناء (إيقاف خادم <bdi dir="ltr" class="odt-ltr-term">Laragon</bdi>):</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\fetch-02.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">requête HTTP vers le serveur en cours ---------------------------------------------</span></span>
@@ -1340,16 +1342,16 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc225400640539168"></a></p>
-<h2 id="125-axios-01">12.5. <span style="color: #4f81bd"><strong><span style="color: #4f81bd">نص برمجي [axios-01]</span></strong></span></h2>
-<p>هنا نعود إلى البرنامج النصي <strong>[fetch-01]</strong>، الذي سنعيد كتابته باستخدام مكتبة <strong>[axios]</strong>. للتذكير، يكمن اهتمامنا بهذه المكتبة في قابليتها للتنقل بين بيئة <strong>[node.js]</strong> والمتصفحات الشائعة. وهذا يتيح:</p>
+<h2 id="125-axios-01">12.5. <span style="color: #4f81bd"><strong><span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">axios-01</bdi>]</span></strong></span></h2>
+<p>هنا نعود إلى البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">fetch-01</bdi>]</strong>، الذي سنعيد كتابته باستخدام مكتبة <strong>[<bdi dir="ltr" class="odt-ltr-term">axios</bdi>]</strong>. للتذكير، يكمن اهتمامنا بهذه المكتبة في قابليتها للتنقل بين بيئة <strong>[<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</strong> والمتصفحات الشائعة. وهذا يتيح:</p>
 <ul>
-  <li>في المرحلة 1، اختبار نصوصنا البرمجية في بيئة<b> [Node.js]</b>؛
+  <li>في المرحلة 1، اختبار نصوصنا البرمجية في بيئة<b> [<bdi dir="ltr" class="odt-ltr-term">Node.js</bdi>]</b>؛
   </li>
   <li>في المرحلة 2، نقلها إلى متصفح؛
   </li>
 </ul>
 
-<p>يتبع البرنامج النصي <strong>[axios-01]</strong> بنية البرنامج النصي <strong>[fetch-01]</strong>:</p>
+<p>يتبع البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">axios-01</bdi>]</strong> بنية البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">fetch-01</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
@@ -1415,50 +1417,50 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 2: نقوم باستيراد مكتبة<b> [axios]</b>؛
+  <li>السطر 2: نقوم باستيراد مكتبة<b> [<bdi dir="ltr" class="odt-ltr-term">axios</bdi>]</b>؛
   </li>
-  <li>السطران 5-6: التكوين الافتراضي لطلبات HTTP. تنطبق خيارات<b> [axios.defaults] </b>على جميع طلبات HTTP المرسلة بواسطة كائن<b> [axios] </b>دون الحاجة إلى تحديدها لكل طلب جديد؛
+  <li>السطران 5-6: التكوين الافتراضي لطلبات <bdi dir="ltr" class="odt-ltr-term">HTTP.</bdi> تنطبق خيارات<b> [<bdi dir="ltr" class="odt-ltr-term">axios.defaults</bdi>] </b>على جميع طلبات <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> المرسلة بواسطة كائن<b> [<bdi dir="ltr" class="odt-ltr-term">axios</bdi>] </b>دون الحاجة إلى تحديدها لكل طلب جديد؛
   </li>
   <li>السطر 5: مهلة انتظار مدتها ثانيتان لجميع الطلبات؛
   </li>
-  <li>السطر 6: ستكون جميع عناوين URL نسبية بالنسبة إلى عنوان URL الأساسي؛
+  <li>السطر 6: ستكون جميع عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> نسبية بالنسبة إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الأساسي؛
   </li>
-  <li>السطر 9: الدالة غير المتزامنة <b>[initSession]</b>؛
+  <li>السطر 9: الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>]</b>؛
   </li>
-  <li>الأسطر 11-18: خيارات طلب HTTP المراد إرساله (بالإضافة إلى الخيارات الافتراضية المحددة بالفعل في الأسطر 5-6)؛
+  <li>الأسطر 11-18: خيارات طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> المراد إرساله (بالإضافة إلى الخيارات الافتراضية المحددة بالفعل في الأسطر 5-6)؛
   </li>
-  <li>الأسطر 14-17: معلمات عنوان URL <b>[action=init-session&amp;type=json]</b>. سيتم تحويل كائن<b> [params] </b>تلقائيًا إلى سلسلة مشفرة بعنوان URL؛
+  <li>الأسطر 14-17: معلمات عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">type</bdi>=<bdi dir="ltr" class="odt-ltr-term">json</bdi>]</b>. سيتم تحويل كائن<b> [<bdi dir="ltr" class="odt-ltr-term">params</bdi>] </b>تلقائيًا إلى سلسلة مشفرة بعنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>؛
   </li>
-  <li>السطر 22: استدعاء حظر للدالة غير المتزامنة <b>[axios.request]</b>. المعلمة الأولى هي عنوان URL الهدف الذي تم إنشاؤه على أنه <b>[main.php] </b>مضافًا إلى عنوان URL الأساسي المحدد في السطر 6. المعلمة الثانية هي كائن<b> [options] </b>من الأسطر 11–18؛
+  <li>السطر 22: استدعاء حظر للدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">axios.request</bdi>]</b>. المعلمة الأولى هي عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الهدف الذي تم إنشاؤه على أنه <b>[<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>] </b>مضافًا إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الأساسي المحدد في السطر 6. المعلمة الثانية هي كائن<b> [<bdi dir="ltr" class="odt-ltr-term">options</bdi>] </b>من الأسطر 11–18؛
   </li>
-  <li>السطر 25: <b>[response] </b>هو كائن JavaScript يغلف استجابة HTTP الكاملة من الخادم (رؤوس HTTP + نص الاستجابة). نعرضه لنرى هيكل JavaScript الخاص به؛
+  <li>السطر 25: <b>[<bdi dir="ltr" class="odt-ltr-term">response</bdi>] </b>هو كائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> يغلف استجابة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الكاملة من الخادم (رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> + نص الاستجابة). نعرضه لنرى هيكل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> الخاص به؛
   </li>
-  <li>السطر 27: إذا أرسل الخادم مستندًا، فسيتم العثور عليه في <b>[response.data]</b>. هنا نعلم أن الخادم يرسل استجابة JSON مصحوبة برأس HTTP <b>[Content-type: application/json]</b>. يؤدي وجود هذا الرأس إلى قيام<b> [axios] </b>تلقائيًا بإلغاء تسلسل <b>[response.data] </b>إلى كائن JavaScript؛
+  <li>السطر 27: إذا أرسل الخادم مستندًا، فسيتم العثور عليه في <b>[<bdi dir="ltr" class="odt-ltr-term">response.data</bdi>]</b>. هنا نعلم أن الخادم يرسل استجابة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> مصحوبة برأس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">Content-type: application/json</bdi>]</b>. يؤدي وجود هذا الرأس إلى قيام<b> [<bdi dir="ltr" class="odt-ltr-term">axios</bdi>] </b>تلقائيًا بإلغاء تسلسل <b>[<bdi dir="ltr" class="odt-ltr-term">response.data</bdi>] </b>إلى كائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
   </li>
-  <li>السطر 28: يمكن أن ترمي دالة<b> [axios] </b>استثناءً. هذا هو المكان الذي يختلف فيه<b> [axios] </b>عن <b>[fetch]</b>. يتم رمي استثناء في الحالات التالية:
+  <li>السطر 28: يمكن أن ترمي دالة<b> [<bdi dir="ltr" class="odt-ltr-term">axios</bdi>] </b>استثناءً. هذا هو المكان الذي يختلف فيه<b> [<bdi dir="ltr" class="odt-ltr-term">axios</bdi>] </b>عن <b>[<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>]</b>. يتم رمي استثناء في الحالات التالية:
     <ul>
-      <li>تعذر إرسال طلب HTTP (خطأ من جانب العميل)؛
+      <li>تعذر إرسال طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> (خطأ من جانب العميل)؛
       </li>
-      <li>أرسل الخادم رمز خطأ HTTP (400، 404، 500، ...) (هذا السلوك قابل للتكوين في الواقع). لاحظ أنه إذا كان رمز حالة HTTP هذا مصحوبًا باستجابة، فإن<b> [fetch] </b>لم يرمي استثناءً، في حين أن <b>[axios] </b>يفعل ذلك. ومع ذلك، إذا كان رمز خطأ HTTP مصحوبًا بوثيقة، يتم وضعها في <b>[error.response]</b>؛
+      <li>أرسل الخادم رمز خطأ <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> (400، 404، 500، ...) (هذا السلوك قابل للتكوين في الواقع). لاحظ أنه إذا كان رمز حالة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> هذا مصحوبًا باستجابة، فإن<b> [<bdi dir="ltr" class="odt-ltr-term">fetch</bdi>] </b>لم يرمي استثناءً، في حين أن <b>[<bdi dir="ltr" class="odt-ltr-term">axios</bdi>] </b>يفعل ذلك. ومع ذلك، إذا كان رمز خطأ <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> مصحوبًا بوثيقة، يتم وضعها في <b>[<bdi dir="ltr" class="odt-ltr-term">error.response</bdi>]</b>؛
       </li>
     </ul>
   </li>
-  <li>السطر 32: نعرض بنية JavaScript لكائن<b> [error]</b>؛
+  <li>السطر 32: نعرض بنية <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> لكائن<b> [<bdi dir="ltr" class="odt-ltr-term">error</bdi>]</b>؛
   </li>
-  <li>الأسطر 33–38: إذا كان كائن<b> [error] </b>يحتوي على كائن<b> [response]</b>، يتم إرجاع هذا الرد إلى الكود المستدعي؛
+  <li>الأسطر 33–38: إذا كان كائن<b> [<bdi dir="ltr" class="odt-ltr-term">error</bdi>] </b>يحتوي على كائن<b> [<bdi dir="ltr" class="odt-ltr-term">response</bdi>]</b>، يتم إرجاع هذا الرد إلى الكود المستدعي؛
   </li>
-  <li>الأسطر 39–42: في جميع الحالات الأخرى، يتم تمرير كائن<b> [error] </b>مرة أخرى إلى الكود المستدعي؛
+  <li>الأسطر 39–42: في جميع الحالات الأخرى، يتم تمرير كائن<b> [<bdi dir="ltr" class="odt-ltr-term">error</bdi>] </b>مرة أخرى إلى الكود المستدعي؛
   </li>
-  <li>الأسطر 47–57: الدالة غير المتزامنة <b>[main]</b>؛
+  <li>الأسطر 47–57: الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">main</bdi>]</b>؛
   </li>
-  <li>السطر 50: استدعاء معطل للدالة غير المتزامنة <b>[initSession]</b>. يتم استرداد استجابة JSON من الخادم ككائن JavaScript؛
+  <li>السطر 50: استدعاء معطل للدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>]</b>. يتم استرداد استجابة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> من الخادم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
   </li>
-  <li>الأسطر 53–56: معالجة أي أخطاء. توجد رسالة الخطأ في <b>[error.message]</b>؛
+  <li>الأسطر 53–56: معالجة أي أخطاء. توجد رسالة الخطأ في <b>[<bdi dir="ltr" class="odt-ltr-term">error.message</bdi>]</b>؛
   </li>
 </ul>
 
 <p>نتائج التنفيذ هي كما يلي:</p>
-<p><strong>الحالة 1</strong>: خادم Laragon غير قيد التشغيل</p>
+<p><strong>الحالة 1</strong>: خادم <bdi dir="ltr" class="odt-ltr-term">Laragon</bdi> غير قيد التشغيل</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-01.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">requête HTTP vers le serveur en cours ---------------------------------------------</span></span>
@@ -1604,37 +1606,37 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>الأسطر 33-136: يحتوي كائن<b> [error] </b>على الكثير من المعلومات؛
+  <li>الأسطر 33-136: يحتوي كائن<b> [<bdi dir="ltr" class="odt-ltr-term">error</bdi>] </b>على الكثير من المعلومات؛
     <ul>
-      <li><b>[Error]</b>، الأسطر 3-9: وصف للخطأ الذي حدث؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">Error</bdi>]</b>، الأسطر 3-9: وصف للخطأ الذي حدث؛
       </li>
-      <li><b>[config]</b>، الأسطر 10–27: تكوين طلب HTTP الذي أدى إلى هذا الخطأ؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">config</bdi>]</b>، الأسطر 10–27: تكوين طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الذي أدى إلى هذا الخطأ؛
       </li>
-      <li><b>[config.url]</b>، الأسطر 11-12: عنوان URL الهدف؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">config.url</bdi>]</b>، الأسطر 11-12: عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الهدف؛
       </li>
-      <li><b>[config.method]</b>، السطر 13: طريقة الطلب؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">config.method</bdi>]</b>، السطر 13: طريقة الطلب؛
       </li>
-      <li><b>[config.params]</b>، السطر 14: معلمات عنوان URL؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">config.params</bdi>]</b>، السطر 14: معلمات عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>؛
       </li>
-      <li><b>[config.headers]</b>، الأسطر 16-17: رؤوس HTTP للطلب؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">config.headers</bdi>]</b>، الأسطر 16-17: رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> للطلب؛
       </li>
-      <li><b>[config.baseURL]</b>، السطر 18: عنوان URL الأساسي لعنوان URL الهدف؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">config.baseURL</bdi>]</b>، السطر 18: عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الأساسي لعنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الهدف؛
       </li>
-      <li><b>[config.timeout]</b>، السطر 21: مهلة الطلب؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">config.timeout</bdi>]</b>، السطر 21: مهلة الطلب؛
       </li>
-      <li><b>[code]</b>، السطر 28: رمز الخطأ؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">code</bdi>]</b>، السطر 28: رمز الخطأ؛
       </li>
-      <li><b>[request]</b>، الأسطر 29–133: وصف تفصيلي لطلب HTTP. لاحظ أن معظم الخصائص مسبوقة بشرطة سفلية (_)، مما يشير إلى أنها خصائص داخلية لكائن<b> [request] </b>غير مخصصة للاستخدام المباشر من قبل المطور؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">request</bdi>]</b>، الأسطر 29–133: وصف تفصيلي لطلب <bdi dir="ltr" class="odt-ltr-term">HTTP.</bdi> لاحظ أن معظم الخصائص مسبوقة بشرطة سفلية (_)، مما يشير إلى أنها خصائص داخلية لكائن<b> [<bdi dir="ltr" class="odt-ltr-term">request</bdi>] </b>غير مخصصة للاستخدام المباشر من قبل المطور؛
       </li>
-      <li><b>[response]</b>، السطر 134: استجابة الخادم، وهي فارغة هنا؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">response</bdi>]</b>، السطر 134: استجابة الخادم، وهي فارغة هنا؛
       </li>
     </ul>
   </li>
-  <li>السطر 138: رسالة الخطأ التي تعرضها الدالة<b> [main]</b>؛
+  <li>السطر 138: رسالة الخطأ التي تعرضها الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">main</bdi>]</b>؛
   </li>
 </ul>
 
-<p><strong>الحالة 2</strong>: خادم Laragon قيد التشغيل</p>
+<p><strong>الحالة 2</strong>: خادم <bdi dir="ltr" class="odt-ltr-term">Laragon</bdi> قيد التشغيل</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-01.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">requête HTTP vers le serveur en cours ---------------------------------------------</span></span>
@@ -1849,31 +1851,31 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>الأسطر 3–203: كائن JavaScript <b>[response] </b>الذي يغلف استجابة HTTP للخادم؛
+  <li>الأسطر 3–203: كائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">response</bdi>] </b>الذي يغلف استجابة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> للخادم؛
   </li>
-  <li>السطر 3، <b>[status]</b>: رمز حالة HTTP للاستجابة؛
+  <li>السطر 3، <b>[<bdi dir="ltr" class="odt-ltr-term">status</bdi>]</b>: رمز حالة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> للاستجابة؛
   </li>
-  <li>السطر 4، <b>[statusText]</b>: النص المرتبط برمز حالة HTTP السابق؛
+  <li>السطر 4، <b>[<bdi dir="ltr" class="odt-ltr-term">statusText</bdi>]</b>: النص المرتبط برمز حالة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> السابق؛
   </li>
-  <li>الأسطر 5-13، <b>[headers]</b>: رؤوس HTTP للاستجابة:
+  <li>الأسطر 5-13، <b>[<bdi dir="ltr" class="odt-ltr-term">headers</bdi>]</b>: رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> للاستجابة:
     <ul>
-      <li>السطر 10، <b>[Set-Cookie]</b>: ملف تعريف ارتباط الجلسة؛
+      <li>السطر 10، <b>[<bdi dir="ltr" class="odt-ltr-term">Set-Cookie</bdi>]</b>: ملف تعريف ارتباط الجلسة؛
       </li>
-      <li>السطر 13، <b>[Content-Type]</b>: نوع المستند المرسل من الخادم؛
+      <li>السطر 13، <b>[<bdi dir="ltr" class="odt-ltr-term">Content-Type</bdi>]</b>: نوع المستند المرسل من الخادم؛
       </li>
     </ul>
   </li>
-  <li>الأسطر 14–31، <b>[config]</b>: تكوين طلب HTTP المرسل؛
+  <li>الأسطر 14–31، <b>[<bdi dir="ltr" class="odt-ltr-term">config</bdi>]</b>: تكوين طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> المرسل؛
   </li>
-  <li>الأسطر 32-199، <b>[request]</b>: كائن JavaScript الذي يوضح تفاصيل طلب HTTP المرسل؛
+  <li>الأسطر 32-199، <b>[<bdi dir="ltr" class="odt-ltr-term">request</bdi>]</b>: كائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> الذي يوضح تفاصيل طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> المرسل؛
   </li>
-  <li>الأسطر 200–203، <b>[request.data]</b>: كائن JavaScript الذي يغلف استجابة JSON للخادم؛
+  <li>الأسطر 200–203، <b>[<bdi dir="ltr" class="odt-ltr-term">request.data</bdi>]</b>: كائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> الذي يغلف استجابة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> للخادم؛
   </li>
-  <li>الأسطر 205–207: الاستجابة التي تم استردادها بواسطة الدالة غير المتزامنة <b>[main]</b>؛
+  <li>الأسطر 205–207: الاستجابة التي تم استردادها بواسطة الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">main</bdi>]</b>؛
   </li>
 </ul>
 
-<p><strong>الحالة 3</strong>: يتم إرسال طلب <strong>[init-session]</strong> غير صحيح إلى خادم Laragon؛</p>
+<p><strong>الحالة 3</strong>: يتم إرسال طلب <strong>[<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>]</strong> غير صحيح إلى خادم <bdi dir="ltr" class="odt-ltr-term">Laragon</bdi>؛</p>
 <p><img src="images/10000000000002B3000001A03BB03E73.png" width="242" height="146" style="width:6.399cm;height:3.852cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002B3000001A03BB03E73.png" /></p>
 <p>نتائج التنفيذ هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -1924,10 +1926,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.69</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p>نظرًا لأن الخادم استجاب برمز HTTP 400 (السطر 15)، ألقى <strong>[axios]</strong> استثناءً (مرة أخرى، هذا السلوك قابل للتكوين). على الرغم من أن <strong>[axios]</strong> ألقى استثناءً، إلا أننا ما زلنا نحصل على استجابة HTTP من الخادم في <strong>[error.response]</strong> (السطر 14) ووثيقة JSON المرسلة <strong>في [error.response.data]</strong> (السطر 34). الأسطر 41–43: تسترد الدالة <strong>[main]</strong> استجابة JSON من الخادم بشكل صحيح.</p>
+<p>نظرًا لأن الخادم استجاب برمز <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> 400 (السطر 15)، ألقى <strong>[<bdi dir="ltr" class="odt-ltr-term">axios</bdi>]</strong> استثناءً (مرة أخرى، هذا السلوك قابل للتكوين). على الرغم من أن <strong>[<bdi dir="ltr" class="odt-ltr-term">axios</bdi>]</strong> ألقى استثناءً، إلا أننا ما زلنا نحصل على استجابة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> من الخادم في <strong>[<bdi dir="ltr" class="odt-ltr-term">error.response</bdi>]</strong> (السطر 14) ووثيقة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المرسلة <strong>في [<bdi dir="ltr" class="odt-ltr-term">error.response.data</bdi>]</strong> (السطر 34). الأسطر 41–43: تسترد الدالة <strong>[<bdi dir="ltr" class="odt-ltr-term">main</bdi>]</strong> استجابة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> من الخادم بشكل صحيح.</p>
 <p><a id="refheadingtoc225402640539168"></a></p>
-<h2 id="126-axios-02">12.6. <span style="color: #4f81bd">نص برمجي [axios-02]</span></h2>
-<p>الآن بعد أن قمنا بتفصيل الكائنات التي تتعامل معها مكتبة <strong>[axios]</strong> أثناء طلب HTTP، يمكننا إعادة كتابة البرنامج النصي <strong>[axios-01]</strong> على النحو التالي:</p>
+<h2 id="126-axios-02">12.6. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">axios-02</bdi>]</span></h2>
+<p>الآن بعد أن قمنا بتفصيل الكائنات التي تتعامل معها مكتبة <strong>[<bdi dir="ltr" class="odt-ltr-term">axios</bdi>]</strong> أثناء طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>، يمكننا إعادة كتابة البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">axios-01</bdi>]</strong> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
@@ -1982,8 +1984,8 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc225404640539168"></a></p>
-<h2 id="127-axios-03">12.7. <span style="color: #4f81bd">نص برمجي [axios-03]</span></h2>
-<p>يتبع البرنامج النصي <strong>[axios-03]</strong> نفس منهجية البرنامج النصي <strong>[axios-02]</strong>. هذه المرة، نضيف طلب HTTP <strong>[authenticate-user]</strong> إلى الخادم، والذي يتم إجراؤه باستخدام طلب POST:</p>
+<h2 id="127-axios-03">12.7. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">axios-03</bdi>]</span></h2>
+<p>يتبع البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">axios-03</bdi>]</strong> نفس منهجية البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">axios-02</bdi>]</strong>. هذه المرة، نضيف طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">authenticate-user</bdi>]</strong> إلى الخادم، والذي يتم إجراؤه باستخدام طلب <bdi dir="ltr" class="odt-ltr-term">POST:</bdi></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
@@ -2081,23 +2083,23 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>الأسطر 38-70: الدالة غير المتزامنة <b>[authenticateUser]</b>؛
+  <li>الأسطر 38-70: الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">authenticateUser</bdi>]</b>؛
   </li>
-  <li>السطر 39: يجب إجراء الطلب <b>[POST /main.php?action=authenticate-user]</b>؛
+  <li>السطر 39: يجب إجراء الطلب <b>[<bdi dir="ltr" class="odt-ltr-term">POST</bdi> /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">authenticate-user</bdi>]</b>؛
   </li>
-  <li>الأسطر 40–54: خيارات طلب HTTP؛
+  <li>الأسطر 40–54: خيارات طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>؛
   </li>
-  <li>السطر 41: هذا طلب POST؛
+  <li>السطر 41: هذا طلب <bdi dir="ltr" class="odt-ltr-term">POST</bdi>؛
   </li>
-  <li>الأسطر 42-44: سيتم ترميز معلمات POST في عنوان URL في مستند يرسله العميل مع طلبه؛
+  <li>الأسطر 42-44: سيتم ترميز معلمات <bdi dir="ltr" class="odt-ltr-term">POST</bdi> في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> في مستند يرسله العميل مع طلبه؛
   </li>
-  <li>الأسطر 46-49: يجب أن تحتوي الخاصية<b> [data] </b>على سلسلة POST المشفرة في عنوان URL. للقيام بذلك، نستخدم مكتبة<b> [qs] </b>المستوردة في السطر 3؛
+  <li>الأسطر 46-49: يجب أن تحتوي الخاصية<b> [<bdi dir="ltr" class="odt-ltr-term">data</bdi>] </b>على سلسلة <bdi dir="ltr" class="odt-ltr-term">POST</bdi> المشفرة في عنوان <bdi dir="ltr" class="odt-ltr-term">URL.</bdi> للقيام بذلك، نستخدم مكتبة<b> [<bdi dir="ltr" class="odt-ltr-term">qs</bdi>] </b>المستوردة في السطر 3؛
   </li>
-  <li>الأسطر 55–69: لتنفيذ الطلب، نستخدم نفس الكود الموجود في طريقة<b> [initSession]</b>؛
+  <li>الأسطر 55–69: لتنفيذ الطلب، نستخدم نفس الكود الموجود في طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>]</b>؛
   </li>
-  <li>الأسطر 73-89: تستدعي طريقة<b> [asynchrone] </b>على التوالي طريقتي <b>[initSession] </b>و<b>[authentifierUtilisateur] </b>بطريقة حجبية، الأسطر 77 و82؛
+  <li>الأسطر 73-89: تستدعي طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">asynchrone</bdi>] </b>على التوالي طريقتي <b>[<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">authentifierUtilisateur</bdi>] </b>بطريقة حجبية، الأسطر 77 و82؛
   </li>
-  <li>السطر 82: يتم استخدام الزوج (admin, admin) كبيانات اعتماد تسجيل الدخول. ونعلم أن الخادم يتعرف عليهما؛
+  <li>السطر 82: يتم استخدام الزوج (<bdi dir="ltr" class="odt-ltr-term">admin</bdi>, <bdi dir="ltr" class="odt-ltr-term">admin</bdi>) كبيانات اعتماد تسجيل الدخول. ونعلم أن الخادم يتعرف عليهما؛
   </li>
 </ul>
 
@@ -2120,17 +2122,17 @@
 </code></pre></div>
 
 <ul>
-  <li>الأسطر 9-12: فشل مصادقة المستخدم: لم يحتفظ الخادم بحقيقة أن جلسة JSON قد بدأت. ويرجع ذلك إلى أن ملف تعريف ارتباط الجلسة الذي تم إرساله استجابة لطلب<b> [init-session] </b>الأول لم يتم إرساله مرة أخرى؛
+  <li>الأسطر 9-12: فشل مصادقة المستخدم: لم يحتفظ الخادم بحقيقة أن جلسة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> قد بدأت. ويرجع ذلك إلى أن ملف تعريف ارتباط الجلسة الذي تم إرساله استجابة لطلب<b> [<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>] </b>الأول لم يتم إرساله مرة أخرى؛
   </li>
 </ul>
 <p><a id="refheadingtoc2152561731793072"></a>
 <a id="axios04"></a></p>
-<h2 id="128-axios-04">12.8. <span style="color: #4f81bd">النص البرمجي [axios-04]</span></h2>
-<p>يقدم البرنامج النصي <strong>[axios-04]</strong> تحسينين على البرنامج النصي <strong>[axios-03]</strong>:</p>
+<h2 id="128-axios-04">12.8. <span style="color: #4f81bd">النص البرمجي [<bdi dir="ltr" class="odt-ltr-term">axios-04</bdi>]</span></h2>
+<p>يقدم البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">axios-04</bdi>]</strong> تحسينين على البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">axios-03</bdi>]</strong>:</p>
 <ul>
   <li>يعالج ملف تعريف ارتباط الجلسة؛
   </li>
-  <li>يدمج في دالة<b> [getRemoteData] </b>العناصر المشتركة بين دالتي <b>[initSession] </b>و <b>[authenticateUser]</b>؛
+  <li>يدمج في دالة<b> [<bdi dir="ltr" class="odt-ltr-term">getRemoteData</bdi>] </b>العناصر المشتركة بين دالتي <b>[<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>] </b>و <b>[<bdi dir="ltr" class="odt-ltr-term">authenticateUser</bdi>]</b>؛
   </li>
 </ul>
 
@@ -2256,19 +2258,19 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>الأسطر 14–26: دالة<b> [initSession]</b>. وهي الآن تقوم ببساطة بإعداد طلب HTTP ليتم إرساله إلى الخادم ولكنها لا تنفذه. وتفوض هذه المهمة إلى طريقة<b> [getRemoteDate] </b>في الأسطر 49–95؛
+  <li>الأسطر 14–26: دالة<b> [<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>]</b>. وهي الآن تقوم ببساطة بإعداد طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> ليتم إرساله إلى الخادم ولكنها لا تنفذه. وتفوض هذه المهمة إلى طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">getRemoteDate</bdi>] </b>في الأسطر 49–95؛
   </li>
-  <li>الأسطر 28–47: تتبع الدالة<b> [authentifierUtilisateur] </b>نفس الإجراء؛
+  <li>الأسطر 28–47: تتبع الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">authentifierUtilisateur</bdi>] </b>نفس الإجراء؛
   </li>
-  <li>السطر 49: تتلقى الدالة<b> [getRemoteData] </b>معلومتين تحتاج إليهما لتنفيذ طلب HTTP:
+  <li>السطر 49: تتلقى الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">getRemoteData</bdi>] </b>معلومتين تحتاج إليهما لتنفيذ طلب <bdi dir="ltr" class="odt-ltr-term">HTTP:</bdi>
     <ul>
-      <li><b>[axios]</b>، الكائن المسؤول عن إرسال الطلب واستلام الرد؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">axios</bdi>]</b>، الكائن المسؤول عن إرسال الطلب واستلام الرد؛
       </li>
-      <li><b>[options]</b>، خيارات التكوين للطلب المراد إرساله إلى الخادم؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">options</bdi>]</b>، خيارات التكوين للطلب المراد إرساله إلى الخادم؛
       </li>
     </ul>
   </li>
-  <li>السطر 59: تنفيذ الطلب وانتظار استجابة JSON الخاصة به؛
+  <li>السطر 59: تنفيذ الطلب وانتظار استجابة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> الخاصة به؛
   </li>
   <li>الأسطر 60–68: معالجة أي استثناءات؛
   </li>
@@ -2276,29 +2278,29 @@
   </li>
   <li>السطر 67: إذا ألقى الخادم استثناءً دون تضمين استجابة الخادم، يتم نقل الخطأ المستلم إلى الكود المستدعي؛
   </li>
-  <li>تدير الدالة<b> [getRemoteData] </b>ملف تعريف الارتباط الخاص بالجلسة:
+  <li>تدير الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">getRemoteData</bdi>] </b>ملف تعريف الارتباط الخاص بالجلسة:
     <ul>
-      <li>تقوم بتخزينه في المتغير<b> [sessionCookie] </b>(السطر 11) عند استلامه لأول مرة؛
+      <li>تقوم بتخزينه في المتغير<b> [<bdi dir="ltr" class="odt-ltr-term">sessionCookie</bdi>] </b>(السطر 11) عند استلامه لأول مرة؛
       </li>
-      <li>ثم تعيده مع كل طلب HTTP جديد؛
+      <li>ثم تعيده مع كل طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> جديد؛
       </li>
     </ul>
   </li>
-  <li>الأسطر 72-92: تحلل<b> [getRemoteData] </b>كل استجابة من الخادم لتحديد ما إذا كان قد أرسل رأس HTTP<b> [Set-Cookie]</b>. نعلم أن الخادم يرسل ملف تعريف ارتباط للجلسة باسم <b>[PHPSESSID] </b>(السطر 10). لذلك، هذا هو ملف تعريف الارتباط الذي نبحث عنه (السطر 10)؛
+  <li>الأسطر 72-92: تحلل<b> [<bdi dir="ltr" class="odt-ltr-term">getRemoteData</bdi>] </b>كل استجابة من الخادم لتحديد ما إذا كان قد أرسل رأس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi><b> [<bdi dir="ltr" class="odt-ltr-term">Set-Cookie</bdi>]</b>. نعلم أن الخادم يرسل ملف تعريف ارتباط للجلسة باسم <b>[<bdi dir="ltr" class="odt-ltr-term">PHPSESSID</bdi>] </b>(السطر 10). لذلك، هذا هو ملف تعريف الارتباط الذي نبحث عنه (السطر 10)؛
   </li>
-  <li>السطر 72: نسترد رؤوس HTTP<b> [Set-Cookie] </b>إذا كانت موجودة (لا يهم استخدام الأحرف الكبيرة أو الصغيرة). قد يكون هناك في الواقع عدة رؤوس<b> [Set-Cookie]</b>، لذا نسترد مصفوفة؛
+  <li>السطر 72: نسترد رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi><b> [<bdi dir="ltr" class="odt-ltr-term">Set-Cookie</bdi>] </b>إذا كانت موجودة (لا يهم استخدام الأحرف الكبيرة أو الصغيرة). قد يكون هناك في الواقع عدة رؤوس<b> [<bdi dir="ltr" class="odt-ltr-term">Set-Cookie</bdi>]</b>، لذا نسترد مصفوفة؛
   </li>
   <li>السطر 73: إذا تم استرداد مصفوفة من ملفات تعريف الارتباط؛
   </li>
   <li>الأسطر 78-90: نبحث عن ملف تعريف ارتباط الجلسة بين جميع ملفات تعريف الارتباط في المصفوفة؛
   </li>
-  <li>السطر 80: التعبير العلائقي المستخدم للبحث عن ملف تعريف الارتباط الخاص بالجلسة في ملف تعريف الارتباط #i؛
+  <li>السطر 80: التعبير العلائقي المستخدم للبحث عن ملف تعريف الارتباط الخاص بالجلسة في ملف تعريف الارتباط #<bdi dir="ltr" class="odt-ltr-term">i</bdi>؛
   </li>
   <li>السطر 81: إذا عادت المقارنة بنتائج؛
   </li>
-  <li>السطر 84: لدينا في results<b>[1]</b>، القوس الأول من نمط التعبير العلائقي، أي (PHPSESSID=xxxx) حتى القوس الختامي (غير مدرج) الذي ينهي ملف تعريف ارتباط الجلسة؛
+  <li>السطر 84: لدينا في <bdi dir="ltr" class="odt-ltr-term">results</bdi><b>[1]</b>، القوس الأول من نمط التعبير العلائقي، أي (<bdi dir="ltr" class="odt-ltr-term">PHPSESSID</bdi>=<bdi dir="ltr" class="odt-ltr-term">xxxx</bdi>) حتى القوس الختامي (غير مدرج) الذي ينهي ملف تعريف ارتباط الجلسة؛
   </li>
-  <li>الأسطر 50-54: مع كل طلب، يتم تضمين ملف تعريف ارتباط الجلسة في رؤوس HTTP للطلب. في المرة الأولى، يكون ملف تعريف الارتباط هذا فارغًا وبالتالي سيتم تجاهله من قبل الخادم؛
+  <li>الأسطر 50-54: مع كل طلب، يتم تضمين ملف تعريف ارتباط الجلسة في رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> للطلب. في المرة الأولى، يكون ملف تعريف الارتباط هذا فارغًا وبالتالي سيتم تجاهله من قبل الخادم؛
   </li>
 </ul>
 

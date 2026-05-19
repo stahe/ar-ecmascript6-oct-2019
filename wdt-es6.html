@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -775,12 +777,12 @@
 
 
 <p><a id="refheadingtoc225368640539168"></a></p>
-<h1 id="10-es6">10. <span style="color: #365f91">وحدات ES6</span></h1>
+<h1 id="10-es6">10. <span style="color: #365f91">وحدات <bdi dir="ltr" class="odt-ltr-term">ES6</bdi></span></h1>
 <p><img src="images/10000000000000FC0000013E566BAA86.png" width="101" height="127" style="width:2.671cm;height:3.371cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FC0000013E566BAA86.png" /></p>
-<p>تتيح لك وحدات ES6 إنشاء تطبيقات JavaScript منظمة في شكل وحدات مستقلة وقابلة لإعادة الاستخدام.</p>
+<p>تتيح لك وحدات <bdi dir="ltr" class="odt-ltr-term">ES6</bdi> إنشاء تطبيقات <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> منظمة في شكل وحدات مستقلة وقابلة لإعادة الاستخدام.</p>
 <p><a id="refheadingtoc225370640539168"></a></p>
-<h2 id="101-import-01-export-01">10.1. <span style="color: #4f81bd">نصوص برمجية [import-01، export-01]</span></h2>
-<p>سيستخدم البرنامج النصي <strong>[import-01]</strong> الوحدة <strong>[export-01]</strong>. ويتم تعريف ذلك على النحو التالي:</p>
+<h2 id="101-import-01-export-01">10.1. <span style="color: #4f81bd">نصوص برمجية [<bdi dir="ltr" class="odt-ltr-term">import-01</bdi>، <bdi dir="ltr" class="odt-ltr-term">export-01</bdi>]</span></h2>
+<p>سيستخدم البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">import-01</bdi>]</strong> الوحدة <strong>[<bdi dir="ltr" class="odt-ltr-term">export-01</bdi>]</strong>. ويتم تعريف ذلك على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// export par défaut d&#x27;un objet non nommé</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
@@ -793,13 +795,13 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>تحدد الأسطر <b>[2–7] </b>كائنًا غير مسمى بخصائص <b>[data, do]</b>؛
+  <li>تحدد الأسطر <b>[2–7] </b>كائنًا غير مسمى بخصائص <b>[<bdi dir="ltr" class="odt-ltr-term">data</bdi>, <bdi dir="ltr" class="odt-ltr-term">do</bdi>]</b>؛
   </li>
-  <li>السطر 2: تقوم عبارة<b> [export default] </b>بتصدير هذا الكائن. وبالتالي يمكن استيراده؛
+  <li>السطر 2: تقوم عبارة<b> [<bdi dir="ltr" class="odt-ltr-term">export default</bdi>] </b>بتصدير هذا الكائن. وبالتالي يمكن استيراده؛
   </li>
 </ul>
 
-<p>يتم استخدام الوحدة النمطية <strong>[export-01]</strong> بواسطة البرنامج النصي <strong>[import-01]</strong> على النحو التالي:</p>
+<p>يتم استخدام الوحدة النمطية <strong>[<bdi dir="ltr" class="odt-ltr-term">export-01</bdi>]</strong> بواسطة البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">import-01</bdi>]</strong> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// import d&#x27;un objet exporté par défaut</span></span>
@@ -813,7 +815,7 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>تستورد السطران 3 و7 الكائن المُصدَّر الافتراضي من الوحدة النمطية<b> [export-01] </b>تحت اسمين مختلفين؛
+  <li>تستورد السطران 3 و7 الكائن المُصدَّر الافتراضي من الوحدة النمطية<b> [<bdi dir="ltr" class="odt-ltr-term">export-01</bdi>] </b>تحت اسمين مختلفين؛
   </li>
   <li>بمجرد استيراد الكائن، يمكن استخدامه كما لو كان قد تم تعريفه محليًا في البرنامج النصي؛
   </li>
@@ -827,9 +829,9 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc225372640539168"></a></p>
-<h2 id="102-import-02-export-02">10.2. <span style="color: #4f81bd">نصوص برمجية [import-02، export-02]</span></h2>
+<h2 id="102-import-02-export-02">10.2. <span style="color: #4f81bd">نصوص برمجية [<bdi dir="ltr" class="odt-ltr-term">import-02</bdi>، <bdi dir="ltr" class="odt-ltr-term">export-02</bdi>]</span></h2>
 <p>توضح هذه البرامج النصية تصدير كائن مسمى.</p>
-<p>النص البرمجي <strong>[export-02]</strong> هو كما يلي:</p>
+<p>النص البرمجي <strong>[<bdi dir="ltr" class="odt-ltr-term">export-02</bdi>]</strong> هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">// export par défaut d&#x27;un objet nommé</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> data = {</span></span></span>
@@ -843,11 +845,11 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 9: نقوم بتصدير كائن<b> [data]</b>؛
+  <li>السطر 9: نقوم بتصدير كائن<b> [<bdi dir="ltr" class="odt-ltr-term">data</bdi>]</b>؛
   </li>
 </ul>
 
-<p>لا يؤثر تسمية الكائن المصدر أو عدم تسميته على عملية الاستيراد. النص البرمجي <strong>[import-02]</strong> هو كما يلي:</p>
+<p>لا يؤثر تسمية الكائن المصدر أو عدم تسميته على عملية الاستيراد. النص البرمجي <strong>[<bdi dir="ltr" class="odt-ltr-term">import-02</bdi>]</strong> هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// import d&#x27;un objet exporté par défaut</span></span>
@@ -867,9 +869,9 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc225374640539168"></a></p>
-<h2 id="103-import-03-export-03">10.3. <span style="color: #4f81bd">نصوص برمجية [import-03، export-03]</span></h2>
+<h2 id="103-import-03-export-03">10.3. <span style="color: #4f81bd">نصوص برمجية [<bdi dir="ltr" class="odt-ltr-term">import-03</bdi>، <bdi dir="ltr" class="odt-ltr-term">export-03</bdi>]</span></h2>
 <p>يمكن للوحدة النمطية تصدير عناصر متعددة.</p>
-<p>النص البرمجي <strong>[export-03]</strong> هو كما يلي:</p>
+<p>النص البرمجي <strong>[<bdi dir="ltr" class="odt-ltr-term">export-03</bdi>]</strong> هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">// multi-exports</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// object export</span></span>
@@ -889,11 +891,11 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطران 10 و 14: تصدير عنصرين. يتم تصدير العنصر باستخدام الصيغة <b>[export {element}]</b>;
+  <li>السطران 10 و 14: تصدير عنصرين. يتم تصدير العنصر باستخدام الصيغة <b>[<bdi dir="ltr" class="odt-ltr-term">export</bdi> {<bdi dir="ltr" class="odt-ltr-term">element</bdi>}]</b>;
   </li>
 </ul>
 
-<p>يستخدم البرنامج النصي <strong>[import-03]</strong> الوحدة النمطية <strong>[export-03]</strong> على النحو التالي:</p>
+<p>يستخدم البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">import-03</bdi>]</strong> الوحدة النمطية <strong>[<bdi dir="ltr" class="odt-ltr-term">export-03</bdi>]</strong> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// import d&#x27;un module [export03]</span></span></span>
@@ -911,7 +913,7 @@
 <ul>
   <li>السطر 3: تتم عمليات<b> [الاستيراد] </b>باستخدام الأسماء الدقيقة للكائنات المصدرة؛
   </li>
-  <li>السطر 8: يمكنك استيراد جميع الكائنات المصدرة إلى كائن مسمى (هنا <b>[module]</b>)؛
+  <li>السطر 8: يمكنك استيراد جميع الكائنات المصدرة إلى كائن مسمى (هنا <b>[<bdi dir="ltr" class="odt-ltr-term">module</bdi>]</b>)؛
   </li>
 </ul>
 

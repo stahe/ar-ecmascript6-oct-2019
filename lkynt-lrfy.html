@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -842,10 +844,10 @@
 
 <p><a id="refheadingtoc2042093980233556"></a></p>
 <h1 id="5">5. <span style="color: #365f91">الكائنات الحرفية</span></h1>
-<p>هنا، نشير إلى الكائنات المحددة حرفياً في الكود باسم &quot;الكائنات الحرفية&quot;. تحتوي JavaScript على مفهوم الفئات وكائنات مثيلات الفئات. لذلك، هذا ليس نوع الكائن الذي نناقشه الآن.</p>
+<p>هنا، نشير إلى الكائنات المحددة حرفياً في الكود باسم &quot;الكائنات الحرفية&quot;. تحتوي <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> على مفهوم الفئات وكائنات مثيلات الفئات. لذلك، هذا ليس نوع الكائن الذي نناقشه الآن.</p>
 <p><img src="images/10000000000000D400000142997DBFD1.png" width="85" height="129" style="width:2.24cm;height:3.403cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D400000142997DBFD1.png" /></p>
 <p><a id="refheadingtoc2042113980233556"></a></p>
-<h2 id="51-script-obj-01">5.1. <span style="color: #4f81bd"><strong>script</strong> [obj-01]</span></h2>
+<h2 id="51-script-obj-01">5.1. <span style="color: #4f81bd"><strong><bdi dir="ltr" class="odt-ltr-term">script</bdi></strong> [<bdi dir="ltr" class="odt-ltr-term">obj-01</bdi>]</span></h2>
 <p>نقدم هنا الخصائص الأساسية للكائنات الحرفية. أهمها أن الكائن يتم التعامل معه عبر مؤشر.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -884,18 +886,18 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 3 من الكود: يتم التعامل مع الكائن عبر مؤشر. وبالتالي، فإن<b> [obj1] </b>هو مؤشر. ولا يؤدي تعديل الكائن الذي يشير إليه المؤشر إلى تعديل المؤشر <b>[obj1] </b>نفسه. ولهذا السبب، كما هو الحال مع المصفوفات، يتم إعلان مرجع الكائن باستخدام الكلمة الرئيسية<b> [const]</b>؛
+  <li>السطر 3 من الكود: يتم التعامل مع الكائن عبر مؤشر. وبالتالي، فإن<b> [<bdi dir="ltr" class="odt-ltr-term">obj1</bdi>] </b>هو مؤشر. ولا يؤدي تعديل الكائن الذي يشير إليه المؤشر إلى تعديل المؤشر <b>[<bdi dir="ltr" class="odt-ltr-term">obj1</bdi>] </b>نفسه. ولهذا السبب، كما هو الحال مع المصفوفات، يتم إعلان مرجع الكائن باستخدام الكلمة الرئيسية<b> [<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</b>؛
   </li>
-  <li>السطر 6 من الكود: كما هو الحال مع المصفوفات، يمكن لـ<b> [console.log] </b>عرض الكائنات؛
+  <li>السطر 6 من الكود: كما هو الحال مع المصفوفات، يمكن لـ<b> [<bdi dir="ltr" class="odt-ltr-term">console.log</bdi>] </b>عرض الكائنات؛
   </li>
-  <li>السطر 11 من الكود: يمكن إعادة كتابة obj1.prop3 على النحو التالي: obj1.<b>[‘prop3’]</b>. هذه الصيغة الأخيرة مفيدة عندما يكون ‘prop3’ متغيرًا فعليًا (السطور 20–21)؛
+  <li>السطر 11 من الكود: يمكن إعادة كتابة <bdi dir="ltr" class="odt-ltr-term">obj1.prop3</bdi> على النحو التالي: <bdi dir="ltr" class="odt-ltr-term">obj1.</bdi><b>[‘<bdi dir="ltr" class="odt-ltr-term">prop3</bdi>’]</b>. هذه الصيغة الأخيرة مفيدة عندما يكون ‘<bdi dir="ltr" class="odt-ltr-term">prop3</bdi>’ متغيرًا فعليًا (السطور 20–21)؛
   </li>
-  <li>الأسطر 13-18 من الكود: توضح أن العبارة <b>[obj2=obj1] </b>هي نسخة من مرجع الكائن وليس من الكائن نفسه؛
+  <li>الأسطر 13-18 من الكود: توضح أن العبارة <b>[<bdi dir="ltr" class="odt-ltr-term">obj2</bdi>=<bdi dir="ltr" class="odt-ltr-term">obj1</bdi>] </b>هي نسخة من مرجع الكائن وليس من الكائن نفسه؛
   </li>
 </ul>
 <p><a id="refheadingtoc2042133980233556"></a></p>
-<h2 id="52-obj-02">5.2. <span style="color: #4f81bd"><strong>النص البرمجي</strong> [obj-02]</span></h2>
-<p>يوضح هذا البرنامج النصي أن خصائص الكائن يمكن أن تحتوي على كائن كقيمة لها. وينتج عن ذلك كائنات متعددة المستويات. كما نقدم الكائن العام <strong>[JSON]،</strong> الذي يتيح تحويل الكائنات إلى سلاسل وتحويل السلاسل إلى كائنات.</p>
+<h2 id="52-obj-02">5.2. <span style="color: #4f81bd"><strong>النص البرمجي</strong> [<bdi dir="ltr" class="odt-ltr-term">obj-02</bdi>]</span></h2>
+<p>يوضح هذا البرنامج النصي أن خصائص الكائن يمكن أن تحتوي على كائن كقيمة لها. وينتج عن ذلك كائنات متعددة المستويات. كما نقدم الكائن العام <strong>[<bdi dir="ltr" class="odt-ltr-term">JSON</bdi>]،</strong> الذي يتيح تحويل الكائنات إلى سلاسل وتحويل السلاسل إلى كائنات.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// a multi-level object</span></span>
@@ -929,9 +931,9 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 24: تحويل كائن JavaScript إلى سلسلة JSON؛
+  <li>السطر 24: تحويل كائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> إلى سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>؛
   </li>
-  <li>السطر 27: تحويل سلسلة JSON إلى كائن JavaScript؛
+  <li>السطر 27: تحويل سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> إلى كائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
   </li>
 </ul>
 
@@ -952,11 +954,11 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 10: في سلسلة JSON، يجب أن تكون الخصائص محاطة بعلامات اقتباس، وكذلك القيم النصية؛
+  <li>السطر 10: في سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>، يجب أن تكون الخصائص محاطة بعلامات اقتباس، وكذلك القيم النصية؛
   </li>
 </ul>
 <p><a id="refheadingtoc2042153980233556"></a></p>
-<h2 id="53-obj-03">5.3. <span style="color: #4f81bd"><strong>نص برمجي</strong> [obj-03]</span></h2>
+<h2 id="53-obj-03">5.3. <span style="color: #4f81bd"><strong>نص برمجي</strong> [<bdi dir="ltr" class="odt-ltr-term">obj-03</bdi>]</span></h2>
 <p>يقدم هذا البرنامج النصي مفهوم المتغيرات المحددة والقيم المحددة لخاصية كائن ما:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -986,17 +988,17 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطور 5–7: تعريف <b>[getter]</b>، وهي دالة تعيد عادةً قيمة خاصية الكائن ولكنها يمكن أن تعيد أي شيء في الواقع. يتم استبدال الكلمة الرئيسية <b>[function] </b>بالكلمة الرئيسية <b>[get]</b>؛
+  <li>السطور 5–7: تعريف <b>[<bdi dir="ltr" class="odt-ltr-term">getter</bdi>]</b>، وهي دالة تعيد عادةً قيمة خاصية الكائن ولكنها يمكن أن تعيد أي شيء في الواقع. يتم استبدال الكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">function</bdi>] </b>بالكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">get</bdi>]</b>؛
   </li>
   <li>السطر 7: تُرجع دالة الاسترجاع الخاصية<b> [_name]</b>. لاحظ أن هذه الخاصية لا تحتاج إلى إعلان؛
   </li>
-  <li>الأسطر 10-13: تعريف <b>[setter]</b>، وهي دالة تقوم عمومًا بتعيين القيمة المستلمة لخاصية كائن، ولكنها يمكن أن تقوم في الواقع بأي شيء. يتم استبدال الكلمة الرئيسية <b>[function] </b>بالكلمة الرئيسية <b>[set]</b>. يمكن استخدام <b>[setter] </b>للتحقق من صحة القيمة التي تم تمريرها كمعلمة إلى <b>[setter]</b>؛
+  <li>الأسطر 10-13: تعريف <b>[<bdi dir="ltr" class="odt-ltr-term">setter</bdi>]</b>، وهي دالة تقوم عمومًا بتعيين القيمة المستلمة لخاصية كائن، ولكنها يمكن أن تقوم في الواقع بأي شيء. يتم استبدال الكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">function</bdi>] </b>بالكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">set</bdi>]</b>. يمكن استخدام <b>[<bdi dir="ltr" class="odt-ltr-term">setter</bdi>] </b>للتحقق من صحة القيمة التي تم تمريرها كمعلمة إلى <b>[<bdi dir="ltr" class="odt-ltr-term">setter</bdi>]</b>؛
   </li>
-  <li>السطر 16: سيتم استدعاء الدالة<b> [set name] </b>ضمناً؛
+  <li>السطر 16: سيتم استدعاء الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">set name</bdi>] </b>ضمناً؛
   </li>
-  <li>السطر 18: سيتم استدعاء الدالة<b> [get name] </b>ضمناً؛
+  <li>السطر 18: سيتم استدعاء الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">get name</bdi>] </b>ضمناً؛
   </li>
-  <li>السطر 22: يوضح أن استخدام getters/setters يعتمد على تقدير المطور. إذا كان المطور يعرف اسم الخاصية التي يديرها، فيمكنه الوصول إليها مباشرةً؛
+  <li>السطر 22: يوضح أن استخدام <bdi dir="ltr" class="odt-ltr-term">getters/setters</bdi> يعتمد على تقدير المطور. إذا كان المطور يعرف اسم الخاصية التي يديرها، فيمكنه الوصول إليها مباشرةً؛
   </li>
 </ul>
 
@@ -1010,9 +1012,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content">personne= { nom: <span style="font-weight:bold">[Getter/Setter]</span>, _nom: &#x27;xyz&#x27; }</span></span>
 </code></pre></div>
 
-<p>لاحظ السطرين 5–6: <strong>[console.log]</strong> يعرض أيضًا الخصائص التي هي دالات.</p>
+<p>لاحظ السطرين 5–6: <strong>[<bdi dir="ltr" class="odt-ltr-term">console.log</bdi>]</strong> يعرض أيضًا الخصائص التي هي دالات.</p>
 <p><a id="refheadingtoc2042173980233556"></a></p>
-<h2 id="54-obj-04">5.4. <span style="color: #4f81bd"><strong>نص برمجي</strong> [obj-04]</span></h2>
+<h2 id="54-obj-04">5.4. <span style="color: #4f81bd"><strong>نص برمجي</strong> [<bdi dir="ltr" class="odt-ltr-term">obj-04</bdi>]</span></h2>
 <p>يوضح هذا البرنامج النصي ثلاث طرق لكتابة أسماء خصائص الكائن وطريقتين للوصول إليها.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -1054,7 +1056,7 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc2042193980233556"></a></p>
-<h2 id="55-obj-05">5.5. <span style="color: #4f81bd"><strong>نص برمجي</strong> [obj-05]</span></h2>
+<h2 id="55-obj-05">5.5. <span style="color: #4f81bd"><strong>نص برمجي</strong> [<bdi dir="ltr" class="odt-ltr-term">obj-05</bdi>]</span></h2>
 <p>يوضح البرنامج النصي أن خصائص كائن حرفي يمكن أن تكون دالات. وهذا يشبه إلى حد كبير كائن مثيل فئة، الذي له خصائص وأساليب.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -1084,7 +1086,7 @@
 </code></pre></div>
 
 <ul>
-  <li>الأسطر 17–19: طريقة داخلية للكائن. في هذه الطريقة، نصل إلى خصائص الكائن باستخدام الكلمة الرئيسية <b>[this] </b>(السطر 18). تشير<b> [this] </b>إلى الكائن نفسه، وتشير<b> [this.firstName] </b>إلى خاصية<b> [firstName] </b>الخاصة به؛
+  <li>الأسطر 17–19: طريقة داخلية للكائن. في هذه الطريقة، نصل إلى خصائص الكائن باستخدام الكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">this</bdi>] </b>(السطر 18). تشير<b> [<bdi dir="ltr" class="odt-ltr-term">this</bdi>] </b>إلى الكائن نفسه، وتشير<b> [<bdi dir="ltr" class="odt-ltr-term">this.firstName</bdi>] </b>إلى خاصية<b> [<bdi dir="ltr" class="odt-ltr-term">firstName</bdi>] </b>الخاصة به؛
   </li>
 </ul>
 
@@ -1100,7 +1102,7 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc2042213980233556"></a></p>
-<h2 id="56-obj-06">5.6. <span style="color: #4f81bd"><strong>نص برمجي</strong> [obj-06]</span></h2>
+<h2 id="56-obj-06">5.6. <span style="color: #4f81bd"><strong>نص برمجي</strong> [<bdi dir="ltr" class="odt-ltr-term">obj-06</bdi>]</span></h2>
 <p>يوضح هذا البرنامج النصي كيفية الوصول إلى خصائص كائن ما عندما لا تكون أسماؤها معروفة مسبقًا.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -1155,20 +1157,20 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>الأسطر 26–31: الكود الذي يسترد قائمة خصائص (باستثناء الطرق) كائن ما. يثير هذا الكود تحذيرًا من ESLint:
+  <li>الأسطر 26–31: الكود الذي يسترد قائمة خصائص (باستثناء الطرق) كائن ما. يثير هذا الكود تحذيرًا من <bdi dir="ltr" class="odt-ltr-term">ESLint:</bdi>
   </li>
 </ul>
 
 <p><img src="images/1000000000000687000002662860A8EF.png" width="501" height="184" style="width:13.259cm;height:4.872cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000687000002662860A8EF.png" /></p>
 <ul>
-  <li>الأسطر 32–39: الكود الذي يسمح لنا بتجاوز تحذير ESLint. نستخدم النموذج الأولي لفئة<b> [Object]</b>؛
+  <li>الأسطر 32–39: الكود الذي يسمح لنا بتجاوز تحذير <bdi dir="ltr" class="odt-ltr-term">ESLint.</bdi> نستخدم النموذج الأولي لفئة<b> [<bdi dir="ltr" class="odt-ltr-term">Object</bdi>]</b>؛
   </li>
   <li>الأسطر 41–47: أو يمكننا ببساطة تعطيل التحذير (السطر 43)؛
   </li>
 </ul>
 <p><a id="refheadingtoc5458631626043720"></a></p>
-<h2 id="57-obj-07">5.7. <span style="color: #4f81bd">البرنامج النصي [obj-07]</span></h2>
-<p>يوضح البرنامج النصي [obj-07] القدرة على تفكيك كائن:</p>
+<h2 id="57-obj-07">5.7. <span style="color: #4f81bd">البرنامج النصي [<bdi dir="ltr" class="odt-ltr-term">obj-07</bdi>]</span></h2>
+<p>يوضح البرنامج النصي [<bdi dir="ltr" class="odt-ltr-term">obj-07</bdi>] القدرة على تفكيك كائن:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// destructuring</span></span>
@@ -1213,7 +1215,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> { nom: n, prénom: p } = obj1</span></span></span>
 </code></pre></div>
 
-<p>تنشئ متغيرين [n] و [p] وهي تعادل:</p>
+<p>تنشئ متغيرين [<bdi dir="ltr" class="odt-ltr-term">n</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">p</bdi>] وهي تعادل:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> </span><span style="color:#000000">n</span><span style="color:#000000"> = obj1.nom</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> p = obj1.prénom</span></span></span>
@@ -1224,7 +1226,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> { nom =&gt; n, prénom =&gt; p } = obj1</span></span></span>
 </code></pre></div>
 
-<p>للإشارة إلى أن قيم السمتين [lastName، firstName] تُخزّن في المتغيرين [n، p]؛</p>
+<p>للإشارة إلى أن قيم السمتين [<bdi dir="ltr" class="odt-ltr-term">lastName</bdi>، <bdi dir="ltr" class="odt-ltr-term">firstName</bdi>] تُخزّن في المتغيرين [<bdi dir="ltr" class="odt-ltr-term">n</bdi>، <bdi dir="ltr" class="odt-ltr-term">p</bdi>]؛</p>
 <ul>
   <li>تتكرر عملية التفكيك في الأسطر 15 و21 و28. في كل مرة، يشير وجود الأقواس المتعرجة {} إلى أن كائنًا ما سيتم تفكيكه إلى متغيرات؛
   </li>
@@ -1246,8 +1248,8 @@
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>h-nom= martin h-prénom= jean
 </code></pre></div></td></tr></table></div>
 <p><a id="refheadingtoc5458651626043720"></a></p>
-<h2 id="58-obj-08">5.8. <span style="color: #4f81bd">نص [obj-08]</span></h2>
-<p>يوضح البرنامج النصي [obj-08] كيفية الحصول على نسخة من كائن:</p>
+<h2 id="58-obj-08">5.8. <span style="color: #4f81bd">نص [<bdi dir="ltr" class="odt-ltr-term">obj-08</bdi>]</span></h2>
+<p>يوضح البرنامج النصي [<bdi dir="ltr" class="odt-ltr-term">obj-08</bdi>] كيفية الحصول على نسخة من كائن:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1267,7 +1269,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 10: عملية نسخ الكائن [obj1]. يُسمى عامل ... عامل الانتشار؛
+  <li>السطر 10: عملية نسخ الكائن [<bdi dir="ltr" class="odt-ltr-term">obj1</bdi>]. يُسمى عامل ... عامل الانتشار؛
   </li>
 </ul>
 
@@ -1277,15 +1279,15 @@
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>obj2= { nom: &#39;martin&#39;, &#39;prénom&#39;: &#39;jean&#39; }
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 1: يوضح أن المرجعين [obj1] و [obj2] لا يشيران إلى نفس الكائن؛
+  <li>السطر 1: يوضح أن المرجعين [<bdi dir="ltr" class="odt-ltr-term">obj1</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">obj2</bdi>] لا يشيران إلى نفس الكائن؛
   </li>
-  <li>السطر 2: يوضح أن الكائن الذي تشير إليه [obj2] هو نسخة من الكائن الذي تشير إليه [obj1]؛
+  <li>السطر 2: يوضح أن الكائن الذي تشير إليه [<bdi dir="ltr" class="odt-ltr-term">obj2</bdi>] هو نسخة من الكائن الذي تشير إليه [<bdi dir="ltr" class="odt-ltr-term">obj1</bdi>]؛
   </li>
 </ul>
 
 <p><a id="refheadingtoc2042233980233556"></a></p>
 <h2 id="59">5.9. <span style="color: #4f81bd">الخلاصة</span></h2>
-<p>أظهرت البرامج النصية في هذا القسم أن الكائن الحرفي في JavaScript مشابه لكائن مثيل الفئة في اللغات الموجهة للكائنات. يمكنك تعريف الخصائص والطرق ووحدات الحصول/التعيين عليه. إنه كائن ديناميكي يمكن تعريف خصائصه في وقت التشغيل. ثم يتصرف كقاموس يمكن أن تكون عناصره من أي نوع، بما في ذلك نوع <strong>[function]</strong>.</p>
+<p>أظهرت البرامج النصية في هذا القسم أن الكائن الحرفي في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> مشابه لكائن مثيل الفئة في اللغات الموجهة للكائنات. يمكنك تعريف الخصائص والطرق ووحدات الحصول/التعيين عليه. إنه كائن ديناميكي يمكن تعريف خصائصه في وقت التشغيل. ثم يتصرف كقاموس يمكن أن تكون عناصره من أي نوع، بما في ذلك نوع <strong>[<bdi dir="ltr" class="odt-ltr-term">function</bdi>]</strong>.</p>
 
 
 

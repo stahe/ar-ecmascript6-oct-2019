@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -830,13 +832,13 @@
 
 
 <p><a id="refheadingtoc2041813980233556"></a></p>
-<h1 id="3-javascript">3. <span style="color: #365f91">أساسيات JavaScript</span></h1>
-<p><strong>ملاحظة</strong>: من الآن فصاعدًا، سيشير مصطلح <strong>[JavaScript]</strong> دائمًا إلى معيار ECMAScript 6.</p>
-<p>داخل مشروع JavaScript السابق، أنشئ مجلدًا <strong>باسم [bases]</strong>. سنضع الأمثلة من هذا القسم هناك:</p>
+<h1 id="3-javascript">3. <span style="color: #365f91">أساسيات <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi></span></h1>
+<p><strong>ملاحظة</strong>: من الآن فصاعدًا، سيشير مصطلح <strong>[<bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>]</strong> دائمًا إلى معيار <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi> 6.</p>
+<p>داخل مشروع <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> السابق، أنشئ مجلدًا <strong>باسم [<bdi dir="ltr" class="odt-ltr-term">bases</bdi>]</strong>. سنضع الأمثلة من هذا القسم هناك:</p>
 <p><img src="images/1000000000000444000001D76F20A45A.png" width="437" height="188" style="width:11.561cm;height:4.987cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000444000001D76F20A45A.png" /></p>
 <p><a id="refheadingtoc2041833980233556"></a></p>
-<h2 id="31-script-bases-01">3.1. <span style="color: #4f81bd">script [bases-01]</span></h2>
-<p>لتقديم أساسيات PHP7، استخدمنا الكود التالي (انظر الفقرة <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">المرتبطة</span></u></a>):</p>
+<h2 id="31-script-bases-01">3.1. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">script</bdi> [<bdi dir="ltr" class="odt-ltr-term">bases-01</bdi>]</span></h2>
+<p>لتقديم أساسيات <bdi dir="ltr" class="odt-ltr-term">PHP7</bdi>، استخدمنا الكود التالي (انظر الفقرة <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">المرتبطة</span></u></a>):</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -947,7 +949,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">?&gt;</span></span>
 </code></pre></div>
 
-<p>عند ترجمة هذا إلى JavaScript، ينتج عنه الكود التالي:</p>
+<p>عند ترجمة هذا إلى <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>، ينتج عنه الكود التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// this is a comment</span></span>
@@ -1055,21 +1057,21 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>دعونا نناقش الاختلافات بين كود PHP وكود ECMAScript 6 مع إعلان <strong>[use strict]</strong> (السطر 1):</p>
+<p>دعونا نناقش الاختلافات بين كود <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> وكود <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi> 6 مع إعلان <strong>[<bdi dir="ltr" class="odt-ltr-term">use strict</bdi>]</strong> (السطر 1):</p>
 <ul>
-  <li>الاختلاف الأول هو أنه في ECMAScript، <b>يتم إعلان المتغيرات </b>باستخدام الكلمات الرئيسية التالية:
+  <li>الاختلاف الأول هو أنه في <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi>، <b>يتم إعلان المتغيرات </b>باستخدام الكلمات الرئيسية التالية:
     <ul>
-      <li><b>[let] </b>لإعلان متغير <b>قد تتغير </b>قيمته أثناء تنفيذ الكود؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">let</bdi>] </b>لإعلان متغير <b>قد تتغير </b>قيمته أثناء تنفيذ الكود؛
       </li>
-      <li><b>[const] </b>لإعلان متغير <b>لن تتغير</b> قيمته (أي ثابت) أثناء تنفيذ الكود؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>] </b>لإعلان متغير <b>لن تتغير</b> قيمته (أي ثابت) أثناء تنفيذ الكود؛
       </li>
-      <li>يمكنك أيضًا استخدام الكلمة الرئيسية<b> [var] </b>بدلاً من <b>[let]</b>. كانت هذه هي الكلمة الرئيسية المستخدمة في ECMAScript 5. لن نستخدمها في هذه الدورة؛
+      <li>يمكنك أيضًا استخدام الكلمة الرئيسية<b> [<bdi dir="ltr" class="odt-ltr-term">var</bdi>] </b>بدلاً من <b>[<bdi dir="ltr" class="odt-ltr-term">let</bdi>]</b>. كانت هذه هي الكلمة الرئيسية المستخدمة في <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi> 5. لن نستخدمها في هذه الدورة؛
       </li>
     </ul>
   </li>
-  <li>السطر 6: يمكن لطريقة<b> [console.log] </b>عرض جميع أنواع البيانات: السلاسل والأرقام والقيم المنطقية والمصفوفات والكائنات. لا يمكن لطريقة<b> [print] </b>في PHP عرض المصفوفات والكائنات بشكل أصلي. في تعبير<b> [console.log]</b>، <b>[console] </b>هو كائن و<b>[log] </b>هي طريقة لهذا الكائن؛
+  <li>السطر 6: يمكن لطريقة<b> [<bdi dir="ltr" class="odt-ltr-term">console.log</bdi>] </b>عرض جميع أنواع البيانات: السلاسل والأرقام والقيم المنطقية والمصفوفات والكائنات. لا يمكن لطريقة<b> [<bdi dir="ltr" class="odt-ltr-term">print</bdi>] </b>في <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> عرض المصفوفات والكائنات بشكل أصلي. في تعبير<b> [<bdi dir="ltr" class="odt-ltr-term">console.log</bdi>]</b>، <b>[<bdi dir="ltr" class="odt-ltr-term">console</bdi>] </b>هو كائن و<b>[<bdi dir="ltr" class="odt-ltr-term">log</bdi>] </b>هي طريقة لهذا الكائن؛
   </li>
-  <li>السطر 8: المصفوفات في JavaScript هي <b>كائنات يُشار إليها بواسطة مؤشر</b>. عندما نكتب:
+  <li>السطر 8: المصفوفات في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> هي <b>كائنات يُشار إليها بواسطة مؤشر</b>. عندما نكتب:
   </li>
 </ul>
 
@@ -1077,27 +1079,27 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tableau = </span><span style="font-weight:bold;color:#000000">[&quot;un&quot;, &quot;deux&quot;, 3, 4]</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p>فالمتغير <strong>[array]</strong> هو <strong>مؤشر</strong> إلى المصفوفة الحرفية <strong>[&quot;one&quot;, &quot;two&quot;, 3, 4]</strong>. ولا يؤدي تعديل محتويات المصفوفة إلى تغيير مؤشرها. ولذلك، غالبًا ما يتم إعلان المصفوفة باستخدام الكلمة الرئيسية <strong>[const]</strong>. أما في PHP، فلا تتم الإشارة إلى المصفوفة بواسطة مؤشر. فهي قيمة حرفية؛</p>
+<p>فالمتغير <strong>[<bdi dir="ltr" class="odt-ltr-term">array</bdi>]</strong> هو <strong>مؤشر</strong> إلى المصفوفة الحرفية <strong>[&quot;<bdi dir="ltr" class="odt-ltr-term">one</bdi>&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">two</bdi>&quot;, 3, 4]</strong>. ولا يؤدي تعديل محتويات المصفوفة إلى تغيير مؤشرها. ولذلك، غالبًا ما يتم إعلان المصفوفة باستخدام الكلمة الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</strong>. أما في <bdi dir="ltr" class="odt-ltr-term">PHP</bdi>، فلا تتم الإشارة إلى المصفوفة بواسطة مؤشر. فهي قيمة حرفية؛</p>
 <ul>
-  <li>السطر 12: تم تعريف متغير الحلقة <b>[i] </b>(let) داخل الحلقة. الكلمة الرئيسية <b>[let] </b>لها نطاق كتلة (الرمز الموجود داخل الأقواس المتعرجة). وبالتالي، لا يمكن الوصول إلى المتغير <b>[i] </b>الموجود في السطر 12 إلا داخل الحلقة؛
+  <li>السطر 12: تم تعريف متغير الحلقة <b>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>] </b>(<bdi dir="ltr" class="odt-ltr-term">let</bdi>) داخل الحلقة. الكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">let</bdi>] </b>لها نطاق كتلة (الرمز الموجود داخل الأقواس المتعرجة). وبالتالي، لا يمكن الوصول إلى المتغير <b>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>] </b>الموجود في السطر 12 إلا داخل الحلقة؛
   </li>
-  <li>السطر 18: عامل ربط السلاسل هو عامل + في JavaScript وعامل . في PHP. ومن السمات المميزة لهذا العامل أنه له الأسبقية على عامل الجمع +. وبالتالي:
+  <li>السطر 18: عامل ربط السلاسل هو عامل + في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> وعامل . في <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi> ومن السمات المميزة لهذا العامل أنه له الأسبقية على عامل الجمع +. وبالتالي:
     <ul>
-      <li>في PHP، ينتج عن ‘1’ + 2 الرقم 3؛
+      <li>في <bdi dir="ltr" class="odt-ltr-term">PHP</bdi>، ينتج عن ‘1’ + 2 الرقم 3؛
       </li>
-      <li>في JavaScript، ينتج عن ‘1’+2 السلسلة ‘12’؛
+      <li>في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>، ينتج عن ‘1’+2 السلسلة ‘12’؛
       </li>
     </ul>
   </li>
-  <li>السطر 20: يمكن لـ<b> [console.log] </b>عرض المصفوفات؛
+  <li>السطر 20: يمكن لـ<b> [<bdi dir="ltr" class="odt-ltr-term">console.log</bdi>] </b>عرض المصفوفات؛
   </li>
-  <li>السطر 82: في JavaScript، لا يمكن تحديد نوع معلمات الدالة؛
+  <li>السطر 82: في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>، لا يمكن تحديد نوع معلمات الدالة؛
   </li>
-  <li>السطر 91: يسمح لك عامل<b> [typeof] </b>بتحديد نوع عنصر البيانات. هناك أربعة أنواع: number و string و boolean و object. لاحظ أنه في JavaScript لا يوجد نوع<b> [integer] </b>أو نوع<b> [array]</b>. كما ذكرنا، يتم التعامل مع المصفوفات عبر المؤشرات وتندرج ضمن فئة الكائنات؛
+  <li>السطر 91: يسمح لك عامل<b> [<bdi dir="ltr" class="odt-ltr-term">typeof</bdi>] </b>بتحديد نوع عنصر البيانات. هناك أربعة أنواع: <bdi dir="ltr" class="odt-ltr-term">number</bdi> و <bdi dir="ltr" class="odt-ltr-term">string</bdi> و <bdi dir="ltr" class="odt-ltr-term">boolean</bdi> و <bdi dir="ltr" class="odt-ltr-term">object.</bdi> لاحظ أنه في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> لا يوجد نوع<b> [<bdi dir="ltr" class="odt-ltr-term">integer</bdi>] </b>أو نوع<b> [<bdi dir="ltr" class="odt-ltr-term">array</bdi>]</b>. كما ذكرنا، يتم التعامل مع المصفوفات عبر المؤشرات وتندرج ضمن فئة الكائنات؛
   </li>
-  <li>الأسطر 50–59: كما هو الحال في PHP، تحتوي JavaScript على عاملين للمقارنة، == و ‘===’، لهما نفس المعنى كما في PHP. غالبًا ما يشير ESLint إلى عامل == على أنه خطأ محتمل. سنستخدم عامل ‘===’ بشكل ثابت؛
+  <li>الأسطر 50–59: كما هو الحال في <bdi dir="ltr" class="odt-ltr-term">PHP</bdi>، تحتوي <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> على عاملين للمقارنة، == و ‘===’، لهما نفس المعنى كما في <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi> غالبًا ما يشير <bdi dir="ltr" class="odt-ltr-term">ESLint</bdi> إلى عامل == على أنه خطأ محتمل. سنستخدم عامل ‘===’ بشكل ثابت؛
   </li>
-  <li>السطر 79: كان بإمكاننا تضمين عبارة<b> [return]</b>، لكن ESLint يصدر تحذيرًا بأن <b>[return] </b>يجب أن تُستخدم فقط داخل دالة؛
+  <li>السطر 79: كان بإمكاننا تضمين عبارة<b> [<bdi dir="ltr" class="odt-ltr-term">return</bdi>]</b>، لكن <bdi dir="ltr" class="odt-ltr-term">ESLint</bdi> يصدر تحذيرًا بأن <b>[<bdi dir="ltr" class="odt-ltr-term">return</bdi>] </b>يجب أن تُستخدم فقط داخل دالة؛
   </li>
 </ul>
 
@@ -1133,12 +1135,12 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.316</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p>في الكود المكتوب، أبلغ ESLint عن خطأين:</p>
+<p>في الكود المكتوب، أبلغ <bdi dir="ltr" class="odt-ltr-term">ESLint</bdi> عن خطأين:</p>
 <p><img src="images/10000000000005D50000015C686F68EF.png" width="597" height="139" style="width:15.799cm;height:3.683cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005D50000015C686F68EF.png" /></p>
 <ul>
-  <li>عند تمرير المؤشر فوق خط التحذير الأحمر، تظهر رسالة الخطأ <b>[3]</b>. هنا، لا يتعرف ESLint على أن هناك مقارنة بين ثابتين. يجب أن يكون أحد المعاملين متغيرًا؛
+  <li>عند تمرير المؤشر فوق خط التحذير الأحمر، تظهر رسالة الخطأ <b>[3]</b>. هنا، لا يتعرف <bdi dir="ltr" class="odt-ltr-term">ESLint</bdi> على أن هناك مقارنة بين ثابتين. يجب أن يكون أحد المعاملين متغيرًا؛
   </li>
-  <li>في <b>[4]</b>، يتيح لك خيار<b> [Quick Fix] </b>تجاهل التحذير إذا قررت عدم تصحيح الخطأ؛
+  <li>في <b>[4]</b>، يتيح لك خيار<b> [<bdi dir="ltr" class="odt-ltr-term">Quick Fix</bdi>] </b>تجاهل التحذير إذا قررت عدم تصحيح الخطأ؛
   </li>
 </ul>
 
@@ -1148,8 +1150,8 @@
   </li>
 </ul>
 <p><a id="refheadingtoc2041853980233556"></a></p>
-<h2 id="32-bases-02">3.2. <span style="color: #4f81bd">البرنامج النصي [bases-02]</span></h2>
-<p>يوضح البرنامج النصي <strong>[bases-02]</strong> استخدام الكلمتين الرئيسيتين <strong>[let]</strong> و <strong>[const]</strong>:</p>
+<h2 id="32-bases-02">3.2. <span style="color: #4f81bd">البرنامج النصي [<bdi dir="ltr" class="odt-ltr-term">bases-02</bdi>]</span></h2>
+<p>يوضح البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">bases-02</bdi>]</strong> استخدام الكلمتين الرئيسيتين <strong>[<bdi dir="ltr" class="odt-ltr-term">let</bdi>]</strong> و <strong>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// to initialize a variable, use let or const</span></span>
@@ -1165,14 +1167,14 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 11 يتسبب في خطأ وقت التشغيل <b>[1-2]</b>. يتم الإبلاغ عنه بواسطة ESLint قبل التنفيذ <b>[3]</b>:
+  <li>السطر 11 يتسبب في خطأ وقت التشغيل <b>[1-2]</b>. يتم الإبلاغ عنه بواسطة <bdi dir="ltr" class="odt-ltr-term">ESLint</bdi> قبل التنفيذ <b>[3]</b>:
   </li>
 </ul>
 
 <p><img src="images/100000000000056E000001566AC0ABC5.png" width="556" height="137" style="width:14.713cm;height:3.62cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000056E000001566AC0ABC5.png" /></p>
 <p><a id="refheadingtoc2041873980233556"></a></p>
-<h2 id="33-bases-03">3.3. <span style="color: #4f81bd">البرنامج النصي [bases-03]</span></h2>
-<p>يفحص البرنامج النصي <strong>[bases-03]</strong> نطاق المتغيرات في JavaScript:</p>
+<h2 id="33-bases-03">3.3. <span style="color: #4f81bd">البرنامج النصي [<bdi dir="ltr" class="odt-ltr-term">bases-03</bdi>]</span></h2>
+<p>يفحص البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">bases-03</bdi>]</strong> نطاق المتغيرات في <bdi dir="ltr" class="odt-ltr-term">JavaScript:</bdi></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// variable scope</span></span>
@@ -1186,7 +1188,7 @@
 </code></pre></div>
 
 <ul>
-  <li>المتغير <b>[count] </b>المُعلن خارج دالة<b> [doSomething] </b>معروف مع ذلك داخل هذه الدالة. وهذا اختلاف جوهري عن PHP؛
+  <li>المتغير <b>[<bdi dir="ltr" class="odt-ltr-term">count</bdi>] </b>المُعلن خارج دالة<b> [<bdi dir="ltr" class="odt-ltr-term">doSomething</bdi>] </b>معروف مع ذلك داخل هذه الدالة. وهذا اختلاف جوهري عن <bdi dir="ltr" class="odt-ltr-term">PHP</bdi>؛
   </li>
 </ul>
 
@@ -1199,7 +1201,7 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc2041893980233556"></a></p>
-<h2 id="34-bases-04">3.4. <span style="color: #4f81bd">نص برمجي [bases-04]</span></h2>
+<h2 id="34-bases-04">3.4. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">bases-04</bdi>]</span></h2>
 <p>تخفي متغير محلي متغير عام يحمل نفس الاسم:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -1226,7 +1228,7 @@
 </code></pre></div>
 
 <p><a id="refheadingtoc2041913980233556"></a></p>
-<h2 id="35-bases-05">3.5. <span style="color: #4f81bd">نص برمجي [bases-05]</span></h2>
+<h2 id="35-bases-05">3.5. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">bases-05</bdi>]</span></h2>
 <p>المتغير المُعرَّف داخل الدالة غير معروف خارجها:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -1241,11 +1243,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">doSomething();</span></span>
 </code></pre></div>
 
-<p>يبلغ ESLint عن وجود خطأ في السطر 9:</p>
+<p>يبلغ <bdi dir="ltr" class="odt-ltr-term">ESLint</bdi> عن وجود خطأ في السطر 9:</p>
 <p><img src="images/10000000000005BA00000149D2F450CA.png" width="513" height="115" style="width:13.58cm;height:3.048cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005BA00000149D2F450CA.png" /></p>
 <p><a id="refheadingtoc2041933980233556"></a></p>
-<h2 id="36-script-bases-06">3.6. <span style="color: #4f81bd">script [bases-06]</span></h2>
-<p>تحدد الكلمات الرئيسية <strong>[let]</strong> و <strong>[const]</strong> المتغيرات ذات نطاق <strong>[block]</strong> (الرمز الموجود داخل الأقواس المتعرجة)، ولكن لا تحددها الكلمة الرئيسية <strong>[var]</strong>:</p>
+<h2 id="36-script-bases-06">3.6. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">script</bdi> [<bdi dir="ltr" class="odt-ltr-term">bases-06</bdi>]</span></h2>
+<p>تحدد الكلمات الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">let</bdi>]</strong> و <strong>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</strong> المتغيرات ذات نطاق <strong>[<bdi dir="ltr" class="odt-ltr-term">block</bdi>]</strong> (الرمز الموجود داخل الأقواس المتعرجة)، ولكن لا تحددها الكلمة الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">var</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// the [let] keyword is used to define a block-scope variable</span></span>
@@ -1278,20 +1280,20 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 5: المتغير <b>[count] </b>معروف فقط داخل كتلة الكود التي تم إعلانه فيها (الأسطر 3–7)؛
+  <li>السطر 5: المتغير <b>[<bdi dir="ltr" class="odt-ltr-term">count</bdi>] </b>معروف فقط داخل كتلة الكود التي تم إعلانه فيها (الأسطر 3–7)؛
   </li>
-  <li>السطر 14: الثابت <b>[count2] </b>معروف فقط داخل كتلة الكود التي تم إعلانه فيها (الأسطر 12–16)؛
+  <li>السطر 14: الثابت <b>[<bdi dir="ltr" class="odt-ltr-term">count2</bdi>] </b>معروف فقط داخل كتلة الكود التي تم إعلانه فيها (الأسطر 12–16)؛
   </li>
-  <li>السطر 23: المتغير <b>[count3] </b>معروف خارج كتلة الكود التي تم إعلانه فيها (الأسطر 21–25)؛
+  <li>السطر 23: المتغير <b>[<bdi dir="ltr" class="odt-ltr-term">count3</bdi>] </b>معروف خارج كتلة الكود التي تم إعلانه فيها (الأسطر 21–25)؛
   </li>
 </ul>
 
-<p>يبلغ ESLint عن الأخطاء التالية:</p>
+<p>يبلغ <bdi dir="ltr" class="odt-ltr-term">ESLint</bdi> عن الأخطاء التالية:</p>
 <p><img src="images/100000000000053400000459582F975E.png" width="400" height="334" style="width:10.582cm;height:8.842cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000053400000459582F975E.png" /></p>
-<p>لهذه الأسباب المتعلقة بنطاق الكتلة، سنستخدم فقط الكلمات الرئيسية <strong>[let]</strong> و <strong>[const]</strong> من الآن فصاعدًا.</p>
+<p>لهذه الأسباب المتعلقة بنطاق الكتلة، سنستخدم فقط الكلمات الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">let</bdi>]</strong> و <strong>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</strong> من الآن فصاعدًا.</p>
 <p><a id="refheadingtoc2041953980233556"></a></p>
-<h2 id="37-bases-07">3.7. <span style="color: #4f81bd">نص برمجي [bases-07]</span></h2>
-<p>أنواع البيانات في JavaScript:</p>
+<h2 id="37-bases-07">3.7. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">bases-07</bdi>]</span></h2>
+<p>أنواع البيانات في <bdi dir="ltr" class="odt-ltr-term">JavaScript:</bdi></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1330,16 +1332,16 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 7 (الكود): المصفوفة هي كائن. وبالتالي، فإن<b> [var4] </b>هو مؤشر إلى المصفوفة، وليس المصفوفة نفسها؛
+  <li>السطر 7 (الكود): المصفوفة هي كائن. وبالتالي، فإن<b> [<bdi dir="ltr" class="odt-ltr-term">var4</bdi>] </b>هو مؤشر إلى المصفوفة، وليس المصفوفة نفسها؛
   </li>
-  <li>السطر 8 (الكود): <b>[var5] </b>هو مؤشر إلى كائن حرفي. سنرى أن الكائنات الحرفية في JavaScript تشبه إلى حد كبير مثيلات الفئات في PHP. يتم الإشارة إليها أيضًا عبر المؤشرات؛
+  <li>السطر 8 (الكود): <b>[<bdi dir="ltr" class="odt-ltr-term">var5</bdi>] </b>هو مؤشر إلى كائن حرفي. سنرى أن الكائنات الحرفية في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> تشبه إلى حد كبير مثيلات الفئات في <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi> يتم الإشارة إليها أيضًا عبر المؤشرات؛
   </li>
-  <li>السطر 11 (الكود): يمكن أن يكون المتغير من النوع <b>[function] </b>(السطر 7 من النتائج)؛
+  <li>السطر 11 (الكود): يمكن أن يكون المتغير من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">function</bdi>] </b>(السطر 7 من النتائج)؛
   </li>
 </ul>
 <p><a id="refheadingtoc2041973980233556"></a></p>
-<h2 id="38-bases-08">3.8. <span style="color: #4f81bd">نص برمجي [bases-08]</span></h2>
-<p>يوضح هذا البرنامج النصي تحويلات الأنواع الممكنة في JavaScript.</p>
+<h2 id="38-bases-08">3.8. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">bases-08</bdi>]</span></h2>
+<p>يوضح هذا البرنامج النصي تحويلات الأنواع الممكنة في <bdi dir="ltr" class="odt-ltr-term">JavaScript.</bdi></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
