@@ -1061,15 +1061,15 @@
 <ul>
   <li>الاختلاف الأول هو أنه في <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi>، <b>يتم إعلان المتغيرات </b>باستخدام الكلمات الرئيسية التالية:
     <ul>
-      <li><b>[<bdi dir="ltr" class="odt-ltr-term">let</bdi>] </b>لإعلان متغير <b>قد تتغير </b>قيمته أثناء تنفيذ الكود؛
+      <li><b>[let] </b>لإعلان متغير <b>قد تتغير </b>قيمته أثناء تنفيذ الكود؛
       </li>
       <li><b>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>] </b>لإعلان متغير <b>لن تتغير</b> قيمته (أي ثابت) أثناء تنفيذ الكود؛
       </li>
-      <li>يمكنك أيضًا استخدام الكلمة الرئيسية<b> [<bdi dir="ltr" class="odt-ltr-term">var</bdi>] </b>بدلاً من <b>[<bdi dir="ltr" class="odt-ltr-term">let</bdi>]</b>. كانت هذه هي الكلمة الرئيسية المستخدمة في <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi> 5. لن نستخدمها في هذه الدورة؛
+      <li>يمكنك أيضًا استخدام الكلمة الرئيسية<b> [var] </b>بدلاً من <b>[let]</b>. كانت هذه هي الكلمة الرئيسية المستخدمة في <bdi dir="ltr" class="odt-ltr-term">ECMAScript</bdi> 5. لن نستخدمها في هذه الدورة؛
       </li>
     </ul>
   </li>
-  <li>السطر 6: يمكن لطريقة<b> [<bdi dir="ltr" class="odt-ltr-term">console.log</bdi>] </b>عرض جميع أنواع البيانات: السلاسل والأرقام والقيم المنطقية والمصفوفات والكائنات. لا يمكن لطريقة<b> [<bdi dir="ltr" class="odt-ltr-term">print</bdi>] </b>في <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> عرض المصفوفات والكائنات بشكل أصلي. في تعبير<b> [<bdi dir="ltr" class="odt-ltr-term">console.log</bdi>]</b>، <b>[<bdi dir="ltr" class="odt-ltr-term">console</bdi>] </b>هو كائن و<b>[<bdi dir="ltr" class="odt-ltr-term">log</bdi>] </b>هي طريقة لهذا الكائن؛
+  <li>السطر 6: يمكن لطريقة<b> [<bdi dir="ltr" class="odt-ltr-term">console.log</bdi>] </b>عرض جميع أنواع البيانات: السلاسل والأرقام والقيم المنطقية والمصفوفات والكائنات. لا يمكن لطريقة<b> [<bdi dir="ltr" class="odt-ltr-term">print</bdi>] </b>في <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> عرض المصفوفات والكائنات بشكل أصلي. في تعبير<b> [<bdi dir="ltr" class="odt-ltr-term">console.log</bdi>]</b>، <b>[<bdi dir="ltr" class="odt-ltr-term">console</bdi>] </b>هو كائن و<b>[log] </b>هي طريقة لهذا الكائن؛
   </li>
   <li>السطر 8: المصفوفات في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> هي <b>كائنات يُشار إليها بواسطة مؤشر</b>. عندما نكتب:
   </li>
@@ -1079,9 +1079,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tableau = </span><span style="font-weight:bold;color:#000000">[&quot;un&quot;, &quot;deux&quot;, 3, 4]</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p>فالمتغير <strong>[<bdi dir="ltr" class="odt-ltr-term">array</bdi>]</strong> هو <strong>مؤشر</strong> إلى المصفوفة الحرفية <strong>[&quot;<bdi dir="ltr" class="odt-ltr-term">one</bdi>&quot;, &quot;<bdi dir="ltr" class="odt-ltr-term">two</bdi>&quot;, 3, 4]</strong>. ولا يؤدي تعديل محتويات المصفوفة إلى تغيير مؤشرها. ولذلك، غالبًا ما يتم إعلان المصفوفة باستخدام الكلمة الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</strong>. أما في <bdi dir="ltr" class="odt-ltr-term">PHP</bdi>، فلا تتم الإشارة إلى المصفوفة بواسطة مؤشر. فهي قيمة حرفية؛</p>
+<p>فالمتغير <strong>[<bdi dir="ltr" class="odt-ltr-term">array</bdi>]</strong> هو <strong>مؤشر</strong> إلى المصفوفة الحرفية <strong>[&quot;one&quot;, &quot;two&quot;, 3, 4]</strong>. ولا يؤدي تعديل محتويات المصفوفة إلى تغيير مؤشرها. ولذلك، غالبًا ما يتم إعلان المصفوفة باستخدام الكلمة الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</strong>. أما في <bdi dir="ltr" class="odt-ltr-term">PHP</bdi>، فلا تتم الإشارة إلى المصفوفة بواسطة مؤشر. فهي قيمة حرفية؛</p>
 <ul>
-  <li>السطر 12: تم تعريف متغير الحلقة <b>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>] </b>(<bdi dir="ltr" class="odt-ltr-term">let</bdi>) داخل الحلقة. الكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">let</bdi>] </b>لها نطاق كتلة (الرمز الموجود داخل الأقواس المتعرجة). وبالتالي، لا يمكن الوصول إلى المتغير <b>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>] </b>الموجود في السطر 12 إلا داخل الحلقة؛
+  <li>السطر 12: تم تعريف متغير الحلقة <b>[i] </b>(let) داخل الحلقة. الكلمة الرئيسية <b>[let] </b>لها نطاق كتلة (الرمز الموجود داخل الأقواس المتعرجة). وبالتالي، لا يمكن الوصول إلى المتغير <b>[i] </b>الموجود في السطر 12 إلا داخل الحلقة؛
   </li>
   <li>السطر 18: عامل ربط السلاسل هو عامل + في <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> وعامل . في <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi> ومن السمات المميزة لهذا العامل أنه له الأسبقية على عامل الجمع +. وبالتالي:
     <ul>
@@ -1151,7 +1151,7 @@
 </ul>
 <p><a id="refheadingtoc2041853980233556"></a></p>
 <h2 id="32-bases-02">3.2. <span style="color: #4f81bd">البرنامج النصي [<bdi dir="ltr" class="odt-ltr-term">bases-02</bdi>]</span></h2>
-<p>يوضح البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">bases-02</bdi>]</strong> استخدام الكلمتين الرئيسيتين <strong>[<bdi dir="ltr" class="odt-ltr-term">let</bdi>]</strong> و <strong>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</strong>:</p>
+<p>يوضح البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">bases-02</bdi>]</strong> استخدام الكلمتين الرئيسيتين <strong>[let]</strong> و <strong>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// to initialize a variable, use let or const</span></span>
@@ -1247,7 +1247,7 @@
 <p><img src="images/10000000000005BA00000149D2F450CA.png" width="513" height="115" style="width:13.58cm;height:3.048cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005BA00000149D2F450CA.png" /></p>
 <p><a id="refheadingtoc2041933980233556"></a></p>
 <h2 id="36-script-bases-06">3.6. <span style="color: #4f81bd"><bdi dir="ltr" class="odt-ltr-term">script</bdi> [<bdi dir="ltr" class="odt-ltr-term">bases-06</bdi>]</span></h2>
-<p>تحدد الكلمات الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">let</bdi>]</strong> و <strong>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</strong> المتغيرات ذات نطاق <strong>[<bdi dir="ltr" class="odt-ltr-term">block</bdi>]</strong> (الرمز الموجود داخل الأقواس المتعرجة)، ولكن لا تحددها الكلمة الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">var</bdi>]</strong>:</p>
+<p>تحدد الكلمات الرئيسية <strong>[let]</strong> و <strong>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</strong> المتغيرات ذات نطاق <strong>[<bdi dir="ltr" class="odt-ltr-term">block</bdi>]</strong> (الرمز الموجود داخل الأقواس المتعرجة)، ولكن لا تحددها الكلمة الرئيسية <strong>[var]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// the [let] keyword is used to define a block-scope variable</span></span>
@@ -1290,7 +1290,7 @@
 
 <p>يبلغ <bdi dir="ltr" class="odt-ltr-term">ESLint</bdi> عن الأخطاء التالية:</p>
 <p><img src="images/100000000000053400000459582F975E.png" width="400" height="334" style="width:10.582cm;height:8.842cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000053400000459582F975E.png" /></p>
-<p>لهذه الأسباب المتعلقة بنطاق الكتلة، سنستخدم فقط الكلمات الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">let</bdi>]</strong> و <strong>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</strong> من الآن فصاعدًا.</p>
+<p>لهذه الأسباب المتعلقة بنطاق الكتلة، سنستخدم فقط الكلمات الرئيسية <strong>[let]</strong> و <strong>[<bdi dir="ltr" class="odt-ltr-term">const</bdi>]</strong> من الآن فصاعدًا.</p>
 <p><a id="refheadingtoc2041953980233556"></a></p>
 <h2 id="37-bases-07">3.7. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">bases-07</bdi>]</span></h2>
 <p>أنواع البيانات في <bdi dir="ltr" class="odt-ltr-term">JavaScript:</bdi></p>

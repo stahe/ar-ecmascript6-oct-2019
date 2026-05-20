@@ -965,7 +965,7 @@
 <p><img src="images/1000000000000551000001A055C7BE76.png" width="544" height="166" style="width:14.4cm;height:4.401cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000551000001A055C7BE76.png" /></p>
 <p>سنقوم بفحص نسختين من العميل:</p>
 <ul>
-  <li>سيكون للإصدار 1 من العميل الهيكل الطبقي<b> [<bdi dir="ltr" class="odt-ltr-term">main</bdi>, <bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>التالي:
+  <li>سيكون للإصدار 1 من العميل الهيكل الطبقي<b> [<bdi dir="ltr" class="odt-ltr-term">main</bdi>, dao] </b>التالي:
   </li>
 </ul>
 
@@ -989,8 +989,8 @@
   </li>
 </ul>
 <p><a id="refheadingtoc225424640539168"></a></p>
-<h3 id="1421-dao">14.2.1. <span style="color: #4f81bd"><strong>طبقة</strong> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h3>
-<p>سيتم تنفيذ طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> بواسطة الفئة التالية <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao1.js</bdi>]</strong>:</p>
+<h3 id="1421-dao">14.2.1. <span style="color: #4f81bd"><strong>طبقة</strong> [dao]</span></h3>
+<p>سيتم تنفيذ طبقة <strong>[dao]</strong> بواسطة الفئة التالية <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao1.js</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1170,9 +1170,9 @@
   </li>
   <li>الأسطر 53–76: تقوم الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi>] </b>بإجراء الطلب <b>[<bdi dir="ltr" class="odt-ltr-term">post</bdi> /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">calculate-tax</bdi>] </b>عن طريق إرسال المعلمات <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>, <bdi dir="ltr" class="odt-ltr-term">children</bdi>, <bdi dir="ltr" class="odt-ltr-term">salary</bdi>]</b>. وتُرجع سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المرسلة من الخادم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
   </li>
-  <li>الأسطر 79–92: تقوم الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">listSimulations</bdi>] </b>بإجراء الطلب [<span style="color: #008000"><bdi dir="ltr" class="odt-ltr-term">get</bdi> /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi></span>]. وتُرجع سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المرسلة من الخادم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
+  <li>الأسطر 79–92: تقوم الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">listSimulations</bdi>] </b>بإجراء الطلب [<span style="color: #008000">get /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi></span>]. وتُرجع سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المرسلة من الخادم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
   </li>
-  <li>الأسطر 95–109: تقوم الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">deleteSimulation</bdi>] </b>بإرسال الطلب <b>[<bdi dir="ltr" class="odt-ltr-term">get</bdi> /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">delete-simulation</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">number</bdi>=<bdi dir="ltr" class="odt-ltr-term">index</bdi>]</b>. وتُرجع سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المرسلة من الخادم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
+  <li>الأسطر 95–109: تقوم الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">deleteSimulation</bdi>] </b>بإرسال الطلب <b>[get /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">delete-simulation</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">number</bdi>=<bdi dir="ltr" class="odt-ltr-term">index</bdi>]</b>. وتُرجع سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المرسلة من الخادم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
   </li>
   <li>السطر 121: يتم استخدام الترميز <b>[<bdi dir="ltr" class="odt-ltr-term">this.axios</bdi>] </b>لأن كائن<b> [<bdi dir="ltr" class="odt-ltr-term">axios</bdi>] </b>الذي تم تمريره إلى المنشئ قد تم تخزينه في الخاصية<b> [<bdi dir="ltr" class="odt-ltr-term">this.axios</bdi>]</b>؛
   </li>
@@ -1268,7 +1268,7 @@
   </li>
   <li>السطر 12: تم إنشاء طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">Dao</bdi>]</b>. يمكن استخدامها الآن؛
   </li>
-  <li>الأسطر 46-48: تُستخدم وظيفة<b> [<bdi dir="ltr" class="odt-ltr-term">log</bdi>] </b>لعرض سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> لكائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> بطريقة منسقة: عموديًا مع مسافة بادئة بمقدار مسافتين (المعلمة الثالثة)؛
+  <li>الأسطر 46-48: تُستخدم وظيفة<b> [log] </b>لعرض سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> لكائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> بطريقة منسقة: عموديًا مع مسافة بادئة بمقدار مسافتين (المعلمة الثالثة)؛
   </li>
   <li>الأسطر 15-18: تهيئة جلسة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>؛
   </li>
@@ -1666,7 +1666,7 @@
     <ul>
       <li>لن يتلقى مثيلًا لطبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] </b>(لم يعد بحاجة إلى مثيل)؛
       </li>
-      <li>لن يطلب بيانات الضرائب من إدارة<b> [<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>] </b>من طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</b>: سيقوم كود الاستدعاء بتمرير هذه البيانات إلى المنشئ؛
+      <li>لن يطلب بيانات الضرائب من إدارة<b> [<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>] </b>من طبقة<b> [dao]</b>: سيقوم كود الاستدعاء بتمرير هذه البيانات إلى المنشئ؛
       </li>
     </ul>
   </li>
@@ -1874,7 +1874,7 @@
 <p><a id="refheadingtoc225432640539168"></a></p>
 <h3 id="1432-javascript-dao2">14.3.2. <span style="color: #4f81bd"><strong>فئة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi></strong> [<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>]</span></h3>
 <p><img src="images/10000000000005DF000001A53E81FA2B.png" width="601" height="168" style="width:15.91cm;height:4.456cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DF000001A53E81FA2B.png" /></p>
-<p>تنفذ فئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>]</strong> طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> لعميل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> أعلاه على النحو التالي:</p>
+<p>تنفذ فئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>]</strong> طبقة <strong>[dao]</strong> لعميل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> أعلاه على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
@@ -2014,7 +2014,7 @@
 <h3 id="1433">14.3.3. <span style="color: #4f81bd">تعديل خادم حساب الضرائب</span></h3>
 <p>يجب أن ينفذ خادم حساب الضرائب إجراءً جديدًا. سنقوم بذلك في الإصدار 14 من الخادم. يتميز الإجراء المراد تنفيذه بالخصائص التالية:</p>
 <ul>
-  <li>يتم طلبه بواسطة عملية <b><span style="color: #008000">[<bdi dir="ltr" class="odt-ltr-term">get</bdi> /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">get-admindata</bdi>]</span></b><span style="color: #008000">؛</span>
+  <li>يتم طلبه بواسطة عملية <b><span style="color: #008000">[get /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">get-admindata</bdi>]</span></b><span style="color: #008000">؛</span>
   </li>
   <li>يعيد سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> لكائن يغلف بيانات إدارة الضرائب؛
   </li>
@@ -2589,7 +2589,7 @@
   </li>
   <li>الأسطر 10-36: يستدعي البرنامج النصي طرق<b> [<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>، <bdi dir="ltr" class="odt-ltr-term">authenticateUser</bdi>، <bdi dir="ltr" class="odt-ltr-term">getAdminData</bdi>] </b>الخاصة بطبقة<b> [<bdi dir="ltr" class="odt-ltr-term">Dao</bdi>] </b>بالتسلسل وبطريقة حجبية؛
   </li>
-  <li>السطر 38: لم نعد بحاجة إلى طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</b>. لدينا جميع العناصر اللازمة لتشغيل طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>لعميل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
+  <li>السطر 38: لم نعد بحاجة إلى طبقة<b> [dao]</b>. لدينا جميع العناصر اللازمة لتشغيل طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>لعميل <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
   </li>
   <li>الأسطر 41–46: نقوم بإجراء ثلاثة حسابات ضريبية ونخزن النتائج في مصفوفة <b>[<bdi dir="ltr" class="odt-ltr-term">simulations</bdi>]</b>؛
   </li>
@@ -2705,7 +2705,7 @@
 <p><img src="images/10000000000005CD000001A3E68297B7.png" width="594" height="168" style="width:15.722cm;height:4.436cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005CD000001A3E68297B7.png" /></p>
 <p>عملية النقل ليست بسيطة. في حين أن <strong>[<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>]</strong> يمكنه تنفيذ جافا سكريبت <bdi dir="ltr" class="odt-ltr-term">ES6</bdi>، فإن هذا لا ينطبق عمومًا على المتصفحات. لذلك يجب علينا استخدام أدوات تقوم بترجمة كود <bdi dir="ltr" class="odt-ltr-term">ES6</bdi> إلى كود <bdi dir="ltr" class="odt-ltr-term">ES5</bdi> الذي تفهمه المتصفحات الحديثة. لحسن الحظ، هذه الأدوات قوية وسهلة الاستخدام إلى حد ما.</p>
 <p>هنا، اتبعنا المقالة <strong>[كيفية كتابة كود <bdi dir="ltr" class="odt-ltr-term">ES6</bdi> آمن للتشغيل في المتصفح - <bdi dir="ltr" class="odt-ltr-term">Web Developer</bdi>&#x27;<bdi dir="ltr" class="odt-ltr-term">s Journal</bdi>]</strong>.</p>
-<p>في مجلد <strong>[<bdi dir="ltr" class="odt-ltr-term">client HTTP</bdi> 3/<bdi dir="ltr" class="odt-ltr-term">src</bdi>]</strong>، وضعنا ملفات <strong>[<bdi dir="ltr" class="odt-ltr-term">main.js</bdi> و <bdi dir="ltr" class="odt-ltr-term">Métier.js</bdi> و <bdi dir="ltr" class="odt-ltr-term">Dao2.js</bdi>]</strong> من تطبيق <strong>[<bdi dir="ltr" class="odt-ltr-term">Client Http</bdi> 2]</strong> الذي قمنا بتطويره للتو.</p>
+<p>في مجلد <strong>[<bdi dir="ltr" class="odt-ltr-term">client HTTP</bdi> 3/src]</strong>، وضعنا ملفات <strong>[<bdi dir="ltr" class="odt-ltr-term">main.js</bdi> و <bdi dir="ltr" class="odt-ltr-term">Métier.js</bdi> و <bdi dir="ltr" class="odt-ltr-term">Dao2.js</bdi>]</strong> من تطبيق <strong>[<bdi dir="ltr" class="odt-ltr-term">Client Http</bdi> 2]</strong> الذي قمنا بتطويره للتو.</p>
 <p><a id="refheadingtoc225440640539168"></a></p>
 <h3 id="1441">14.4.1. <span style="color: #4f81bd">تهيئة المشروع</span></h3>
 <p>سنعمل في المجلد <strong>[<bdi dir="ltr" class="odt-ltr-term">client http</bdi> 3]</strong>. نفتح محطة طرفية في <strong>[<bdi dir="ltr" class="odt-ltr-term">VSCode</bdi>]</strong> وننتقل إلى هذا المجلد:</p>
@@ -2738,7 +2738,7 @@
 </ul>
 
 <p>يتم تثبيت تبعيات المشروع على النحو التالي في محطة <strong>[<bdi dir="ltr" class="odt-ltr-term">VSCode</bdi>]</strong>:</p>
-<p><bdi dir="ltr" class="odt-ltr-term">npm</bdi> --<bdi dir="ltr" class="odt-ltr-term">save-dev install</bdi> @<bdi dir="ltr" class="odt-ltr-term">babel/core</bdi> @<bdi dir="ltr" class="odt-ltr-term">babel/preset-env babel-loader webpack webpack-cli webpack-dev-server</bdi> @<bdi dir="ltr" class="odt-ltr-term">webpack-cli/init</bdi></p>
+<p>npm --<bdi dir="ltr" class="odt-ltr-term">save-dev install</bdi> @<bdi dir="ltr" class="odt-ltr-term">babel/core</bdi> @<bdi dir="ltr" class="odt-ltr-term">babel/preset-env babel-loader webpack webpack-cli webpack-dev-server</bdi> @<bdi dir="ltr" class="odt-ltr-term">webpack-cli/init</bdi></p>
 <p><img src="images/10000000000008DC000000F377F51916.png" width="567" height="61" style="width:15.002cm;height:1.607cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008DC000000F377F51916.png" /></p>
 <p>بعد تثبيت التبعيات، تغير ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">package.json</bdi>]</strong> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -2978,9 +2978,9 @@
   </li>
   <li>السطران 8–9 و18–19: تمت إضافتهما؛
   </li>
-  <li>السطر 8: مهمة<b> [<bdi dir="ltr" class="odt-ltr-term">npm</bdi>] </b>التي تقوم بتجميع المشروع؛
+  <li>السطر 8: مهمة<b> [npm] </b>التي تقوم بتجميع المشروع؛
   </li>
-  <li>السطر 9: مهمة<b> [<bdi dir="ltr" class="odt-ltr-term">npm</bdi>] </b>التي تقوم بتشغيله؛
+  <li>السطر 9: مهمة<b> [npm] </b>التي تقوم بتشغيله؛
   </li>
   <li>السطر 18: ؟
   </li>
@@ -2997,7 +2997,7 @@
 
 <p><a id="refheadingtoc225446640539168"></a></p>
 <h3 id="1444">14.4.4. <span style="color: #4f81bd">تجميع المشروع وتشغيله</span></h3>
-<p>يحتوي ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">package.json</bdi>]</strong> على ثلاث مهام <strong>[<bdi dir="ltr" class="odt-ltr-term">npm</bdi>]</strong>:</p>
+<p>يحتوي ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">package.json</bdi>]</strong> على ثلاث مهام <strong>[npm]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2e75b6">&quot;scripts&quot;</span><span style="color:#000000">: {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#2e75b6">&quot;test&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><span style="color:#000000">,</span></span></span>
@@ -3206,7 +3206,7 @@
   </li>
   <li><b>[2]</b>: في فئة<b> [<bdi dir="ltr" class="odt-ltr-term">ParentResponse</bdi>]</b>، التي ترسل الاستجابة إلى عميل <bdi dir="ltr" class="odt-ltr-term">JavaScript.</bdi> سترسل هذه الفئة رؤوس <bdi dir="ltr" class="odt-ltr-term">CORS</bdi> التي يتوقعها متصفح العميل؛
   </li>
-  <li><b>[3]</b>: في فئات<b> [<bdi dir="ltr" class="odt-ltr-term">HtmlResponse</bdi>، <bdi dir="ltr" class="odt-ltr-term">JsonResponse</bdi>، <bdi dir="ltr" class="odt-ltr-term">XmlResponse</bdi>] </b>التي تولد استجابات لجلسات<b> [<bdi dir="ltr" class="odt-ltr-term">html</bdi>، <bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>]</b>، على التوالي. يجب أن تمرر هذه الفئات المتغير المنطقي<b> [<bdi dir="ltr" class="odt-ltr-term">corsAllowed</bdi>] </b>الموجود في <b>[4] </b>إلى فئتها الأم <b>[2]</b>. ويتم ذلك في <b>[5]</b>، عن طريق تمرير مصفوفة الصور من ملف <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> <b>[2]</b>؛
+  <li><b>[3]</b>: في فئات<b> [<bdi dir="ltr" class="odt-ltr-term">HtmlResponse</bdi>، <bdi dir="ltr" class="odt-ltr-term">JsonResponse</bdi>، <bdi dir="ltr" class="odt-ltr-term">XmlResponse</bdi>] </b>التي تولد استجابات لجلسات<b> [<bdi dir="ltr" class="odt-ltr-term">html</bdi>، <bdi dir="ltr" class="odt-ltr-term">json</bdi>، xml]</b>، على التوالي. يجب أن تمرر هذه الفئات المتغير المنطقي<b> [<bdi dir="ltr" class="odt-ltr-term">corsAllowed</bdi>] </b>الموجود في <b>[4] </b>إلى فئتها الأم <b>[2]</b>. ويتم ذلك في <b>[5]</b>، عن طريق تمرير مصفوفة الصور من ملف <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> <b>[2]</b>؛
   </li>
 </ul>
 
@@ -3337,7 +3337,7 @@
 <p><img src="images/1000000000000220000003A5B333BDD4.png" width="163" height="280" style="width:4.32cm;height:7.408cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000220000003A5B333BDD4.png" /></p>
 <p><a id="refheadingtoc1252801348058621"></a></p>
 <h2 id="145-http-3">14.5. <span style="color: #4f81bd">تحسين عميل <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> 3</span></h2>
-<p>عندما تعمل فئة [<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>] السابقة داخل متصفح، لا تكون إدارة ملفات تعريف الارتباط للجلسة ضرورية. وذلك لأن المتصفح الذي يستضيف طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] يدير ملفات تعريف الارتباط للجلسة: فهو يعيد تلقائيًا أي ملف تعريف ارتباط يرسله الخادم إليه. وبالتالي، يمكن إعادة كتابة فئة [<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>] لتصبح فئة [<bdi dir="ltr" class="odt-ltr-term">Dao3</bdi>] التالية:</p>
+<p>عندما تعمل فئة [<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>] السابقة داخل متصفح، لا تكون إدارة ملفات تعريف الارتباط للجلسة ضرورية. وذلك لأن المتصفح الذي يستضيف طبقة [dao] يدير ملفات تعريف الارتباط للجلسة: فهو يعيد تلقائيًا أي ملف تعريف ارتباط يرسله الخادم إليه. وبالتالي، يمكن إعادة كتابة فئة [<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>] لتصبح فئة [<bdi dir="ltr" class="odt-ltr-term">Dao3</bdi>] التالية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&quot;use strict&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -3430,7 +3430,7 @@
 <p>اختفى كل ما يتعلق بإدارة ملف تعريف الارتباط الخاص بالإدارة.</p>
 <p>نقوم بتعديل المشروع السابق على النحو التالي:</p>
 <p><img src="images/1000000000000186000001F9A222DDB4.png" width="136" height="176" style="width:3.602cm;height:4.664cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000186000001F9A222DDB4.png" /></p>
-<p>في المجلد [<bdi dir="ltr" class="odt-ltr-term">src</bdi>]، أضفنا ملفين:</p>
+<p>في المجلد [src]، أضفنا ملفين:</p>
 <ul>
   <li>فئة [<bdi dir="ltr" class="odt-ltr-term">Dao3</bdi>] التي قدمناها للتو؛
   </li>
