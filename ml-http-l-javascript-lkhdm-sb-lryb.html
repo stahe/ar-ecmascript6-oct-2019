@@ -965,7 +965,7 @@
 <p><img src="images/1000000000000551000001A055C7BE76.png" width="544" height="166" style="width:14.4cm;height:4.401cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000551000001A055C7BE76.png" /></p>
 <p>سنقوم بفحص نسختين من العميل:</p>
 <ul>
-  <li>سيكون للإصدار 1 من العميل الهيكل الطبقي<b> [<bdi dir="ltr" class="odt-ltr-term">main</bdi>, dao] </b>التالي:
+  <li>سيكون للإصدار 1 من العميل الهيكل الطبقي<b> [<bdi dir="ltr" class="odt-ltr-term">main, dao</bdi>] </b>التالي:
   </li>
 </ul>
 
@@ -1168,11 +1168,11 @@
       </li>
     </ul>
   </li>
-  <li>الأسطر 53–76: تقوم الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi>] </b>بإجراء الطلب <b>[<bdi dir="ltr" class="odt-ltr-term">post</bdi> /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">calculate-tax</bdi>] </b>عن طريق إرسال المعلمات <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>, <bdi dir="ltr" class="odt-ltr-term">children</bdi>, <bdi dir="ltr" class="odt-ltr-term">salary</bdi>]</b>. وتُرجع سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المرسلة من الخادم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
+  <li>الأسطر 53–76: تقوم الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi>] </b>بإجراء الطلب <b>[<bdi dir="ltr" class="odt-ltr-term">post /main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">calculate-tax</bdi>] </b>عن طريق إرسال المعلمات <b>[<bdi dir="ltr" class="odt-ltr-term">married, children, salary</bdi>]</b>. وتُرجع سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المرسلة من الخادم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
   </li>
-  <li>الأسطر 79–92: تقوم الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">listSimulations</bdi>] </b>بإجراء الطلب [<span style="color: #008000">get /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi></span>]. وتُرجع سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المرسلة من الخادم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
+  <li>الأسطر 79–92: تقوم الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">listSimulations</bdi>] </b>بإجراء الطلب [<span style="color: #008000"><bdi dir="ltr" class="odt-ltr-term">get /main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi></span>]. وتُرجع سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المرسلة من الخادم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
   </li>
-  <li>الأسطر 95–109: تقوم الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">deleteSimulation</bdi>] </b>بإرسال الطلب <b>[get /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">delete-simulation</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">number</bdi>=<bdi dir="ltr" class="odt-ltr-term">index</bdi>]</b>. وتُرجع سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المرسلة من الخادم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
+  <li>الأسطر 95–109: تقوم الدالة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">deleteSimulation</bdi>] </b>بإرسال الطلب <b>[<bdi dir="ltr" class="odt-ltr-term">get /main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">delete-simulation</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">number</bdi>=<bdi dir="ltr" class="odt-ltr-term">index</bdi>]</b>. وتُرجع سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> المرسلة من الخادم ككائن <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
   </li>
   <li>السطر 121: يتم استخدام الترميز <b>[<bdi dir="ltr" class="odt-ltr-term">this.axios</bdi>] </b>لأن كائن<b> [<bdi dir="ltr" class="odt-ltr-term">axios</bdi>] </b>الذي تم تمريره إلى المنشئ قد تم تخزينه في الخاصية<b> [<bdi dir="ltr" class="odt-ltr-term">this.axios</bdi>]</b>؛
   </li>
@@ -1185,7 +1185,7 @@
 <ul>
   <li>تهيئة جلسة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>؛
   </li>
-  <li>المصادقة باستخدام <b>[<bdi dir="ltr" class="odt-ltr-term">admin</bdi>, <bdi dir="ltr" class="odt-ltr-term">admin</bdi>]</b>؛
+  <li>المصادقة باستخدام <b>[<bdi dir="ltr" class="odt-ltr-term">admin, admin</bdi>]</b>؛
   </li>
   <li>طلب ثلاثة حسابات ضريبية؛
   </li>
@@ -2014,7 +2014,7 @@
 <h3 id="1433">14.3.3. <span style="color: #4f81bd">تعديل خادم حساب الضرائب</span></h3>
 <p>يجب أن ينفذ خادم حساب الضرائب إجراءً جديدًا. سنقوم بذلك في الإصدار 14 من الخادم. يتميز الإجراء المراد تنفيذه بالخصائص التالية:</p>
 <ul>
-  <li>يتم طلبه بواسطة عملية <b><span style="color: #008000">[get /<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">get-admindata</bdi>]</span></b><span style="color: #008000">؛</span>
+  <li>يتم طلبه بواسطة عملية <b><span style="color: #008000">[<bdi dir="ltr" class="odt-ltr-term">get /main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">get-admindata</bdi>]</span></b><span style="color: #008000">؛</span>
   </li>
   <li>يعيد سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> لكائن يغلف بيانات إدارة الضرائب؛
   </li>
@@ -2363,7 +2363,7 @@
   </li>
   <li><span style="color: #000000">السطور 85-86: إذا لم يكن الأمر كذلك، يتم إصدار استثناء؛</span>
   </li>
-  <li><span style="color: #000000">السطور 32–65: تقوم الدالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">check</bdi>] </span></b><span style="color: #000000">بأكثر مما هو ضروري. فهي تتعامل مع كل من المصفوفات والقيم الفردية. ومع ذلك، يتم استدعاؤها هنا فقط للتحقق من قيمة من النوع </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">string</bdi>]</span></b><span style="color: #000000">. وتُرجع كائنًا به الخصائص </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">error</bdi>, <bdi dir="ltr" class="odt-ltr-term">value</bdi>] </span></b><span style="color: #000000">حيث:</span>
+  <li><span style="color: #000000">السطور 32–65: تقوم الدالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">check</bdi>] </span></b><span style="color: #000000">بأكثر مما هو ضروري. فهي تتعامل مع كل من المصفوفات والقيم الفردية. ومع ذلك، يتم استدعاؤها هنا فقط للتحقق من قيمة من النوع </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">string</bdi>]</span></b><span style="color: #000000">. وتُرجع كائنًا به الخصائص </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">error, value</bdi>] </span></b><span style="color: #000000">حيث:</span>
     <ul>
       <li><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">error</bdi>] </span></b><span style="color: #000000">هو قيمة منطقية تشير إلى ما إذا كان قد حدث خطأ أم لا؛</span>
       </li>
@@ -2449,7 +2449,7 @@
 
 <p><strong><span style="color: #000000">تعليقات</span></strong></p>
 <ul>
-  <li><span style="color: #000000">السطر 20: تم تحويل السمة </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>→<bdi dir="ltr" class="odt-ltr-term">arrayOfAttributes</bdi>] </span></b><span style="color: #000000">إلى متغير يجب الآن تمريره إلى الدالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">checkForAllAttributes</bdi>] </span></b><span style="color: #000000">في السطر 38، والتي كانت تعمل سابقًا على السمة </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>→<bdi dir="ltr" class="odt-ltr-term">arrayOfAttributes</bdi>]</span></b><span style="color: #000000">؛</span>
+  <li><span style="color: #000000">السطر 20: تم تحويل السمة </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">this→arrayOfAttributes</bdi>] </span></b><span style="color: #000000">إلى متغير يجب الآن تمريره إلى الدالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">checkForAllAttributes</bdi>] </span></b><span style="color: #000000">في السطر 38، والتي كانت تعمل سابقًا على السمة </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">this→arrayOfAttributes</bdi>]</span></b><span style="color: #000000">؛</span>
   </li>
 </ul>
 
@@ -2738,7 +2738,7 @@
 </ul>
 
 <p>يتم تثبيت تبعيات المشروع على النحو التالي في محطة <strong>[<bdi dir="ltr" class="odt-ltr-term">VSCode</bdi>]</strong>:</p>
-<p>npm --<bdi dir="ltr" class="odt-ltr-term">save-dev install</bdi> @<bdi dir="ltr" class="odt-ltr-term">babel/core</bdi> @<bdi dir="ltr" class="odt-ltr-term">babel/preset-env babel-loader webpack webpack-cli webpack-dev-server</bdi> @<bdi dir="ltr" class="odt-ltr-term">webpack-cli/init</bdi></p>
+<p>npm --<bdi dir="ltr" class="odt-ltr-term">save-dev install @babel/core @babel/preset-env babel-loader webpack webpack-cli webpack-dev-server @webpack-cli/init</bdi></p>
 <p><img src="images/10000000000008DC000000F377F51916.png" width="567" height="61" style="width:15.002cm;height:1.607cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008DC000000F377F51916.png" /></p>
 <p>بعد تثبيت التبعيات، تغير ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">package.json</bdi>]</strong> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">

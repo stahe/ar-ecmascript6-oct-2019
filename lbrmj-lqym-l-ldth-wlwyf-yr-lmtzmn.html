@@ -1193,7 +1193,7 @@
 <ul>
   <li>يقوم منشئ<b> [<bdi dir="ltr" class="odt-ltr-term">Promise</bdi>] </b>بأمرين:
     <ul>
-      <li>إنه ينشئ حدثًا لتشغيل تنفيذ <b>الدالة [<bdi dir="ltr" class="odt-ltr-term">function</bdi>(<bdi dir="ltr" class="odt-ltr-term">resolve</bdi>, <bdi dir="ltr" class="odt-ltr-term">reject</bdi>)] </b>التي تم تمريرها إليه كمعلمة، ولكنه لا ينتظر نتيجتها ويقوم على الفور بإرجاع كائن<b> [<bdi dir="ltr" class="odt-ltr-term">Promise</bdi>] </b>إلى الكود المستدعي. يمكن أن يكون لهذا الكائن أربع حالات:
+      <li>إنه ينشئ حدثًا لتشغيل تنفيذ <b>الدالة [<bdi dir="ltr" class="odt-ltr-term">function</bdi>(<bdi dir="ltr" class="odt-ltr-term">resolve, reject</bdi>)] </b>التي تم تمريرها إليه كمعلمة، ولكنه لا ينتظر نتيجتها ويقوم على الفور بإرجاع كائن<b> [<bdi dir="ltr" class="odt-ltr-term">Promise</bdi>] </b>إلى الكود المستدعي. يمكن أن يكون لهذا الكائن أربع حالات:
         <ul>
           <li><b>[<bdi dir="ltr" class="odt-ltr-term">pending</bdi>]</b>: الإجراء غير المتزامن الذي أعاد <b>[<bdi dir="ltr" class="odt-ltr-term">Promise</bdi>] </b>لم يكتمل بعد؛
           </li>
@@ -1251,7 +1251,7 @@
 <ul>
   <li>(تابع)
     <ul>
-      <li>بمجرد إطلاق المهمة غير المتزامنة في السطرين 2 و 5 وإكمال عملها، يمكنها إرجاع نتيجة إلى الكود المستدعي باستخدام الدالتين <b>[<bdi dir="ltr" class="odt-ltr-term">resolve</bdi>, <bdi dir="ltr" class="odt-ltr-term">reject</bdi>] </b>اللتين مررهما منشئ<b> [<bdi dir="ltr" class="odt-ltr-term">Promise</bdi>] </b>إليها كمعلمات. وتتمثل القاعدة في ما يلي:
+      <li>بمجرد إطلاق المهمة غير المتزامنة في السطرين 2 و 5 وإكمال عملها، يمكنها إرجاع نتيجة إلى الكود المستدعي باستخدام الدالتين <b>[<bdi dir="ltr" class="odt-ltr-term">resolve, reject</bdi>] </b>اللتين مررهما منشئ<b> [<bdi dir="ltr" class="odt-ltr-term">Promise</bdi>] </b>إليها كمعلمات. وتتمثل القاعدة في ما يلي:
         <ul>
           <li>تشير المهمة غير المتزامنة إلى النجاح عبر <b>[<bdi dir="ltr" class="odt-ltr-term">resolve</bdi>(<bdi dir="ltr" class="odt-ltr-term">result</bdi>)]</b>. وهذا يعادل إضافة حدث إلى حلقة أحداث<b> [<bdi dir="ltr" class="odt-ltr-term">node.js</bdi>] </b>يمكن تسميته <b>[<bdi dir="ltr" class="odt-ltr-term">resolved</bdi>]</b>، مع <b>[<bdi dir="ltr" class="odt-ltr-term">result</bdi>] </b>كبيانات مرتبطة؛
           </li>
@@ -1285,7 +1285,7 @@
   </li>
 </ul>
 
-<p>تخفي هذه الصيغة تمامًا الأحداث التي نشترك فيها. ومع ذلك، فهي اشتراك، ومثل المثال السابق، لا تنفذ الدوال <strong>[f1, f2, f3]</strong> على الفور. سيتم تنفيذ هذه الدوال — أو عدم تنفيذها — عند حدوث أحد الأحداث <strong>[<bdi dir="ltr" class="odt-ltr-term">resolved</bdi>, <bdi dir="ltr" class="odt-ltr-term">rejected</bdi>]</strong> التي نشترك فيها.</p>
+<p>تخفي هذه الصيغة تمامًا الأحداث التي نشترك فيها. ومع ذلك، فهي اشتراك، ومثل المثال السابق، لا تنفذ الدوال <strong>[<bdi dir="ltr" class="odt-ltr-term">f1, f2, f3</bdi>]</strong> على الفور. سيتم تنفيذ هذه الدوال — أو عدم تنفيذها — عند حدوث أحد الأحداث <strong>[<bdi dir="ltr" class="odt-ltr-term">resolved, rejected</bdi>]</strong> التي نشترك فيها.</p>
 <p>يوضح البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">async-04</bdi>]</strong> هذه الآلية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
@@ -1598,11 +1598,11 @@
   </li>
   <li>السطر 54: الآن فقط يتم تنفيذ الدالتين غير المتزامنتين <b>[<bdi dir="ltr" class="odt-ltr-term">async01</bdi>، <bdi dir="ltr" class="odt-ltr-term">async02</bdi>] </b>(الرموز <bdi dir="ltr" class="odt-ltr-term">async01</bdi>(10) و <bdi dir="ltr" class="odt-ltr-term">async02</bdi>(10,20)). يتم تنفيذهما داخل مصفوفة تم تمريرها كمعلمة إلى طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">Promise.all</bdi>]</b>. نعلم أن <b>[<bdi dir="ltr" class="odt-ltr-term">async01</bdi>، <bdi dir="ltr" class="odt-ltr-term">async02</bdi>] </b>تعيدان كلاهما وعدًا إلى الكود المستدعي. لذلك، فإن معلمة <b>[<bdi dir="ltr" class="odt-ltr-term">Promise.all</bdi>] </b>هي مصفوفة من وعدين؛
   </li>
-  <li><b>[<bdi dir="ltr" class="odt-ltr-term">Promise.all</bdi>([<bdi dir="ltr" class="odt-ltr-term">promise1</bdi>, <bdi dir="ltr" class="odt-ltr-term">promise2</bdi>, …, <bdi dir="ltr" class="odt-ltr-term">promisen</bdi>]).<bdi dir="ltr" class="odt-ltr-term">then</bdi>(f1).<bdi dir="ltr" class="odt-ltr-term">catch</bdi>(f2).<bdi dir="ltr" class="odt-ltr-term">finally</bdi>(f3)</b>] هو اشتراك في حدث:
+  <li><b>[<bdi dir="ltr" class="odt-ltr-term">Promise.all</bdi>([<bdi dir="ltr" class="odt-ltr-term">promise1, promise2</bdi>, …, <bdi dir="ltr" class="odt-ltr-term">promisen</bdi>]).<bdi dir="ltr" class="odt-ltr-term">then</bdi>(f1).<bdi dir="ltr" class="odt-ltr-term">catch</bdi>(f2).<bdi dir="ltr" class="odt-ltr-term">finally</bdi>(f3)</b>] هو اشتراك في حدث:
     <ul>
       <li><b>[<bdi dir="ltr" class="odt-ltr-term">Promise.all</bdi>] </b>من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">Promise</bdi>]</b>؛
       </li>
-      <li>سيتم تنفيذ الدالة <b>[f1] </b>الخاصة بالطريقة<b> [<bdi dir="ltr" class="odt-ltr-term">then</bdi>] </b>عندما تنتقل <b>جميع الوعود [<bdi dir="ltr" class="odt-ltr-term">promise1</bdi>, <bdi dir="ltr" class="odt-ltr-term">promise2</bdi>, …, <bdi dir="ltr" class="odt-ltr-term">promisen</bdi>] </b>الموجودة في مصفوفة معلمة الطريقة<b> [all] </b>من الحالة<b> [<bdi dir="ltr" class="odt-ltr-term">pending</bdi>] </b>إلى الحالة<b> [<bdi dir="ltr" class="odt-ltr-term">resolved</bdi>]</b>. بعبارة أخرى، سيتم تنفيذ <b>[f1] </b>عندما تكتمل جميع الوعود الموجودة في المصفوفة بنجاح؛
+      <li>سيتم تنفيذ الدالة <b>[f1] </b>الخاصة بالطريقة<b> [<bdi dir="ltr" class="odt-ltr-term">then</bdi>] </b>عندما تنتقل <b>جميع الوعود [<bdi dir="ltr" class="odt-ltr-term">promise1, promise2</bdi>, …, <bdi dir="ltr" class="odt-ltr-term">promisen</bdi>] </b>الموجودة في مصفوفة معلمة الطريقة<b> [all] </b>من الحالة<b> [<bdi dir="ltr" class="odt-ltr-term">pending</bdi>] </b>إلى الحالة<b> [<bdi dir="ltr" class="odt-ltr-term">resolved</bdi>]</b>. بعبارة أخرى، سيتم تنفيذ <b>[f1] </b>عندما تكتمل جميع الوعود الموجودة في المصفوفة بنجاح؛
       </li>
       <li>سيتم تنفيذ الدالة<b> [f2] </b>الخاصة بالطريقة<b> [<bdi dir="ltr" class="odt-ltr-term">catch</bdi>] </b>بمجرد أن تتغير أي من الوعود في المصفوفة من الحالة<b> [<bdi dir="ltr" class="odt-ltr-term">pending</bdi>] </b>إلى الحالة<b> [<bdi dir="ltr" class="odt-ltr-term">rejected</bdi>]</b>. بعبارة أخرى، يتم تنفيذ <b>[f2] </b>بمجرد فشل أي من الوعود في المصفوفة؛
       </li>
@@ -1636,14 +1636,14 @@
   </li>
   <li>السطر 7: تكتمل المهمة غير المتزامنة <b>[<bdi dir="ltr" class="odt-ltr-term">async02</bdi>] </b>بعد حوالي ثانيتين من إطلاقها. وهي تُرجع نتيجة باستخدام دالة<b> [<bdi dir="ltr" class="odt-ltr-term">resolve</bdi>]</b>، لذا يتغير وعدها في المصفوفة في السطر 56 من الكود من الحالة<b> [<bdi dir="ltr" class="odt-ltr-term">pending</bdi>] </b>إلى <b>[<bdi dir="ltr" class="odt-ltr-term">resolved</bdi>]</b>. سيتم تنفيذ طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">then</bdi>] </b>بمجرد أن تسمح حلقة الأحداث بذلك؛
   </li>
-  <li>السطر 8:   يتم تنفيذ طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">then</bdi>] </b>الخاصة بـ <b>[<bdi dir="ltr" class="odt-ltr-term">Promise.all</bdi>]</b>. تتلقى كمعلمة مصفوفة <b>[<bdi dir="ltr" class="odt-ltr-term">result1</bdi>, <bdi dir="ltr" class="odt-ltr-term">result2</bdi>] </b>حيث <b>[<bdi dir="ltr" class="odt-ltr-term">result1</bdi>] </b>هي النتيجة التي تعيدها <b>[<bdi dir="ltr" class="odt-ltr-term">async01</bdi>]</b>، و<b>[<bdi dir="ltr" class="odt-ltr-term">result2</bdi>] </b>هي النتيجة التي تعيدها <b>[<bdi dir="ltr" class="odt-ltr-term">async02</bdi>]</b>؛
+  <li>السطر 8:   يتم تنفيذ طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">then</bdi>] </b>الخاصة بـ <b>[<bdi dir="ltr" class="odt-ltr-term">Promise.all</bdi>]</b>. تتلقى كمعلمة مصفوفة <b>[<bdi dir="ltr" class="odt-ltr-term">result1, result2</bdi>] </b>حيث <b>[<bdi dir="ltr" class="odt-ltr-term">result1</bdi>] </b>هي النتيجة التي تعيدها <b>[<bdi dir="ltr" class="odt-ltr-term">async01</bdi>]</b>، و<b>[<bdi dir="ltr" class="odt-ltr-term">result2</bdi>] </b>هي النتيجة التي تعيدها <b>[<bdi dir="ltr" class="odt-ltr-term">async02</bdi>]</b>؛
   </li>
   <li>السطر 9: يتم تنفيذ طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>] </b>الخاصة بـ <b>[<bdi dir="ltr" class="odt-ltr-term">Promise.all</bdi>]</b>؛
   </li>
 </ul>
 <p><a id="refheadingtoc225386640539168"></a></p>
 <h2 id="116-async-06">11.6. <span style="color: #4f81bd">نص برمجي [<bdi dir="ltr" class="odt-ltr-term">async-06</bdi>]</span></h2>
-<p>يوضح هذا البرنامج النصي الجديد كيف أن الاستخدام المشترك لكلمتي <strong>[<bdi dir="ltr" class="odt-ltr-term">async</bdi> / <bdi dir="ltr" class="odt-ltr-term">await</bdi>]</strong> يتيح كتابة كود <strong>غير متزامن</strong> يشبه الكود <strong>المتزامن</strong>. يتم إخفاء معالجة الأحداث تمامًا، مما يجعل الكود أسهل في الفهم.</p>
+<p>يوضح هذا البرنامج النصي الجديد كيف أن الاستخدام المشترك لكلمتي <strong>[<bdi dir="ltr" class="odt-ltr-term">async / await</bdi>]</strong> يتيح كتابة كود <strong>غير متزامن</strong> يشبه الكود <strong>المتزامن</strong>. يتم إخفاء معالجة الأحداث تمامًا، مما يجعل الكود أسهل في الفهم.</p>
 <p>نعيد النظر في المثال السابق مع التعديلات التالية:</p>
 <ul>
   <li>نضيف دالة غير متزامنة ثالثة <b>[<bdi dir="ltr" class="odt-ltr-term">async03</bdi>]، </b>والتي تُرجع نتيجتها باستخدام طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">Promise.reject</bdi>]</b>، مما يشير إلى حلقة الأحداث بأنها &quot;فشلت&quot; في إكمال مهمتها؛
@@ -1702,7 +1702,7 @@
   </li>
 </ul>
 
-<p>مع الاستمرار في استخدام الكلمات الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">async</bdi> / <bdi dir="ltr" class="odt-ltr-term">await</bdi>]</strong>، من الممكن تنفيذ المهام غير المتزامنة بالتوازي باستخدام الصيغة التالية:</p>
+<p>مع الاستمرار في استخدام الكلمات الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">async / await</bdi>]</strong>، من الممكن تنفيذ المهام غير المتزامنة بالتوازي باستخدام الصيغة التالية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// parallel execution of asynchronous tasks</span></span></span>
@@ -1718,9 +1718,9 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 3: لدينا عملية <b>حجب</b>: ننتظر حتى تنشر المهام الثلاث غير المتزامنة في المصفوفة <b>[<bdi dir="ltr" class="odt-ltr-term">async01</bdi>(..), <bdi dir="ltr" class="odt-ltr-term">async02</bdi>(..), <bdi dir="ltr" class="odt-ltr-term">async03</bdi>(..)] </b>نتائجها في حلقة الأحداث باستخدام إحدى الطرق <b>[<bdi dir="ltr" class="odt-ltr-term">Promise.resolve</bdi>, <bdi dir="ltr" class="odt-ltr-term">Promise.reject</bdi>]</b>؛
+  <li>السطر 3: لدينا عملية <b>حجب</b>: ننتظر حتى تنشر المهام الثلاث غير المتزامنة في المصفوفة <b>[<bdi dir="ltr" class="odt-ltr-term">async01</bdi>(..), <bdi dir="ltr" class="odt-ltr-term">async02</bdi>(..), <bdi dir="ltr" class="odt-ltr-term">async03</bdi>(..)] </b>نتائجها في حلقة الأحداث باستخدام إحدى الطرق <b>[<bdi dir="ltr" class="odt-ltr-term">Promise.resolve, Promise.reject</bdi>]</b>؛
   </li>
-  <li>إذا نشرت المهام غير المتزامنة الثلاث نتائجها باستخدام <b>[<bdi dir="ltr" class="odt-ltr-term">Promise.resolve</bdi>]</b>، فإن الثابت <b>[<bdi dir="ltr" class="odt-ltr-term">result</bdi>] </b>يكون عندئذ المصفوفة <b>[<bdi dir="ltr" class="odt-ltr-term">result1</bdi>, <bdi dir="ltr" class="odt-ltr-term">result2</bdi>, <bdi dir="ltr" class="odt-ltr-term">result3</bdi>] </b>حيث:
+  <li>إذا نشرت المهام غير المتزامنة الثلاث نتائجها باستخدام <b>[<bdi dir="ltr" class="odt-ltr-term">Promise.resolve</bdi>]</b>، فإن الثابت <b>[<bdi dir="ltr" class="odt-ltr-term">result</bdi>] </b>يكون عندئذ المصفوفة <b>[<bdi dir="ltr" class="odt-ltr-term">result1, result2, result3</bdi>] </b>حيث:
     <ul>
       <li><b>[<bdi dir="ltr" class="odt-ltr-term">result1</bdi>] </b>هي النتيجة التي نشرتها <b>[<bdi dir="ltr" class="odt-ltr-term">async01</bdi>] </b>باستخدام التعبير <b>[<bdi dir="ltr" class="odt-ltr-term">Promise.resolve</bdi>(<bdi dir="ltr" class="odt-ltr-term">result1</bdi>)]</b>؛
       </li>
